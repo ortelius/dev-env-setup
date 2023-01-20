@@ -7,6 +7,7 @@
 
 ## K8s Ortelius cluster details
 - Namespace `ortelius`
+### Nodes
 - Control Plane `ortelius-control-plane`
 - Worker `ortelius-worker`
 
