@@ -1,5 +1,4 @@
-## Ortelius in box local development environment
-### [Ortelius Issue 535](https://github.com/ortelius/ortelius/issues/535)
+# Ortelius in box local development environment
 
 ## What will you need?
 - Docker
