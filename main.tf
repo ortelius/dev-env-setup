@@ -43,16 +43,6 @@ provider "kubectl" {
   client_certificate     = kind_cluster.ortelius.client_certificate
   client_key             = kind_cluster.ortelius.client_key
   load_config_file       = false
-
-  data "kubectl_filename_list" "manifests" {
-    pattern = "./bird_router/*.yaml"
-  }
-
-  resource "kubectl_manifest" "bird_router" {
-    count     = length(data.kubectl_filename_list.manifests.matches)
-    yaml_body = file(element(data.kubectl_filename_list.manifests.matches, count.index))
-  }
-
 }
 
 provider "helm" {
