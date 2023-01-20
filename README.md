@@ -1,4 +1,4 @@
-# Ortelius in box local development environment
+# [Ortelius](https://ortelius.io/) local development environment
 
 ## What will you need?
 - Docker
