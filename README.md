@@ -1,7 +1,7 @@
 ## Ortelius in box local development environment
 ### [Ortelius Issue 535](https://github.com/ortelius/ortelius/issues/535)
 
-### Deployment Benchmark Times for just the Kind Cluster & Ortelius
+### Deployment Benchmark Times for just the Kind Cluster & Ortelius deployment
 ```
 time terraform apply
 ```
