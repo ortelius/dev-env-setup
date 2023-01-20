@@ -207,14 +207,14 @@ Terraform is a tool for building, changing, and versioning infrastructure safely
 - Install Terraform [here](https://www.terraform.io/downloads)
 - Documentation is [here](https://www.terraform.io/docs)
 - [Terms & Conditions](https://registry.terraform.io/terms)
-## Deployment Benchmark Times for just the Kind Cluster & Ortelius deployment
-### Dell G15 5510
+### Deployment Benchmark Times for just the Kind Cluster & Ortelius deployment
+#### Dell G15 5510
 - Intel Core i5-10200H CPU @ 2.40GHZ
 - 8 GB RAM
 - SSD Disk
 - Windows 10
 - Benchmark time to deploy `10min`
-### Mac M1
+#### Mac M1
 - Apple Silicon CPU
 - 16 GB RAM
 - SSD Disk
