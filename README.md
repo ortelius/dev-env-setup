@@ -1,24 +1,11 @@
 ## Ortelius in box local development environment
 ### [Ortelius Issue 535](https://github.com/ortelius/ortelius/issues/535)
 
-### Deployment Benchmark Times for just the Kind Cluster & Ortelius deployment
-```
-time terraform apply
-```
-#### Dell G15 5510
-- Intel Core i5-10200H CPU @ 2.40GHZ
-- 8 GB RAM
-- SSD Disk
-- Windows 10
-- Benchmark time to deploy `10min`
-#### Mac M1
-- Apple Silicon CPU
-- 16 GB RAM
-- SSD Disk
-- OSX Ventura
-- Benchmark time to deploy `7min`
-
 ## [VSCode](https://code.visualstudio.com/) IDE
+## [GitHub](https://github.com/microsoft/vscode)
+
+Visual Studio Code combines the simplicity of a code editor with what developers need for their core edit-build-debug cycle. It provides comprehensive code editing, navigation, and understanding support along with lightweight debugging, a rich extensibility model, and lightweight integration with existing tools.
+
 - Download `VSCode IDE` [here](https://code.visualstudio.com/download)
 - Security starts in the IDE
 - [Terms & Conditions](https://code.visualstudio.com/License/)
@@ -32,6 +19,7 @@ time terraform apply
 - Install `ToDo Tree` [here](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
 
 ## [Docker.com](https://www.docker.com/)
+## [GitHub](https://github.com/docker)
 
 Docker is software that provides containers, which allows teams to emulate development environments.
 Docker began as an internal project, initially developed by dotCloud engineers.
@@ -89,7 +77,7 @@ docker image rm quay.io/ortelius/ortelius
 ```
 
 ## [Kind.sigs.k8s.io](https://kind.sigs.k8s.io/)
-
+## [GitHub]()
 kind is a tool for running local Kubernetes clusters using Docker container "nodes". kind was primarily designed for testing Kubernetes itself, but may be used for local development or CI.
 
 - Install [here](https://kind.sigs.k8s.io/docs/user/quick-start/#installation)
@@ -98,15 +86,15 @@ kind is a tool for running local Kubernetes clusters using Docker container "nod
 - Checkout the Kind documentation [here](https://kind.sigs.k8s.io/docs/user/quick-start/)
 - [Terms & Conditions](https://www.apache.org/licenses/LICENSE-2.0)
 
-#### Why kind?
+### Why kind?
 - kind supports multi-node (including HA) clusters
 - kind supports building Kubernetes release builds from source
 - support for make / bash or docker, in addition to pre-published builds
 - kind supports Linux, macOS and Windows
 - kind is a `CNCF certified conformant Kubernetes installer`
 
-### Troubleshooting tool
-#### Container Runtime Interface (CRI) CLI
+## Container Runtime Interface (CRI) CLI
+## [GitHub]()
 
 crictl provides a CLI for CRI-compatible container runtimes. This allows the CRI runtime developers to debug their runtime without needing to set up Kubernetes components.
 crictl is currently in Beta and still under quick iterations. It is hosted at the cri-tools repository. We encourage the CRI developers to report bugs or help extend the coverage by adding more functionalities.
@@ -175,7 +163,7 @@ kubens argocd
 - Download `Kubens & Kubectx` [here](https://github.com/ahmetb/kubectx)
 
 ## Octant | Graphical representation of your K8s Clusters
-
+## [GitHub]()
 Octant is a tool for developers to understand how applications run on a Kubernetes cluster. It aims to be part of the developer's toolkit for gaining insight and approaching complexity found in Kubernetes. Octant offers a combination of introspective tooling, cluster navigation, and object management along with a plugin system to further extend its capabilities.
 
 - Download [here](https://github.com/vmware-tanzu/octant)
@@ -187,7 +175,8 @@ Octant is a tool for developers to understand how applications run on a Kubernet
 - [Helm](https://github.com/bloodorangeio/octant-helm)
 - [Policy Report](https://github.com/evalsocket/policyreport-octant-plugin)
 
-## Helm
+## [Helm](https://helm.sh/)
+## [GitHub](https://github.com/helm/helm)
 
 Helm helps you manage Kubernetes applications — Helm Charts help you define, install, and upgrade even the most complex Kubernetes application.
 Charts are easy to create, version, share, and publish — so start using Helm and stop the copy-and-paste.
@@ -195,36 +184,23 @@ Charts are easy to create, version, share, and publish — so start using Helm a
 - Install Helm [here](https://helm.sh/)
 - Also known as the package manager for Kubernetes
 
-#### Helm Dashboard
+### Helm Dashboard
 - GitHub page [here](https://github.com/komodorio/helm-dashboard
 - Binds to all IPs `0.0.0.0:8080`
 
-#### Install
+### Install
 ```
 helm plugin install https://github.com/komodorio/helm-dashboard.git
 ```
-#### Update
+### Update
 ```
 helm plugin update dashboard
 ```
-#### Uninstall
+### Uninstall
 ```
 helm plugin uninstall dashboard
 ```
-#### Please make sure you add the following Helm packages
-```
-helm repo add argo https://argoproj.github.io/argo-helm
-```
-```
-helm repo add ortelius https://ortelius.github.io/ortelius-charts
-```
-```
-helm repo add keptn-ortelius-service https://ortelius.github.io/keptn-ortelius-service
-```
-```
-helm repo add istio https://istio-release.storage.googleapis.com/charts
-```
-#### Use `helm repo list` to make sure they are there
+### Use `helm repo list` to make sure they are there
 ```
 helm repo list
 ```
@@ -250,29 +226,52 @@ helm install argocd ./helm-appsofapps --dry-run
 helm install argocd ./helm-appsofapps --dry-run --debug
 ```
 
-### [Terraform](https://www.terraform.io/intro)
+## [Terraform](https://www.terraform.io/intro)
+## [GitHub](https://github.com/hashicorp/terraform)
+
+Terraform is a tool for building, changing, and versioning infrastructure safely and efficiently. Terraform can manage existing and popular service providers as well as custom in-house solutions.
+
 - Install Terraform [here](https://www.terraform.io/downloads)
 - Documentation is [here](https://www.terraform.io/docs)
 - [Terms & Conditions](https://registry.terraform.io/terms)
 
-#### Steps to get going
-- Clone `ortelius-in-a-box` [here](https://github.com/sachajw/ortelius-in-a-box)
+## Deployment Benchmark Times for just the Kind Cluster & Ortelius deployment
+### Dell G15 5510
+- Intel Core i5-10200H CPU @ 2.40GHZ
+- 8 GB RAM
+- SSD Disk
+- Windows 10
+- Benchmark time to deploy `10min`
+### Mac M1
+- Apple Silicon CPU
+- 16 GB RAM
+- SSD Disk
+- OSX Ventura
+- Benchmark time to deploy `7min`
+
+### Steps to get going
+- Clone `dev-env-setup` [here](https://github.com/ortelius/dev-env-setup)
 - Navigate to `/terraform`
 - Run the following
+
 ```
 terraform init
 ```
 ```
 terraform plan
 ```
+### Time the deployment
+```
+time terraform apply
+```
+`OR`
+### No timing the deployment
 ```
 terraform apply
 ```
-- You should see something like this in Docker Desktop
-![ortelius docker nodes!](images/docker/ortelius-nodes-docker.jpg "ortelius docker nodes")
 
-### Helpful tips
-#### Logs
+## Helpful tips
+### Logs
 In total, there 5 log levels which can be used for debugging purposes:
 
 - `TRACE` one of the most descriptive log levels, if you set the log level to *TRACE,* Terraform will write every action and step into the log file.
