@@ -142,55 +142,6 @@ Octant is a tool for developers to understand how applications run on a Kubernet
 - [Helm](https://github.com/bloodorangeio/octant-helm)
 - [Policy Report](https://github.com/evalsocket/policyreport-octant-plugin)
 
-## [Helm](https://helm.sh/)
-### [GitHub](https://github.com/helm/helm)
-
-Helm helps you manage Kubernetes applications — Helm Charts help you define, install, and upgrade even the most complex Kubernetes application.
-Charts are easy to create, version, share, and publish — so start using Helm and stop the copy-and-paste.
-
-- Install Helm [here](https://helm.sh/)
-- Also known as the package manager for Kubernetes
-### Helm Dashboard
-- GitHub page [here](https://github.com/komodorio/helm-dashboard
-- Binds to all IPs `0.0.0.0:8080`
-#### Install
-```
-helm plugin install https://github.com/komodorio/helm-dashboard.git
-```
-#### Update
-```
-helm plugin update dashboard
-```
-#### Uninstall
-```
-helm plugin uninstall dashboard
-```
-#### Use `helm repo list` to make sure they are there
-```
-helm repo list
-```
-### Helpful commands
-#### Update Helm repos
-```
-helm repo update
-```
-#### Lint
-```
-helm lint ./helm-appsofapps
-```
-#### Debug
-```
-helm template ./helm-appsofapps --debug
-```
-#### Dry-run
-```
-helm install argocd ./helm-appsofapps --dry-run
-```
-#### Dry-run with Debug
-```
-helm install argocd ./helm-appsofapps --dry-run --debug
-```
-
 ## [Terraform](https://www.terraform.io/intro)
 ### [GitHub](https://github.com/hashicorp/terraform)
 
@@ -224,12 +175,12 @@ terraform plan
 ```
 ### Time the deployment
 ```
-time terraform apply
+time terraform apply --auto-approve
 ```
 `OR`
 ### No timing the deployment
 ```
-terraform apply
+terraform apply --auto-approve
 ```
 ### Logs
 In total, there 5 log levels which can be used for debugging purposes:

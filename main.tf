@@ -56,6 +56,18 @@ provider "helm" {
   }
 }
 
+# ortelius https://artifacthub.io/packages/helm/ortelius/ortelius
+# postgresql https://artifacthub.io/packages/helm/bitnami/postgresql-ha
+resource "helm_release" "ortelius" {
+  name             = "ortelius"
+  chart            = "ortelius"
+  repository       = "https://ortelius.github.io/ortelius-charts/"
+  namespace        = "ortelius"
+  create_namespace = true
+  depends_on       = [kind_cluster.ortelius]
+  timeout          = 600
+}
+
 # nginx ingress controller maintained by the K8s community https://github.com/kubernetes/ingress-nginx/
 resource "helm_release" "ingress_nginx" {
   name             = "ingress-nginx"
@@ -84,16 +96,4 @@ resource "null_resource" "wait_for_ingress_nginx" {
     EOF
   }
   depends_on = [helm_release.ingress_nginx]
-}
-
-# ortelius https://artifacthub.io/packages/helm/ortelius/ortelius
-# postgresql https://artifacthub.io/packages/helm/bitnami/postgresql-ha
-resource "helm_release" "ortelius" {
-  name             = "ortelius"
-  chart            = "ortelius"
-  repository       = "https://ortelius.github.io/ortelius-charts/"
-  namespace        = "ortelius"
-  create_namespace = true
-  depends_on       = [kind_cluster.ortelius]
-  timeout          = 600
 }
