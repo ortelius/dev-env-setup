@@ -142,6 +142,13 @@ kind load docker-image --name ortelius-in-a-box --nodes ortelius-in-a-box-contro
 - Add the `aliases` & `auto complete` which are in the `cheat sheet`
 
 ### Helpful tools
+### Combine Kubens & Kubectx with Fuzzy Finder
+- `kubectx` is a tool to switch between contexts (clusters) on kubectl faster.
+- `kubens` is a tool to switch between Kubernetes namespaces (and configure them for kubectl) easily.
+- `fzf` is a general-purpose command-line fuzzy finder.
+- `fzf` is an interactive Unix filter for command-line that can be used with any list; files, command history, processes, hostnames, bookmarks, git commits, etc.
+- Download `Fuzzy Finder` [here](https://github.com/junegunn/fzf)
+- Download `Kubens & Kubectx` [here](https://github.com/ahmetb/kubectx)
 #### Kubectx for switching context
 ```
 kubectx kind-ortelius-in-a-box
@@ -150,13 +157,6 @@ kubectx kind-ortelius-in-a-box
 ```
 kubens argocd
 ```
-### Combine Kubens & Kubectx with Fuzzy Finder
-- `kubectx` is a tool to switch between contexts (clusters) on kubectl faster.
-- `kubens` is a tool to switch between Kubernetes namespaces (and configure them for kubectl) easily.
-- `fzf` is a general-purpose command-line fuzzy finder.
-- `fzf` is an interactive Unix filter for command-line that can be used with any list; files, command history, processes, hostnames, bookmarks, git commits, etc.
-- Download `Fuzzy Finder` [here](https://github.com/junegunn/fzf)
-- Download `Kubens & Kubectx` [here](https://github.com/ahmetb/kubectx)
 
 ## Octant | Graphical representation of your K8s Clusters
 ### [GitHub](https://github.com/vmware-archive/octant)
@@ -228,7 +228,6 @@ Terraform is a tool for building, changing, and versioning infrastructure safely
 - Install Terraform [here](https://www.terraform.io/downloads)
 - Documentation is [here](https://www.terraform.io/docs)
 - [Terms & Conditions](https://registry.terraform.io/terms)
-
 ## Deployment Benchmark Times for just the Kind Cluster & Ortelius deployment
 ### Dell G15 5510
 - Intel Core i5-10200H CPU @ 2.40GHZ
