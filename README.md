@@ -93,8 +93,8 @@ kind is a tool for running local Kubernetes clusters using Docker container "nod
 - kind supports Linux, macOS and Windows
 - kind is a `CNCF certified conformant Kubernetes installer`
 
-## Container Runtime Interface (CRI) CLI
-## [GitHub]()
+## [Container Runtime Interface (CRI) CLI](https://kubernetes.io/docs/tasks/debug/debug-cluster/crictl/)
+## [GitHub](https://github.com/kubernetes-sigs/cri-tools/blob/master/docs/crictl.md)
 
 crictl provides a CLI for CRI-compatible container runtimes. This allows the CRI runtime developers to debug their runtime without needing to set up Kubernetes components.
 crictl is currently in Beta and still under quick iterations. It is hosted at the cri-tools repository. We encourage the CRI developers to report bugs or help extend the coverage by adding more functionalities.
