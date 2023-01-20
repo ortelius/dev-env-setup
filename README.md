@@ -129,7 +129,7 @@ kubectx kind-ortelius-in-a-box
 kubens argocd
 ```
 
-## Octant | Graphical representation of your K8s Clusters
+## Octant | GUI of your K8s Clusters
 ### [GitHub](https://github.com/vmware-archive/octant)
 
 Octant is a tool for developers to understand how applications run on a Kubernetes cluster. It aims to be part of the developer's toolkit for gaining insight and approaching complexity found in Kubernetes. Octant offers a combination of introspective tooling, cluster navigation, and object management along with a plugin system to further extend its capabilities.
