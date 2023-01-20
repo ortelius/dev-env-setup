@@ -16,14 +16,6 @@ Docker began as an internal project, initially developed by dotCloud engineers.
 - Use [Devdocs](https://devdocs.io/) and the Docker documentation [here](https://docs.docker.com/)
 - [Terms & Conditions](https://www.docker.com/legal/docker-terms-service/)
 
-### Docker Security
-- Bake security right in from the word go
-- We are going to use Snyk to scan our containers
-- Snyk is free and you can set yourself up [here](https://snyk.io/)
-- In `Docker Desktop` go to the ` Extensions Marketplace` and install the `Snyk Container Extension`
-- On your command line you can now scan your Docker images with `docker scan your-docker-image`
-- Disclaimer: Please follow any prompts `Snyk` requires you to fulfill to get up and running
-- [Terms & Conditions for Snyk](https://snyk.io/policies/terms-of-service/)
 ### Helpful commands
 #### List images
 ```
