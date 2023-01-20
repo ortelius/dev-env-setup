@@ -5,6 +5,11 @@
 - Kind
 - Terraform
 
+## K8s Ortelius cluster details
+- Namespace `ortelius`
+- Control Plane `ortelius-control-plane`
+- Worker `ortelius-worker`
+
 ## [Docker.com](https://www.docker.com/)
 ### [GitHub](https://github.com/docker)
 
