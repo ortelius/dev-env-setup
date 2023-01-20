@@ -161,13 +161,13 @@ kubectx kind-ortelius-in-a-box
 kubens argocd
 ```
 #### Combine Kubens & Kubectx with Fuzzy Finder
-- kubectx is a tool to switch between contexts (clusters) on kubectl faster.
-- kubens is a tool to switch between Kubernetes namespaces (and configure them for kubectl) easily.
-- fzf is a general-purpose command-line fuzzy finder.
-- fzf is an interactive Unix filter for command-line that can be used with any list; files, command history, processes, hostnames, bookmarks, git commits, etc.
+- `kubectx` is a tool to switch between contexts (clusters) on kubectl faster.
+- `kubens` is a tool to switch between Kubernetes namespaces (and configure them for kubectl) easily.
+- `fzf` is a general-purpose command-line fuzzy finder.
+- `fzf` is an interactive Unix filter for command-line that can be used with any list; files, command history, processes, hostnames, bookmarks, git commits, etc.
 
-- Download Fuzzy Finder [here](https://github.com/junegunn/fzf)
-- Download Kubens & Kubectx [here](https://github.com/ahmetb/kubectx)
+- Download `Fuzzy Finder` [here](https://github.com/junegunn/fzf)
+- Download `Kubens & Kubectx` [here](https://github.com/ahmetb/kubectx)
 
  ![kubectx with fuzzy finder!](images/k8s/kubens-kubectx-fuzzyfinder.jpg "kubectx with fuzzy finder")
 
@@ -186,9 +186,11 @@ Octant is a tool for developers to understand how applications run on a Kubernet
 ### Helm
 - Install Helm [here](https://helm.sh/)
 - Also known as the package manager for Kubernetes
+
 #### Helm Dashboard
 - GitHub page [here](https://github.com/komodorio/helm-dashboard
 - Binds to all IPs `0.0.0.0:8080`
+
 #### Install
 ```
 helm plugin install https://github.com/komodorio/helm-dashboard.git
@@ -244,6 +246,7 @@ helm install argocd ./helm-appsofapps --dry-run --debug
 - Install Terraform [here](https://www.terraform.io/downloads)
 - Documentation is [here](https://www.terraform.io/docs)
 - [Terms & Conditions](https://registry.terraform.io/terms)
+
 #### Steps to get going
 - Clone `ortelius-in-a-box` [here](https://github.com/sachajw/ortelius-in-a-box)
 - Navigate to `/terraform`
