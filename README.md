@@ -25,17 +25,6 @@ Docker began as an internal project, initially developed by dotCloud engineers.
 - In `Docker Desktop` go to the ` Extensions Marketplace` and install the `Snyk Container Extension`
 - On your command line you can now scan your Docker images with `docker scan your-docker-image`
 - Disclaimer: Please follow any prompts `Snyk` requires you to fulfill to get up and running
-#### .docker/config.json
-```
-{
-	"auths": {
-		"<account number>.dkr.ecr.eu-central-1.amazonaws.com": {},
-		"https://index.docker.io/v1/": {}
-	},
-	"credsStore": "desktop",
-	"currentContext": "desktop-linux"
-}
-```
 ### Helpful commands
 #### List images
 #### Pull the current images to the local machine at the time of writing
