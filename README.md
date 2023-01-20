@@ -2,7 +2,7 @@
 ### [Ortelius Issue 535](https://github.com/ortelius/ortelius/issues/535)
 
 ## [VSCode](https://code.visualstudio.com/) IDE
-## [GitHub](https://github.com/microsoft/vscode)
+### [GitHub](https://github.com/microsoft/vscode)
 
 Visual Studio Code combines the simplicity of a code editor with what developers need for their core edit-build-debug cycle. It provides comprehensive code editing, navigation, and understanding support along with lightweight debugging, a rich extensibility model, and lightweight integration with existing tools.
 
@@ -19,7 +19,7 @@ Visual Studio Code combines the simplicity of a code editor with what developers
 - Install `ToDo Tree` [here](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
 
 ## [Docker.com](https://www.docker.com/)
-## [GitHub](https://github.com/docker)
+### [GitHub](https://github.com/docker)
 
 Docker is software that provides containers, which allows teams to emulate development environments.
 Docker began as an internal project, initially developed by dotCloud engineers.
@@ -77,7 +77,7 @@ docker image rm quay.io/ortelius/ortelius
 ```
 
 ## [Kind.sigs.k8s.io](https://kind.sigs.k8s.io/)
-## [GitHub]()
+### [GitHub](https://github.com/kubernetes-sigs/kind)
 kind is a tool for running local Kubernetes clusters using Docker container "nodes". kind was primarily designed for testing Kubernetes itself, but may be used for local development or CI.
 
 - Install [here](https://kind.sigs.k8s.io/docs/user/quick-start/#installation)
@@ -94,7 +94,7 @@ kind is a tool for running local Kubernetes clusters using Docker container "nod
 - kind is a `CNCF certified conformant Kubernetes installer`
 
 ## [Container Runtime Interface (CRI) CLI](https://kubernetes.io/docs/tasks/debug/debug-cluster/crictl/)
-## [GitHub](https://github.com/kubernetes-sigs/cri-tools/blob/master/docs/crictl.md)
+### [GitHub](https://github.com/kubernetes-sigs/cri-tools/blob/master/docs/crictl.md)
 
 crictl provides a CLI for CRI-compatible container runtimes. This allows the CRI runtime developers to debug their runtime without needing to set up Kubernetes components.
 crictl is currently in Beta and still under quick iterations. It is hosted at the cri-tools repository. We encourage the CRI developers to report bugs or help extend the coverage by adding more functionalities.
@@ -115,25 +115,27 @@ sudo tar zxvf crictl-$VERSION-linux-amd64.tar.gz -C /usr/local/bin
 rm -f crictl-$VERSION-linux-amd64.tar.gz
 ```
 
-## Helpful commands
-### Get the list of nodes
+### Helpful commands
+#### Get the list of nodes
 ```
 kind get nodes -n ortelius-in-a-box
 ```
-### Cluster info
+#### Cluster info
 ```
 kubectl cluster-info --context ortelius-in-a-box
 ```
-### Logs
+#### Logs
 ```
 kind export logs -n ortelius-in-a-box
 ```
-### Load an image onto the container nodes
+#### Load an image onto the container nodes
 ```
 kind load docker-image --name ortelius-in-a-box --nodes ortelius-in-a-box-control-plane,ortelius-in-a-box-worker ghcr.io/ortelius/keptn-ortelius-service:0.0.2-dev
 ```
 
-### [Kubernetes.io](https://kubernetes.io/)
+## [Kubernetes.io](https://kubernetes.io/)
+### [GitHub](https://github.com/kubernetes-sigs)
+
 - K8s is a production grade container orchestrater
 - [Terms & Conditions](https://www.linuxfoundation.org/legal/terms#:~:text=Users%20are%20solely%20responsible%20for,arising%20out%20of%20User%20Content.)
 - [Creative Commons](https://creativecommons.org/licenses/by/3.0/)
@@ -144,12 +146,12 @@ kind load docker-image --name ortelius-in-a-box --nodes ortelius-in-a-box-contro
 - Use [Devdocs](https://devdocs.io/) and the official documentation [here](https://kubernetes.io/docs/home/)
 - Add the `aliases` & `auto complete` which are in the `cheat sheet`
 
-## Helpful tools
-### Kubectx for switching context
+### Helpful tools
+#### Kubectx for switching context
 ```
 kubectx kind-ortelius-in-a-box
 ```
-### Kubens for switching namespaces
+#### Kubens for switching namespaces
 ```
 kubens argocd
 ```
@@ -163,7 +165,8 @@ kubens argocd
 - Download `Kubens & Kubectx` [here](https://github.com/ahmetb/kubectx)
 
 ## Octant | Graphical representation of your K8s Clusters
-## [GitHub]()
+### [GitHub](https://github.com/vmware-archive/octant)
+
 Octant is a tool for developers to understand how applications run on a Kubernetes cluster. It aims to be part of the developer's toolkit for gaining insight and approaching complexity found in Kubernetes. Octant offers a combination of introspective tooling, cluster navigation, and object management along with a plugin system to further extend its capabilities.
 
 - Download [here](https://github.com/vmware-tanzu/octant)
@@ -176,7 +179,7 @@ Octant is a tool for developers to understand how applications run on a Kubernet
 - [Policy Report](https://github.com/evalsocket/policyreport-octant-plugin)
 
 ## [Helm](https://helm.sh/)
-## [GitHub](https://github.com/helm/helm)
+### [GitHub](https://github.com/helm/helm)
 
 Helm helps you manage Kubernetes applications — Helm Charts help you define, install, and upgrade even the most complex Kubernetes application.
 Charts are easy to create, version, share, and publish — so start using Helm and stop the copy-and-paste.
@@ -188,23 +191,23 @@ Charts are easy to create, version, share, and publish — so start using Helm a
 - GitHub page [here](https://github.com/komodorio/helm-dashboard
 - Binds to all IPs `0.0.0.0:8080`
 
-### Install
+#### Install
 ```
 helm plugin install https://github.com/komodorio/helm-dashboard.git
 ```
-### Update
+#### Update
 ```
 helm plugin update dashboard
 ```
-### Uninstall
+#### Uninstall
 ```
 helm plugin uninstall dashboard
 ```
-### Use `helm repo list` to make sure they are there
+#### Use `helm repo list` to make sure they are there
 ```
 helm repo list
 ```
-### Helpful tips
+### Helpful commands
 #### Update Helm repos
 ```
 helm repo update
@@ -227,7 +230,7 @@ helm install argocd ./helm-appsofapps --dry-run --debug
 ```
 
 ## [Terraform](https://www.terraform.io/intro)
-## [GitHub](https://github.com/hashicorp/terraform)
+### [GitHub](https://github.com/hashicorp/terraform)
 
 Terraform is a tool for building, changing, and versioning infrastructure safely and efficiently. Terraform can manage existing and popular service providers as well as custom in-house solutions.
 
@@ -270,7 +273,6 @@ time terraform apply
 terraform apply
 ```
 
-## Helpful tips
 ### Logs
 In total, there 5 log levels which can be used for debugging purposes:
 
