@@ -1,6 +1,6 @@
 # [Ortelius](https://ortelius.io/) local development environment
 
-## What will you need?
+## What you need?
 - Docker
 - Kind
 - Terraform
