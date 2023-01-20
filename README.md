@@ -27,6 +27,9 @@ Docker began as an internal project, initially developed by dotCloud engineers.
 - [Terms & Conditions for Snyk](https://snyk.io/policies/terms-of-service/)
 ### Helpful commands
 #### List images
+```
+docker container ls
+```
 #### Pull the current images to the local machine at the time of writing
 ```
 docker pull quay.io/ortelius/ortelius:latest
