@@ -1,23 +1,6 @@
 ## Ortelius in box local development environment
 ### [Ortelius Issue 535](https://github.com/ortelius/ortelius/issues/535)
 
-## [VSCode](https://code.visualstudio.com/) IDE
-### [GitHub](https://github.com/microsoft/vscode)
-
-Visual Studio Code combines the simplicity of a code editor with what developers need for their core edit-build-debug cycle. It provides comprehensive code editing, navigation, and understanding support along with lightweight debugging, a rich extensibility model, and lightweight integration with existing tools.
-
-- Download `VSCode IDE` [here](https://code.visualstudio.com/download)
-- Security starts in the IDE
-- [Terms & Conditions](https://code.visualstudio.com/License/)
-
-### Helpful Extensions
-- Install `Snyk Security | Code & Open Source Dependencies` scanner [here](https://marketplace.visualstudio.com/items?itemName=snyk-security.snyk-vulnerability-scanner)
-- Install `Language Support for Java by Red Hat` [here](https://marketplace.visualstudio.com/items?itemName=redhat.java)
-- Install `Yaml` support [here](https://marketplace.visualstudio.com/items?itemName=redhat.java)
-- Install `Indent Rainbow` [here](https://marketplace.visualstudio.com/items?itemName=redhat.java)
-- Install `Change All End of Line Sequence` [here](https://marketplace.visualstudio.com/items?itemName=vs-publisher-1448185.keyoti-changeallendoflinesequence)
-- Install `ToDo Tree` [here](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
-
 ## [Docker.com](https://www.docker.com/)
 ### [GitHub](https://github.com/docker)
 
@@ -30,7 +13,7 @@ Docker began as an internal project, initially developed by dotCloud engineers.
 - Use [Devdocs](https://devdocs.io/) and the Docker documentation [here](https://docs.docker.com/)
 - [Terms & Conditions](https://www.docker.com/legal/docker-terms-service/)
 
-**Docker Security**
+### Docker Security
 - Bake security right in from the word go
 - We are going to use Snyk to scan our containers
 - Snyk is free and you can set yourself up [here](https://snyk.io/)
@@ -38,7 +21,6 @@ Docker began as an internal project, initially developed by dotCloud engineers.
 - In `Docker Desktop` go to the ` Extensions Marketplace` and install the `Snyk Container Extension`
 - On your command line you can now scan your Docker images with `docker scan your-docker-image`
 - Disclaimer: Please follow any prompts `Snyk` requires you to fulfill to get up and running
-
 #### .docker/config.json
 ```
 {
