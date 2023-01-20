@@ -76,7 +76,7 @@ resource "helm_release" "ingress_nginx" {
   depends_on       = [kind_cluster.ortelius]
   timeout          = 600
 
-  values = [file("ingress-nginx/values.yaml")]
+  #values = [file("ingress-nginx/values.yaml")]
 }
 
 resource "null_resource" "wait_for_ingress_nginx" {
@@ -121,96 +121,3 @@ resource "helm_release" "ortelius" {
   depends_on       = [kind_cluster.ortelius]
   timeout          = 600
 }
-
-# arangodb https://www.arangodb.com/ https://github.com/arangodb/kube-arangodb
-#resource "helm_release" "kube_arangodb" {
-#  name             = "arangodb"
-#  chart            = "./arangodb/kube-arangodb"
-#  namespace        = "arangodb"
-#  create_namespace = true
-#  depends_on       = [kind_cluster.ortelius]
-#  timeout = 600
-#
-#  values = [
-#    file("arangodb/kube-arangodb/values.yaml"),
-#  ]
-#}
-
-# keptn lifecycle toolkit https://github.com/keptn/lifecycle-toolkit
-#resource "null_resource" "keptn" {
-#
-#  provisioner "local-exec" {
-#    command = <<EOF
-#      kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.10.0/cert-manager.yaml
-#      sleep 45
-#      kubectl apply -f https://github.com/keptn/lifecycle-toolkit/releases/download/v0.4.0/manifest.yaml
-#    EOF
-#  }
-#  depends_on = [kind_cluster.ortelius]
-#}
-
-## argocd https://argoproj.github.io/argo-helm/
-#resource "helm_release" "argocd" {
-#  name             = "argocd"
-#  chart            = "argo-cd"
-#  namespace        = "argocd"
-#  create_namespace = true
-#  depends_on       = [kind_cluster.ortelius]
-#  timeout = 600
-#
-#  values = [
-#    file("argo-cd/values.yaml"),
-#  ]
-#}
-
-# kubescape K8s cluster & image security https://kubescape.github.io/helm-charts/
-# https://github.com/kubescape/kubescape
-#resource "helm_release" "kubescape" {
-#  name             = "kubescape"
-#  chart            = "kubescape-cloud-operator"
-#  repository       = "https://kubescape.github.io/helm-charts/"
-#  namespace        = "kubescape"
-#  create_namespace = true
-#  depends_on       = [kind_cluster.ortelius]
-#  timeout = 600
-#
-#  set {
-#    name  = "account"
-#    value = "8e8c7cc1-0ffb-4abc-be56-cf0228d358f3"
-#  }
-#  set {
-#    name  = "clusterName"
-#    value = "kubectl config current-context"
-#  }
-#
-#  values = [
-#    file("kubescape/cloud-operator/values.yaml"),
-#  ]
-#}
-
-# ortelius backstage https://github.com/ortelius/Backstage
-# resource "helm_release" "backstage" {
-#  name             = "backstage"
-#  chart            = "backstage"
-#  repository       = "https://github.com/ortelius/backstage"
-#  namespace        = "backstage"
-#  create_namespace = true
-#  depends_on       = [kind_cluster.ortelius]
-#  timeout = 600
-#
-#  values = [
-#    file("backstage/values.yaml"),
-#  ]
-#}
-
-# keptn-ortelius-service
-#resource "helm_release" "keptn" {
-#  name             = "keptn"
-#  chart            = "keptn-ortelius-service"
-#  repository       = "https://ortelius.github.io/keptn-ortelius-service"
-#  namespace        = "keptn"
-#  create_namespace = true
-#  depends_on       = [kind_cluster.ortelius]
-#  timeout = 600
-#  values = [file("keptn-ortelius-service/values.yaml")]
-#}
