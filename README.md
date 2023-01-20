@@ -1,6 +1,10 @@
 ## Ortelius in box local development environment
 ### [Ortelius Issue 535](https://github.com/ortelius/ortelius/issues/535)
 
+## What will you need?
+- Docker
+- Terraform
+
 ## [Docker.com](https://www.docker.com/)
 ### [GitHub](https://github.com/docker)
 
