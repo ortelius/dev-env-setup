@@ -50,7 +50,6 @@ Docker began as an internal project, initially developed by dotCloud engineers.
 	"currentContext": "desktop-linux"
 }
 ```
-
 ### Helpful commands
 #### List images
 #### Pull the current images to the local machine at the time of writing
@@ -79,7 +78,6 @@ docker image rm quay.io/ortelius/ortelius
 ## [Kind.sigs.k8s.io](https://kind.sigs.k8s.io/)
 ### [GitHub](https://github.com/kubernetes-sigs/kind)
 kind is a tool for running local Kubernetes clusters using Docker container "nodes". kind was primarily designed for testing Kubernetes itself, but may be used for local development or CI.
-
 - Install [here](https://kind.sigs.k8s.io/docs/user/quick-start/#installation)
 - Kind allows you to use Docker to run K8s nodes as containers
 - Get familiar with the basic commands
@@ -98,8 +96,7 @@ kind is a tool for running local Kubernetes clusters using Docker container "nod
 
 crictl provides a CLI for CRI-compatible container runtimes. This allows the CRI runtime developers to debug their runtime without needing to set up Kubernetes components.
 crictl is currently in Beta and still under quick iterations. It is hosted at the cri-tools repository. We encourage the CRI developers to report bugs or help extend the coverage by adding more functionalities.
-
-- crictl is available [here](https://github.com/kubernetes-sigs/cri-tools/blob/master/docs/crictl.md)
+- Download crictl [here](https://github.com/kubernetes-sigs/cri-tools/blob/master/docs/crictl.md)
 #### using `wget`
 ```
 VERSION="v1.24.1"
@@ -135,11 +132,9 @@ kind load docker-image --name ortelius-in-a-box --nodes ortelius-in-a-box-contro
 
 ## [Kubernetes.io](https://kubernetes.io/)
 ### [GitHub](https://github.com/kubernetes-sigs)
-
 - K8s is a production grade container orchestrater
 - [Terms & Conditions](https://www.linuxfoundation.org/legal/terms#:~:text=Users%20are%20solely%20responsible%20for,arising%20out%20of%20User%20Content.)
 - [Creative Commons](https://creativecommons.org/licenses/by/3.0/)
-
 ### Kubectl
 - Install `kubectl` the command line tool [here](https://kubernetes.io/docs/tasks/tools/)
 - Use the `kubectl` cheat sheet [here](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
@@ -160,7 +155,6 @@ kubens argocd
 - `kubens` is a tool to switch between Kubernetes namespaces (and configure them for kubectl) easily.
 - `fzf` is a general-purpose command-line fuzzy finder.
 - `fzf` is an interactive Unix filter for command-line that can be used with any list; files, command history, processes, hostnames, bookmarks, git commits, etc.
-
 - Download `Fuzzy Finder` [here](https://github.com/junegunn/fzf)
 - Download `Kubens & Kubectx` [here](https://github.com/ahmetb/kubectx)
 
@@ -173,7 +167,6 @@ Octant is a tool for developers to understand how applications run on a Kubernet
 - Documentation [here](https://octant.dev/docs/)
 - Supports dark mode
 - Plugins [here](https://github.com/topics/octant-plugin)
-
 ### Notable Plugins
 - [Helm](https://github.com/bloodorangeio/octant-helm)
 - [Policy Report](https://github.com/evalsocket/policyreport-octant-plugin)
@@ -186,11 +179,9 @@ Charts are easy to create, version, share, and publish — so start using Helm a
 
 - Install Helm [here](https://helm.sh/)
 - Also known as the package manager for Kubernetes
-
 ### Helm Dashboard
 - GitHub page [here](https://github.com/komodorio/helm-dashboard
 - Binds to all IPs `0.0.0.0:8080`
-
 #### Install
 ```
 helm plugin install https://github.com/komodorio/helm-dashboard.git
@@ -251,12 +242,10 @@ Terraform is a tool for building, changing, and versioning infrastructure safely
 - SSD Disk
 - OSX Ventura
 - Benchmark time to deploy `7min`
-
 ### Steps to get going
 - Clone `dev-env-setup` [here](https://github.com/ortelius/dev-env-setup)
 - Navigate to `/terraform`
 - Run the following
-
 ```
 terraform init
 ```
@@ -272,10 +261,8 @@ time terraform apply
 ```
 terraform apply
 ```
-
 ### Logs
 In total, there 5 log levels which can be used for debugging purposes:
-
 - `TRACE` one of the most descriptive log levels, if you set the log level to *TRACE,* Terraform will write every action and step into the log file.
 - `DEBUG` a little bit more sophisticated logging which is used by developers at critical or more complex pieces of code to reduce debugging time.
 - `INFO` the info log level is useful when needing to log some informative instructions or readme type instructions.
