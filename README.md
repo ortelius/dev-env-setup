@@ -161,6 +161,11 @@ kubectx kind-ortelius-in-a-box
 kubens argocd
 ```
 #### Combine Kubens & Kubectx with Fuzzy Finder
+- kubectx is a tool to switch between contexts (clusters) on kubectl faster.
+- kubens is a tool to switch between Kubernetes namespaces (and configure them for kubectl) easily.
+- fzf is a general-purpose command-line fuzzy finder.
+- fzf is an interactive Unix filter for command-line that can be used with any list; files, command history, processes, hostnames, bookmarks, git commits, etc.
+
 - Download Fuzzy Finder [here](https://github.com/junegunn/fzf)
 - Download Kubens & Kubectx [here](https://github.com/ahmetb/kubectx)
 
@@ -173,6 +178,7 @@ Octant is a tool for developers to understand how applications run on a Kubernet
 - Documentation [here](https://octant.dev/docs/)
 - Supports dark mode
 - Plugins [here](https://github.com/topics/octant-plugin)
+
 #### Notable Plugins
 - [Helm](https://github.com/bloodorangeio/octant-helm)
 - [Policy Report](https://github.com/evalsocket/policyreport-octant-plugin)
