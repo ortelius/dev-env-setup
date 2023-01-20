@@ -69,6 +69,24 @@ kind is a tool for running local Kubernetes clusters using Docker container "nod
 - kind supports Linux, macOS and Windows
 - kind is a `CNCF certified conformant Kubernetes installer`
 
+### Helpful commands
+#### Get the list of nodes
+```
+kind get nodes -n ortelius-in-a-box
+```
+#### Cluster info
+```
+kubectl cluster-info --context ortelius-in-a-box
+```
+#### Logs
+```
+kind export logs -n ortelius-in-a-box
+```
+#### Load an image onto the container nodes
+```
+kind load docker-image --name ortelius-in-a-box --nodes ortelius-in-a-box-control-plane,ortelius-in-a-box-worker ghcr.io/ortelius/keptn-ortelius-service:0.0.2-dev
+```
+
 ## [Container Runtime Interface (CRI) CLI](https://kubernetes.io/docs/tasks/debug/debug-cluster/crictl/)
 ### [GitHub](https://github.com/kubernetes-sigs/cri-tools/blob/master/docs/crictl.md)
 
@@ -88,24 +106,6 @@ VERSION="v1.24.1"
 curl -L https://github.com/kubernetes-sigs/cri-tools/releases/download/$VERSION/crictl-${VERSION}-linux-amd64.tar.gz --output crictl-${VERSION}-linux-amd64.tar.gz
 sudo tar zxvf crictl-$VERSION-linux-amd64.tar.gz -C /usr/local/bin
 rm -f crictl-$VERSION-linux-amd64.tar.gz
-```
-
-### Helpful commands
-#### Get the list of nodes
-```
-kind get nodes -n ortelius-in-a-box
-```
-#### Cluster info
-```
-kubectl cluster-info --context ortelius-in-a-box
-```
-#### Logs
-```
-kind export logs -n ortelius-in-a-box
-```
-#### Load an image onto the container nodes
-```
-kind load docker-image --name ortelius-in-a-box --nodes ortelius-in-a-box-control-plane,ortelius-in-a-box-worker ghcr.io/ortelius/keptn-ortelius-service:0.0.2-dev
 ```
 
 ## [Kubernetes.io](https://kubernetes.io/)
