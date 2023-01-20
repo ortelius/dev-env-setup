@@ -113,7 +113,6 @@ rm -f crictl-$VERSION-linux-amd64.tar.gz
 Kubernetes, also known as K8s, is an open-source system for automating deployment, scaling, and management of containerized applications.
 
 ### [GitHub](https://github.com/kubernetes-sigs)
-- K8s is a production grade container orchestrater
 - [Terms & Conditions](https://www.linuxfoundation.org/legal/terms#:~:text=Users%20are%20solely%20responsible%20for,arising%20out%20of%20User%20Content.)
 - [Creative Commons](https://creativecommons.org/licenses/by/3.0/)
 ### Kubectl
