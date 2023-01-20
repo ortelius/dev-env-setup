@@ -88,7 +88,10 @@ docker exec -it ortelius-in-a-box-worker bash
 docker image rm quay.io/ortelius/ortelius
 ```
 
-#### [Kind.sigs.k8s.io](https://kind.sigs.k8s.io/)
+## [Kind.sigs.k8s.io](https://kind.sigs.k8s.io/)
+
+kind is a tool for running local Kubernetes clusters using Docker container "nodes". kind was primarily designed for testing Kubernetes itself, but may be used for local development or CI.
+
 - Install [here](https://kind.sigs.k8s.io/docs/user/quick-start/#installation)
 - Kind allows you to use Docker to run K8s nodes as containers
 - Get familiar with the basic commands
@@ -102,10 +105,7 @@ docker image rm quay.io/ortelius/ortelius
 - kind supports Linux, macOS and Windows
 - kind is a `CNCF certified conformant Kubernetes installer`
 
-#### Istio on Kind
-- [Kind platform setup](https://istio.io/latest/docs/setup/platform-setup/kind/)
-
-### Helpful tool
+### Troubleshooting tool
 #### Container Runtime Interface (CRI) CLI
 
 crictl provides a CLI for CRI-compatible container runtimes. This allows the CRI runtime developers to debug their runtime without needing to set up Kubernetes components.
@@ -127,49 +127,45 @@ sudo tar zxvf crictl-$VERSION-linux-amd64.tar.gz -C /usr/local/bin
 rm -f crictl-$VERSION-linux-amd64.tar.gz
 ```
 
-### Helpful commands
-#### Get the list of nodes
+## Helpful commands
+### Get the list of nodes
 ```
 kind get nodes -n ortelius-in-a-box
 ```
-#### Cluster info
+### Cluster info
 ```
 kubectl cluster-info --context ortelius-in-a-box
 ```
-#### Logs
+### Logs
 ```
 kind export logs -n ortelius-in-a-box
 ```
-#### Load Ortelius image onto the container nodes
-```
-kind load docker-image --name ortelius-in-a-box --nodes ortelius-in-a-box-control-plane,ortelius-in-a-box-worker,ortelius-in-a-box-worker2 quay.io/ortelius/ortelius
-```
-#### Load Keptn image onto the container nodes
+### Load an image onto the container nodes
 ```
 kind load docker-image --name ortelius-in-a-box --nodes ortelius-in-a-box-control-plane,ortelius-in-a-box-worker ghcr.io/ortelius/keptn-ortelius-service:0.0.2-dev
 ```
 
-#### [Kubernetes.io](https://kubernetes.io/)
+### [Kubernetes.io](https://kubernetes.io/)
 - K8s is a production grade container orchestrater
 - [Terms & Conditions](https://www.linuxfoundation.org/legal/terms#:~:text=Users%20are%20solely%20responsible%20for,arising%20out%20of%20User%20Content.)
 - [Creative Commons](https://creativecommons.org/licenses/by/3.0/)
 
-#### Kubectl
+### Kubectl
 - Install `kubectl` the command line tool [here](https://kubernetes.io/docs/tasks/tools/)
 - Use the `kubectl` cheat sheet [here](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 - Use [Devdocs](https://devdocs.io/) and the official documentation [here](https://kubernetes.io/docs/home/)
 - Add the `aliases` & `auto complete` which are in the `cheat sheet`
 
-#### Helpful tools
-#### Kubectx for switching context
+## Helpful tools
+### Kubectx for switching context
 ```
 kubectx kind-ortelius-in-a-box
 ```
-#### Kubens for switching namespaces
+### Kubens for switching namespaces
 ```
 kubens argocd
 ```
-#### Combine Kubens & Kubectx with Fuzzy Finder
+### Combine Kubens & Kubectx with Fuzzy Finder
 - `kubectx` is a tool to switch between contexts (clusters) on kubectl faster.
 - `kubens` is a tool to switch between Kubernetes namespaces (and configure them for kubectl) easily.
 - `fzf` is a general-purpose command-line fuzzy finder.
@@ -178,21 +174,24 @@ kubens argocd
 - Download `Fuzzy Finder` [here](https://github.com/junegunn/fzf)
 - Download `Kubens & Kubectx` [here](https://github.com/ahmetb/kubectx)
 
- ![kubectx with fuzzy finder!](images/k8s/kubens-kubectx-fuzzyfinder.jpg "kubectx with fuzzy finder")
-
-### Octant | Graphical representation of your K8s Clusters
+## Octant | Graphical representation of your K8s Clusters
 
 Octant is a tool for developers to understand how applications run on a Kubernetes cluster. It aims to be part of the developer's toolkit for gaining insight and approaching complexity found in Kubernetes. Octant offers a combination of introspective tooling, cluster navigation, and object management along with a plugin system to further extend its capabilities.
+
 - Download [here](https://github.com/vmware-tanzu/octant)
 - Documentation [here](https://octant.dev/docs/)
 - Supports dark mode
 - Plugins [here](https://github.com/topics/octant-plugin)
 
-#### Notable Plugins
+### Notable Plugins
 - [Helm](https://github.com/bloodorangeio/octant-helm)
 - [Policy Report](https://github.com/evalsocket/policyreport-octant-plugin)
 
-### Helm
+## Helm
+
+Helm helps you manage Kubernetes applications — Helm Charts help you define, install, and upgrade even the most complex Kubernetes application.
+Charts are easy to create, version, share, and publish — so start using Helm and stop the copy-and-paste.
+
 - Install Helm [here](https://helm.sh/)
 - Also known as the package manager for Kubernetes
 
