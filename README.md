@@ -18,12 +18,12 @@ time terraform apply
 - OSX Ventura
 - Benchmark time to deploy `7min`
 
-### [VSCode](https://code.visualstudio.com/) IDE
+## [VSCode](https://code.visualstudio.com/) IDE
 - Download `VSCode IDE` [here](https://code.visualstudio.com/download)
 - Security starts in the IDE
 - [Terms & Conditions](https://code.visualstudio.com/License/)
 
-#### Helpful Extensions
+### Helpful Extensions
 - Install `Snyk Security | Code & Open Source Dependencies` scanner [here](https://marketplace.visualstudio.com/items?itemName=snyk-security.snyk-vulnerability-scanner)
 - Install `Language Support for Java by Red Hat` [here](https://marketplace.visualstudio.com/items?itemName=redhat.java)
 - Install `Yaml` support [here](https://marketplace.visualstudio.com/items?itemName=redhat.java)
@@ -31,7 +31,11 @@ time terraform apply
 - Install `Change All End of Line Sequence` [here](https://marketplace.visualstudio.com/items?itemName=vs-publisher-1448185.keyoti-changeallendoflinesequence)
 - Install `ToDo Tree` [here](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
 
-### [Docker.com](https://www.docker.com/)
+## [Docker.com](https://www.docker.com/)
+
+Docker is software that provides containers, which allows teams to emulate development environments.
+Docker began as an internal project, initially developed by dotCloud engineers.
+
 - [Account setup](https://hub.docker.com/signup)
 - [Install](https://docs.docker.com/get-docker/)
 - Get familiar with the basic commands
