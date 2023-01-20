@@ -2,6 +2,7 @@
 
 ## What will you need?
 - Docker
+- Kind
 - Terraform
 
 ## [Docker.com](https://www.docker.com/)
