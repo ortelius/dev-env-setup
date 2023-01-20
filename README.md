@@ -1,7 +1,6 @@
 ## Ortelius in box local development environment
 ### [Ortelius Issue 535](https://github.com/ortelius/ortelius/issues/535)
 
-
 ### Deployment Benchmark Times for just the Kind Cluster & Ortelius
 ```
 time terraform apply
@@ -104,6 +103,10 @@ docker image rm quay.io/ortelius/ortelius
 
 ### Helpful tool
 #### Container Runtime Interface (CRI) CLI
+
+crictl provides a CLI for CRI-compatible container runtimes. This allows the CRI runtime developers to debug their runtime without needing to set up Kubernetes components.
+crictl is currently in Beta and still under quick iterations. It is hosted at the cri-tools repository. We encourage the CRI developers to report bugs or help extend the coverage by adding more functionalities.
+
 - crictl is available [here](https://github.com/kubernetes-sigs/cri-tools/blob/master/docs/crictl.md)
 #### using `wget`
 ```
