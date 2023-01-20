@@ -96,20 +96,6 @@ resource "null_resource" "wait_for_ingress_nginx" {
   depends_on = [helm_release.ingress_nginx]
 }
 
-# purelb loadbalancer https://gitlab.com/api/v4/projects/20400619/packages/helm/stable
-# https://purelb.gitlab.io/docs/
-resource "helm_release" "purelb" {
-  name             = "purelb"
-  repository       = "https://gitlab.com/api/v4/projects/20400619/packages/helm/stable"
-  chart            = "purelb"
-  namespace        = var.purelb_namespace
-  create_namespace = true
-  depends_on       = [kind_cluster.ortelius]
-  #timeout          = 600
-
-  #values = [file("purelb/values.yaml")]
-}
-
 # ortelius https://artifacthub.io/packages/helm/ortelius/ortelius
 # postgresql https://artifacthub.io/packages/helm/bitnami/postgresql-ha
 resource "helm_release" "ortelius" {
