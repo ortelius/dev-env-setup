@@ -66,7 +66,7 @@ resource "helm_release" "ingress_nginx" {
   depends_on       = [kind_cluster.ortelius]
   timeout          = 600
 
-  values = [file("ingress-nginx/values.yaml")]
+  #values = [file("ingress-nginx/values.yaml")]
 }
 
 resource "null_resource" "wait_for_ingress_nginx" {
@@ -92,7 +92,7 @@ resource "helm_release" "ortelius" {
   name             = "ortelius"
   chart            = "ortelius"
   repository       = "https://ortelius.github.io/ortelius-charts/"
-  namespace        = "ortelius"
+  namespace        = "var.ortelius_namespace"
   create_namespace = true
   depends_on       = [kind_cluster.ortelius]
   timeout          = 600

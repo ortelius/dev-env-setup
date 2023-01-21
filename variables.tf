@@ -16,8 +16,8 @@ variable "ingress_nginx_namespace" {
   default     = "ingress-nginx"
 }
 
-variable "purelb_namespace" {
+variable "ortelius_namespace" {
   type        = string
-  description = "The PureLB loadbalancer namespace"
-  default     = "purelb"
+  description = "The Ortelius namespace"
+  default     = "ortelius"
 }
