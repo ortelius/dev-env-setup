@@ -57,7 +57,7 @@ docker image list | grep <add your desired filter>
 ```
 #### Copy
 ```
-docker cp ~/.docker/config.json ortelius-in-a-box-control-plane:/var/lib/kubelet/config.json
+docker cp ~/.docker/config.json ortelius-control-plane:/var/lib/kubelet/config.json
 ```
 #### Exec
 ```
