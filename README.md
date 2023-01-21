@@ -19,7 +19,7 @@ kubectl config use-context kind-ortelius
 ```
 kubectl config -h
 ```
-- Namespace `ortelius`
+### Namespace `ortelius`
 - List all namespaces
 ```
 kubectl get namespace -A
