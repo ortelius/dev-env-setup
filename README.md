@@ -20,7 +20,7 @@
       - [Get Nodes](#get-nodes)
     - [Kubeconfig](#kubeconfig)
     - [Get Clusters](#get-clusters)
-      - [Logs](#logs)
+      - [Logs | Great for debugging \& troubleshooting](#logs--great-for-debugging--troubleshooting)
   - [Container Runtime Interface (CRI) CLI](#container-runtime-interface-cri-cli)
     - [GitHub](#github-2)
       - [using `wget`](#using-wget)
@@ -43,7 +43,7 @@
     - [Steps to get going](#steps-to-get-going)
     - [Time the deployment](#time-the-deployment)
     - [No timing the deployment](#no-timing-the-deployment)
-    - [Logs](#logs-1)
+    - [Logs](#logs)
   - [Ingress Nginx Controller](#ingress-nginx-controller)
     - [GitHub](#github-6)
 
@@ -148,7 +148,7 @@ kind get kubeconfig -n ortelius
 ```
 kind get clusters
 ```
-#### Logs
+#### Logs | Great for debugging & troubleshooting
 ```
 kind export logs -n ortelius
 ```
