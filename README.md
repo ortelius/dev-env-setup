@@ -6,10 +6,21 @@
 - Terraform
 
 ## K8s Ortelius cluster details
-- Namespace `ortelius`
+### Context `kind-ortelius`
+- Switch to the Ortelius context on Kind
+```
+kubectl config set-context --current --namespace
+```
+Namespace `ortelius`
+```
+kubectl get namespace -A
+```
 ### Nodes
 - Control Plane `ortelius-control-plane`
 - Worker `ortelius-worker`
+```
+kubectl get nodes -A
+```
 
 ## [Docker.com](https://www.docker.com/)
 ### [GitHub](https://github.com/docker)
