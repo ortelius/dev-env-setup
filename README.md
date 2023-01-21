@@ -149,11 +149,11 @@ Kubernetes, also known as K8s, is an open-source system for automating deploymen
 - Download `Kubens & Kubectx` [here](https://github.com/ahmetb/kubectx)
 #### Kubectx for switching context
 ```
-kubectx kind-ortelius-in-a-box
+kubectx kind-ortelius
 ```
 #### Kubens for switching namespaces
 ```
-kubens argocd
+kubens ortelius
 ```
 
 ## Octant | GUI of your K8s Clusters
