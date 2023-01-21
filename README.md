@@ -239,7 +239,7 @@ Terraform is a tool for building, changing, and versioning infrastructure safely
 - OSX Ventura
 - Benchmark time to deploy `7min`
 ### Steps to get going
-- Navigate to `/terraform`
+- Navigate to `/`
 - Run the following
 ```
 terraform init
