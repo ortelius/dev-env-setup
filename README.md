@@ -88,6 +88,18 @@ kind is a tool for running local Kubernetes clusters using Docker container "nod
 - kind is a `CNCF certified conformant Kubernetes installer`
 
 ### Helpful commands
+#### Get Nodes
+```
+kind get nodes ortelius
+```
+### Kubeconfig
+```
+kind get kubeconfig -n ortelius
+```
+### Get Clusters
+```
+kind get clusters
+```
 #### Logs
 ```
 kind export logs -n ortelius
