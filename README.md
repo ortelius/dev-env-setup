@@ -53,9 +53,6 @@ docker container ls
 docker pull quay.io/ortelius/ortelius:latest
 ```
 ```
-docker pull ghcr.io/ortelius/keptn-ortelius-service:0.0.2-dev
-```
-```
 docker image list | grep <add your desired filter>
 ```
 #### Copy
@@ -64,7 +61,10 @@ docker cp ~/.docker/config.json ortelius-in-a-box-control-plane:/var/lib/kubelet
 ```
 #### Exec
 ```
-docker exec -it ortelius-in-a-box-worker bash
+docker exec -it ortelius-control-plane bash
+```
+```
+docker exec -it ortelius-worker bash
 ```
 #### Delete images
 ```
@@ -88,21 +88,9 @@ kind is a tool for running local Kubernetes clusters using Docker container "nod
 - kind is a `CNCF certified conformant Kubernetes installer`
 
 ### Helpful commands
-#### Get the list of nodes
-```
-kind get nodes -n ortelius-in-a-box
-```
-#### Cluster info
-```
-kubectl cluster-info --context ortelius-in-a-box
-```
 #### Logs
 ```
-kind export logs -n ortelius-in-a-box
-```
-#### Load an image onto the container nodes
-```
-kind load docker-image --name ortelius-in-a-box --nodes ortelius-in-a-box-control-plane,ortelius-in-a-box-worker ghcr.io/ortelius/keptn-ortelius-service:0.0.2-dev
+kind export logs -n ortelius
 ```
 
 ## [Container Runtime Interface (CRI) CLI](https://kubernetes.io/docs/tasks/debug/debug-cluster/crictl/)
