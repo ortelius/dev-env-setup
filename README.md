@@ -37,6 +37,7 @@
     - [Notable Plugins](#notable-plugins)
   - [Terraform](#terraform)
     - [GitHub](#github-5)
+      - [Terraform README](#terraform-readme)
     - [Deployment Benchmark Times for just the Kind Cluster \& Ortelius deployment](#deployment-benchmark-times-for-just-the-kind-cluster--ortelius-deployment)
       - [Dell G15 5510](#dell-g15-5510)
       - [Mac M1](#mac-m1)
@@ -221,9 +222,9 @@ Octant is a tool for developers to understand how applications run on a Kubernet
 
 Terraform is a tool for building, changing, and versioning infrastructure safely and efficiently. Terraform can manage existing and popular service providers as well as custom in-house solutions.
 
+#### [Terraform README](TF-README.md)
 - Install Terraform [here](https://www.terraform.io/downloads)
 - Documentation is [here](https://www.terraform.io/docs)
-- Terraform README is [here](TF-README.md)
 - [Terms & Conditions](https://registry.terraform.io/terms)
 ### Deployment Benchmark Times for just the Kind Cluster & Ortelius deployment
 #### Dell G15 5510
