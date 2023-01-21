@@ -224,7 +224,7 @@ Terraform is a tool for building, changing, and versioning infrastructure safely
 
 - Install Terraform [here](https://www.terraform.io/downloads)
 - Documentation is [here](https://www.terraform.io/docs)
-- Terraform READM is [here](TF-README.md)
+- Terraform README is [here](TF-README.md)
 - [Terms & Conditions](https://registry.terraform.io/terms)
 ### Deployment Benchmark Times for just the Kind Cluster & Ortelius deployment
 #### Dell G15 5510
