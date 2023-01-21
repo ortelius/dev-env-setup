@@ -3,6 +3,7 @@
 ## What you need?
 - Docker
 - Kind
+- Kubectl
 - Terraform
 
 ## K8s Ortelius cluster details
