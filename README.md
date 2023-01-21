@@ -42,7 +42,6 @@
       - [Mac M1](#mac-m1)
     - [Steps to get going](#steps-to-get-going)
     - [Time the deployment](#time-the-deployment)
-    - [No timing the deployment](#no-timing-the-deployment)
     - [Logs](#logs)
   - [Ingress Nginx Controller](#ingress-nginx-controller)
     - [GitHub](#github-6)
@@ -252,8 +251,7 @@ terraform plan
 ```
 time terraform apply --auto-approve
 ```
-`OR`
-### No timing the deployment
+`or not`
 ```
 terraform apply --auto-approve
 ```
