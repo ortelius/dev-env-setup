@@ -7,11 +7,20 @@
 
 ## K8s Ortelius cluster details
 ### Context `kind-ortelius`
-- Switch to the Ortelius context on Kind
+- List all the contexts
 ```
-kubectl config set-context --current --namespace
+kubectl config get context
 ```
-Namespace `ortelius`
+- Switch to the kind-ortelius context
+```
+kubectl config use-context kind-ortelius
+```
+- Help with contexts
+```
+kubectl config -h
+```
+- Namespace `ortelius`
+- List all namespaces
 ```
 kubectl get namespace -A
 ```
