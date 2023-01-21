@@ -9,7 +9,7 @@
     - [GitHub](#github)
     - [Helpful commands](#helpful-commands)
       - [List images](#list-images)
-      - [Pull the current images to the local machine at the time of writing](#pull-the-current-images-to-the-local-machine-at-the-time-of-writing)
+      - [Pull images](#pull-images)
       - [Copy](#copy)
       - [Exec](#exec)
       - [Delete images](#delete-images)
@@ -96,7 +96,7 @@ Docker began as an internal project, initially developed by dotCloud engineers.
 ```
 docker container ls
 ```
-#### Pull the current images to the local machine at the time of writing
+#### Pull images
 ```
 docker pull quay.io/ortelius/ortelius:latest
 ```
