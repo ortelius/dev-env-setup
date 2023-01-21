@@ -1,6 +1,6 @@
 variable "kind_cluster_name" {
   type        = string
-  description = "The name of the cluster."
+  description = "The name of the cluster"
   default     = "ortelius"
 }
 

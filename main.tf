@@ -92,7 +92,7 @@ resource "helm_release" "ortelius" {
   name             = "ortelius"
   chart            = "ortelius"
   repository       = "https://ortelius.github.io/ortelius-charts/"
-  namespace        = "var.ortelius_namespace"
+  namespace        = var.ortelius_namespace
   create_namespace = true
   depends_on       = [kind_cluster.ortelius]
   timeout          = 600
