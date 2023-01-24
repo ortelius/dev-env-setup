@@ -119,7 +119,7 @@ docker exec -it ortelius-worker bash
 docker image rm quay.io/ortelius/ortelius
 ```
 
-## [Kind.sigs.k8s.io](https://kind.sigs.k8s.io/)Kubernetes in Docker
+## [Kind.sigs.k8s.io](https://kind.sigs.k8s.io/) Kubernetes in Docker
 ### [GitHub](https://github.com/kubernetes-sigs/kind)
 kind is a tool for running local Kubernetes clusters using Docker container "nodes". kind was primarily designed for testing Kubernetes itself, but may be used for local development or CI.
 - Install [here](https://kind.sigs.k8s.io/docs/user/quick-start/#installation)
