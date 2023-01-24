@@ -191,8 +191,7 @@ Kubernetes, also known as K8s, is an open-source system for automating deploymen
 ### Combine Kubens & Kubectx with Fuzzy Finder
 - `kubectx` is a tool to switch between contexts (clusters) on kubectl faster.
 - `kubens` is a tool to switch between Kubernetes namespaces (and configure them for kubectl) easily.
-- `fzf` is a general-purpose command-line fuzzy finder.
-- `fzf` is an interactive Unix filter for command-line that can be used with any list; files, command history, processes, hostnames, bookmarks, git commits, etc.
+- `fzf` is a general-purpose command-line fuzzy finder and is an interactive Unix filter for command-line that can be used with any list; files, command history, processes, hostnames, bookmarks, git commits, etc.
 - Download `Kubens & Kubectx` [here](https://github.com/ahmetb/kubectx)
 - Download `Fuzzy Finder` [here](https://github.com/junegunn/fzf)
 #### Kubectx for switching context
