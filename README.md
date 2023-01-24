@@ -13,7 +13,7 @@
       - [Copy](#copy)
       - [Exec](#exec)
       - [Delete images](#delete-images)
-  - [Kind.sigs.k8s.io](#kindsigsk8sio)
+  - [Kind.sigs.k8s.ioKubernetes in Docker](#kindsigsk8siokubernetes-in-docker)
     - [GitHub](#github-1)
     - [Why kind?](#why-kind)
     - [Helpful commands](#helpful-commands-1)
@@ -119,7 +119,7 @@ docker exec -it ortelius-worker bash
 docker image rm quay.io/ortelius/ortelius
 ```
 
-## [Kind.sigs.k8s.io](https://kind.sigs.k8s.io/)
+## [Kind.sigs.k8s.io](https://kind.sigs.k8s.io/)Kubernetes in Docker
 ### [GitHub](https://github.com/kubernetes-sigs/kind)
 kind is a tool for running local Kubernetes clusters using Docker container "nodes". kind was primarily designed for testing Kubernetes itself, but may be used for local development or CI.
 - Install [here](https://kind.sigs.k8s.io/docs/user/quick-start/#installation)
