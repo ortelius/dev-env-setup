@@ -32,7 +32,7 @@
     - [Combine Kubens \& Kubectx with Fuzzy Finder](#combine-kubens--kubectx-with-fuzzy-finder)
       - [Kubectx for switching context](#kubectx-for-switching-context)
       - [Kubens for switching namespaces](#kubens-for-switching-namespaces)
-  - [Octant | GUI of your K8s Clusters](#octant--gui-of-your-k8s-clusters)
+  - [Octant](#octant)
     - [GitHub](#github-4)
     - [Notable Plugins](#notable-plugins)
   - [Terraform](#terraform)
@@ -203,7 +203,7 @@ kubectx kind-ortelius
 kubens ortelius
 ```
 
-## Octant | GUI of your K8s Clusters
+## Octant
 ### [GitHub](https://github.com/vmware-archive/octant)
 
 Octant is a tool for developers to understand how applications run on a Kubernetes cluster. It aims to be part of the developer's toolkit for gaining insight and approaching complexity found in Kubernetes. Octant offers a combination of introspective tooling, cluster navigation, and object management along with a plugin system to further extend its capabilities.
