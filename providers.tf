@@ -4,10 +4,6 @@ terraform {
       source  = "tehcyx/kind"
       version = "~>0.0.15"
     }
-    aws = {
-      source  = "hashicorp/aws"
-      version = "4.52.0"
-    }
 
     kubectl = {
       source  = "gavinbunney/kubectl"
@@ -25,10 +21,6 @@ terraform {
     }
   }
   required_version = "~>1.3.5"
-}
-
-provider "aws" {
-  # Configuration options
 }
 
 provider "null" {
