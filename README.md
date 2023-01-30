@@ -1,5 +1,5 @@
-# [Ortelius](https://ortelius.io/) local development environment
-- [Ortelius local development environment](#ortelius-local-development-environment)
+# [Ortelius](https://ortelius.io/) local environment
+- [Ortelius local environment](#ortelius-local-environment)
   - [What you need?](#what-you-need)
   - [K8s Ortelius cluster details](#k8s-ortelius-cluster-details)
     - [Context `kind-ortelius`](#context-kind-ortelius)
@@ -13,7 +13,7 @@
       - [Copy](#copy)
       - [Exec](#exec)
       - [Delete images](#delete-images)
-  - [Kind Kubernetes in Docker](#kind-kubernetes-in-docker)
+  - [Kind](#kind-kubernetes-in-docker)
     - [GitHub](#github-1)
     - [Why kind?](#why-kind)
     - [Helpful commands](#helpful-commands-1)
@@ -119,7 +119,7 @@ docker exec -it ortelius-worker bash
 docker image rm quay.io/ortelius/ortelius
 ```
 
-## [Kind](https://kind.sigs.k8s.io/) Kubernetes in Docker
+## [Kind](https://kind.sigs.k8s.io/)
 ### [GitHub](https://github.com/kubernetes-sigs/kind)
 kind is a tool for running local Kubernetes clusters using Docker container "nodes". kind was primarily designed for testing Kubernetes itself, but may be used for local development or CI.
 - Install [here](https://kind.sigs.k8s.io/docs/user/quick-start/#installation)
@@ -255,6 +255,11 @@ time terraform apply --auto-approve
 ```
 terraform apply --auto-approve
 ```
+- To destroy the environment
+```
+terraform destroy --auto-approve
+```
+
 ### Logs
 In total, there 5 log levels which can be used for debugging purposes:
 - `TRACE` one of the most descriptive log levels, if you set the log level to *TRACE,* Terraform will write every action and step into the log file.
