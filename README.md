@@ -213,6 +213,7 @@ Octant is a tool for developers to understand how applications run on a Kubernet
 - Documentation [here](https://octant.dev/docs/)
 - Supports dark mode
 - Plugins [here](https://github.com/topics/octant-plugin)
+- [Licence](https://github.com/vmware-archive/octant/blob/master/LICENSE)
 ### Notable Plugins
 - [Helm](https://github.com/bloodorangeio/octant-helm)
 - [Policy Report](https://github.com/evalsocket/policyreport-octant-plugin)
