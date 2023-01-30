@@ -18,6 +18,7 @@
 |------|---------|
 | <a name="provider_helm"></a> [helm](#provider\_helm) | 2.7.1 |
 | <a name="provider_kind"></a> [kind](#provider\_kind) | 0.0.16 |
+| <a name="provider_null"></a> [null](#provider\_null) | 3.2.1 |
 
 ## Modules
 
@@ -27,8 +28,10 @@ No modules.
 
 | Name | Type |
 |------|------|
+| [helm_release.ingress_nginx](https://registry.terraform.io/providers/hashicorp/helm/latest/docs/resources/release) | resource |
 | [helm_release.ortelius](https://registry.terraform.io/providers/hashicorp/helm/latest/docs/resources/release) | resource |
 | [kind_cluster.ortelius](https://registry.terraform.io/providers/tehcyx/kind/latest/docs/resources/cluster) | resource |
+| [null_resource.wait_for_ingress_nginx](https://registry.terraform.io/providers/hashicorp/null/latest/docs/resources/resource) | resource |
 
 ## Inputs
 
