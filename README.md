@@ -13,7 +13,7 @@
       - [Copy](#copy)
       - [Exec](#exec)
       - [Delete images](#delete-images)
-  - [Kind](#kind-kubernetes-in-docker)
+  - [Kind](#kind)
     - [GitHub](#github-1)
     - [Why kind?](#why-kind)
     - [Helpful commands](#helpful-commands-1)
@@ -250,7 +250,7 @@ terraform plan
 ```
 time terraform apply --auto-approve
 ```
-`or not`
+or not
 ```
 terraform apply --auto-approve
 ```
