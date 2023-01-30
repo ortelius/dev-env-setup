@@ -256,6 +256,11 @@ time terraform apply --auto-approve
 ```
 terraform apply --auto-approve
 ```
+- To destroy the environment
+```
+terraform destroy --auto-approve
+```
+
 ### Logs
 In total, there 5 log levels which can be used for debugging purposes:
 - `TRACE` one of the most descriptive log levels, if you set the log level to *TRACE,* Terraform will write every action and step into the log file.
