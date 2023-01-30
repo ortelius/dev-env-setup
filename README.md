@@ -13,7 +13,7 @@
       - [Copy](#copy)
       - [Exec](#exec)
       - [Delete images](#delete-images)
-  - [Kind](#kind)
+  - [Kind](#kind-kubernetes-in-docker)
     - [GitHub](#github-1)
     - [Why kind?](#why-kind)
     - [Helpful commands](#helpful-commands-1)
@@ -32,7 +32,7 @@
     - [Combine Kubens \& Kubectx with Fuzzy Finder](#combine-kubens--kubectx-with-fuzzy-finder)
       - [Kubectx for switching context](#kubectx-for-switching-context)
       - [Kubens for switching namespaces](#kubens-for-switching-namespaces)
-  - [Octant | GUI of your K8s Clusters](#octant--gui-of-your-k8s-clusters)
+  - [Octant](#octant)
     - [GitHub](#github-4)
     - [Notable Plugins](#notable-plugins)
   - [Terraform](#terraform)
@@ -191,8 +191,7 @@ Kubernetes, also known as K8s, is an open-source system for automating deploymen
 ### Combine Kubens & Kubectx with Fuzzy Finder
 - `kubectx` is a tool to switch between contexts (clusters) on kubectl faster.
 - `kubens` is a tool to switch between Kubernetes namespaces (and configure them for kubectl) easily.
-- `fzf` is a general-purpose command-line fuzzy finder.
-- `fzf` is an interactive Unix filter for command-line that can be used with any list; files, command history, processes, hostnames, bookmarks, git commits, etc.
+- `fzf` is a general-purpose command-line fuzzy finder and an interactive Unix filter for command-line that can be used with any list; files, command history, processes, hostnames, bookmarks, git commits, etc.
 - Download `Kubens & Kubectx` [here](https://github.com/ahmetb/kubectx)
 - Download `Fuzzy Finder` [here](https://github.com/junegunn/fzf)
 #### Kubectx for switching context
@@ -204,7 +203,7 @@ kubectx kind-ortelius
 kubens ortelius
 ```
 
-## Octant | GUI of your K8s Clusters
+## Octant
 ### [GitHub](https://github.com/vmware-archive/octant)
 
 Octant is a tool for developers to understand how applications run on a Kubernetes cluster. It aims to be part of the developer's toolkit for gaining insight and approaching complexity found in Kubernetes. Octant offers a combination of introspective tooling, cluster navigation, and object management along with a plugin system to further extend its capabilities.
