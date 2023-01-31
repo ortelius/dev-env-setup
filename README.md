@@ -44,6 +44,9 @@
       - [AWS CLI Local](#aws-cli-local)
       - [Configurations](#configurations)
       - [AWS Copilot](#aws-copilot)
+      - [AWS Lamba Golang Runtime](#aws-lamba-golang-runtime)
+      - [LocalStack Java Utils](#localstack-java-utils)
+        - [Prerequisites](#prerequisites)
       - [LocalStack Container](#localstack-container)
       - [LocalStack S3 Endpoint](#localstack-s3-endpoint)
 
@@ -283,6 +286,22 @@ StreamNames: []
 #### [AWS Copilot](https://github.com/localstack/copilot-cli-local)
 - This repo provides copilotlocal, a command-line interface (CLI) with the same features as the original copilot CLI, but using the local API endpoints provided by LocalStack.
 - The patch applied in this repo essentially redirects any AWS API calls to the local endpoints under [http://localhost:53282](http://localhost:53282.
+
+#### [AWS Lamba Golang Runtime](https://github.com/localstack/awslamba-go-runtime)
+- Custom Golang runtime for the execution of AWS Lambdas used in LocalStack.
+- This is a modification of the custom runtime of lambdaci (Thank you guys!)
+- This custom runtime avoids using the /var folder as main place where to locate other files.
+- It contains the source code of the docker-lambda mockserver to build the binary.
+
+#### [LocalStack Java Utils](https://github.com/localstack/localstack-java-utils)
+
+Java utilities and JUnit integration for LocalStack.
+
+##### Prerequisites
+- Java
+- Maven
+- Docker
+- LocalStack
 
 #### LocalStack Container
 ![Localstack on Kind!](images/localstack/01-localstack-kind-pod.jpg)
