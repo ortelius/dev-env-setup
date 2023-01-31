@@ -42,6 +42,7 @@
   - [Localstack](#localstack)
     - [GitHub LocalStack](#github-localstack)
       - [AWS CLI Local](#aws-cli-local)
+      - [AWS Copilot](#aws-copilot)
       - [LocalStack Container](#localstack-container)
       - [LocalStack S3 Endpoint](#localstack-s3-endpoint)
 
@@ -268,6 +269,9 @@ LocalStack is a fully functional local AWS cloud stack that enables developers t
 aws --endpoint-url=http://localhost:53282 kinesis list-streams
 StreamNames: []
 ```
+#### [AWS Copilot](https://github.com/localstack/copilot-cli-local)
+- This repo provides copilotlocal, a command-line interface (CLI) with the same features as the original copilot CLI, but using the local API endpoints provided by LocalStack.
+- The patch applied in this repo essentially redirects any AWS API calls to the local endpoints under [http://localhost:53282](http://localhost:53282.
 
 #### LocalStack Container
 ![Localstack on Kind!](images/localstack/01-localstack-kind-pod.jpg)
