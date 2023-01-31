@@ -41,6 +41,7 @@
       - [Octant Port Forward to the S3 Endpoint](#octant-port-forward-to-the-s3-endpoint)
   - [Localstack](#localstack)
     - [GitHub LocalStack](#github-localstack)
+      - [AWS CLI Local](#aws-cli-local)
       - [LocalStack Container](#localstack-container)
       - [LocalStack S3 Endpoint](#localstack-s3-endpoint)
 
@@ -260,6 +261,9 @@ LocalStack is a fully functional local AWS cloud stack that enables developers t
 - LocalStack is installed using Helm Charts via Terraform [here](https://github.com/localstack/helm-charts)
 - [LocalStack Quickstart](https://docs.localstack.cloud/getting-started/quickstart/)
 - [Localstack Serverless Plugin](https://github.com/localstack/serverless-localstack)
+
+#### [AWS CLI Local](https://github.com/localstack/awscli-local)
+- This package provides the awslocal command, which is a thin wrapper around the aws command line interface for use with LocalStack.
 
 #### LocalStack Container
 ![Localstack on Kind!](images/localstack/01-localstack-kind-pod.jpg)
