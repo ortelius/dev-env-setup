@@ -24,6 +24,9 @@
       - [Logs | Great for debugging \& troubleshooting](#logs--great-for-debugging--troubleshooting)
   - [Container Runtime Interface (CRI) CLI](#container-runtime-interface-cri-cli)
     - [GitHub Crictl](#github-crictl)
+      - [List containers and check the container is in a created state](#list-containers-and-check-the-container-is-in-a-created-state)
+      - [Start container](#start-container)
+      - [Exec a command in container](#exec-a-command-in-container)
   - [Kubernetes.io](#kubernetesio)
     - [GitHub Kubernetes](#github-kubernetes)
       - [Kubectl](#kubectl)
@@ -175,6 +178,27 @@ kind export logs -n ortelius
 Crictl is a command line tool for interacting with a containerd-based container runtime. It provides a simple, human-readable interface for performing common container operations such as pulling images, starting and stopping containers, and viewing logs. Crictl also supports advanced features such as executing commands inside containers and managing network configurations. It is designed to be a fast and flexible alternative to other container runtime management tools, and can be used in production or development environments. Crictl is a component of the containerd project, which is a lightweight, high-performance runtime for managing containers and is used by many popular container orchestration platforms such as Kubernetes.
 
 - Download crictl [here](https://github.com/kubernetes-sigs/cri-tools/blob/master/docs/crictl.md)
+
+#### List containers and check the container is in a created state
+```
+$ crictl ps -a
+CONTAINER ID        IMAGE               CREATED             STATE               NAME                ATTEMPT
+3e025dd50a72d       busybox             32 seconds ago      Created             busybox             0
+```
+#### Start container
+```
+$ crictl start 3e025dd50a72d956c4f14881fbb5b1080c9275674e95fb67f965f6478a957d60
+3e025dd50a72d956c4f14881fbb5b1080c9275674e95fb67f965f6478a957d60
+
+$ crictl ps
+CONTAINER ID        IMAGE               CREATED              STATE               NAME                ATTEMPT
+3e025dd50a72d       busybox             About a minute ago   Running             busybox             0
+```
+#### Exec a command in container
+```
+crictl exec -i -t 3e025dd50a72d956c4f14881fbb5b1080c9275674e95fb67f965f6478a957d60 ls
+bin   dev   etc   home  proc  root  sys   tmp   usr   var
+```
 
 ## [Kubernetes.io](https://kubernetes.io/)
 
