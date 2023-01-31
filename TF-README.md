@@ -29,8 +29,9 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [aws_s3_bucket.ortelius-bucket](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket) | resource |
+| [aws_s3_bucket.ortelius_bucket](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket) | resource |
 | [helm_release.ingress_nginx](https://registry.terraform.io/providers/hashicorp/helm/latest/docs/resources/release) | resource |
+| [helm_release.localstack](https://registry.terraform.io/providers/hashicorp/helm/latest/docs/resources/release) | resource |
 | [helm_release.ortelius](https://registry.terraform.io/providers/hashicorp/helm/latest/docs/resources/release) | resource |
 | [kind_cluster.ortelius](https://registry.terraform.io/providers/tehcyx/kind/latest/docs/resources/cluster) | resource |
 | [null_resource.wait_for_ingress_nginx](https://registry.terraform.io/providers/hashicorp/null/latest/docs/resources/resource) | resource |

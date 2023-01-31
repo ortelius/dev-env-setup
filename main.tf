@@ -34,6 +34,16 @@ resource "kind_cluster" "ortelius" {
         host_port      = 31566
         listen_address = "0.0.0.0"
       }
+      extra_port_mappings {
+        container_port = 31406
+        host_port      = 31406
+        listen_address = "0.0.0.0"
+      }
+      extra_port_mappings {
+        container_port = 31804
+        host_port      = 31804
+        listen_address = "0.0.0.0"
+      }
     }
 
     node {
@@ -82,6 +92,18 @@ resource "helm_release" "ortelius" {
   create_namespace = true
   depends_on       = [kind_cluster.ortelius]
   timeout          = 600
+}
+
+# localstack https://docs.localstack.cloud/overview/
+# localstack helm charts https://github.com/localstack/helm-charts
+resource "helm_release" "localstack" {
+  name             = "localstack"
+  chart            = "localstack"
+  repository       = "https://helm.localstack.cloud"
+  namespace        = var.localstack_namespace
+  create_namespace = true
+  depends_on       = [kind_cluster.if06]
+  #timeout          = 600
 }
 
 resource "aws_s3_bucket" "ortelius_bucket" {
