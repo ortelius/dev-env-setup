@@ -102,7 +102,7 @@ resource "helm_release" "localstack" {
   repository       = "https://helm.localstack.cloud"
   namespace        = var.localstack_namespace
   create_namespace = true
-  depends_on       = [kind_cluster.if06]
+  depends_on       = [kind_cluster.ortelius]
   #timeout          = 600
 }
 
