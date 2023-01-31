@@ -26,7 +26,7 @@
     - [GitHub Crictl](#github-crictl)
       - [List containers and check the container is in a created state](#list-containers-and-check-the-container-is-in-a-created-state)
       - [Start container](#start-container)
-      - [Exec a command in container](#exec-a-command-in-container)
+      - [Exec a command in a container](#exec-a-command-in-a-container)
   - [Kubernetes.io](#kubernetesio)
     - [GitHub Kubernetes](#github-kubernetes)
       - [Kubectl](#kubectl)
@@ -199,7 +199,7 @@ $ crictl ps
 CONTAINER ID        IMAGE               CREATED              STATE               NAME                ATTEMPT
 3e025dd50a72d       busybox             About a minute ago   Running             busybox             0
 ```
-#### Exec a command in container
+#### Exec a command in a container
 ```
 crictl exec -i -t 3e025dd50a72d956c4f14881fbb5b1080c9275674e95fb67f965f6478a957d60 ls
 bin   dev   etc   home  proc  root  sys   tmp   usr   var
