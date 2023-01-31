@@ -38,7 +38,7 @@
   - [Octant](#octant)
     - [GitHub Octant](#github-octant)
       - [Notable Plugins](#notable-plugins)
-      - [Octant Port Forward to the S3 Endpoint](#octant-port-forward-to-the-s3-endpoint)
+      - [Octant Port Forward to an Endpoint](#octant-port-forward-to-an-endpoint)
   - [Localstack](#localstack)
     - [GitHub LocalStack](#github-localstack)
       - [AWS CLI Local](#aws-cli-local)
@@ -255,7 +255,7 @@ Octant is a web-based graphical user interface (GUI) for exploring and analyzing
 - [Helm](https://github.com/bloodorangeio/octant-helm)
 - [Policy Report](https://github.com/evalsocket/policyreport-octant-plugin)
 
-#### Octant Port Forward to the S3 Endpoint
+#### Octant Port Forward to an Endpoint
 ![Octant Port Forward to S3!](images/octant/01-octant-port-forward-s3.jpg)
 
 ## [Localstack](https://docs.localstack.cloud/overview/)
