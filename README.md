@@ -12,6 +12,7 @@
       - [Terraform README](#terraform-readme)
       - [Lets get going](#lets-get-going)
       - [Time the deployment](#time-the-deployment)
+      - [Don't time the deployment](#dont-time-the-deployment)
       - [Destroy the deployment](#destroy-the-deployment)
       - [Logs](#logs)
   - [KinD](#kind)
@@ -109,6 +110,7 @@ terraform plan
 ```
 time terraform apply --auto-approve
 ```
+#### Don't time the deployment
 ```
 terraform apply --auto-approve
 ```
