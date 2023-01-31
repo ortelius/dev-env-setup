@@ -6,6 +6,7 @@
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~>1.3.5 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~>4.52.0 |
 | <a name="requirement_helm"></a> [helm](#requirement\_helm) | ~>2.7.1 |
 | <a name="requirement_kind"></a> [kind](#requirement\_kind) | ~>0.0.15 |
 | <a name="requirement_kubectl"></a> [kubectl](#requirement\_kubectl) | ~>1.14.0 |
@@ -15,6 +16,7 @@
 
 | Name | Version |
 |------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | ~>4.52.0 |
 | <a name="provider_helm"></a> [helm](#provider\_helm) | 2.7.1 |
 | <a name="provider_kind"></a> [kind](#provider\_kind) | 0.0.16 |
 | <a name="provider_null"></a> [null](#provider\_null) | 3.2.1 |
@@ -27,6 +29,7 @@ No modules.
 
 | Name | Type |
 |------|------|
+| [aws_s3_bucket.ortelius_bucket](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket) | resource |
 | [helm_release.ingress_nginx](https://registry.terraform.io/providers/hashicorp/helm/latest/docs/resources/release) | resource |
 | [helm_release.ortelius](https://registry.terraform.io/providers/hashicorp/helm/latest/docs/resources/release) | resource |
 | [kind_cluster.ortelius](https://registry.terraform.io/providers/tehcyx/kind/latest/docs/resources/cluster) | resource |

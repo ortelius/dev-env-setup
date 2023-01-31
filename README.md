@@ -56,6 +56,7 @@
 - Kubectl
 - Terraform
 - Localstack
+- Operating System agnostic
 
 ## Kind Ortelius Cluster Details
 ### Context `kind-ortelius`

@@ -28,31 +28,17 @@ resource "kind_cluster" "ortelius" {
         host_port      = 443
         listen_address = "0.0.0.0"
       }
+      # hardcoded port comes from the localstack helm chart values.yaml
+      extra_port_mappings {
+        container_port = 31566
+        host_port      = 31566
+        listen_address = "0.0.0.0"
+      }
     }
 
     node {
       role = "worker"
     }
-  }
-}
-
-provider "kubectl" {
-  apply_retry_count      = 15
-  host                   = kind_cluster.ortelius.endpoint
-  cluster_ca_certificate = kind_cluster.ortelius.cluster_ca_certificate
-  client_certificate     = kind_cluster.ortelius.client_certificate
-  client_key             = kind_cluster.ortelius.client_key
-  load_config_file       = false
-}
-
-provider "helm" {
-  debug = true
-  kubernetes {
-    host                   = kind_cluster.ortelius.endpoint
-    cluster_ca_certificate = kind_cluster.ortelius.cluster_ca_certificate
-    client_certificate     = kind_cluster.ortelius.client_certificate
-    client_key             = kind_cluster.ortelius.client_key
-    config_path            = pathexpand(var.kind_cluster_config_path)
   }
 }
 
@@ -96,4 +82,8 @@ resource "helm_release" "ortelius" {
   create_namespace = true
   depends_on       = [kind_cluster.ortelius]
   timeout          = 600
+}
+
+resource "aws_s3_bucket" "ortelius_bucket" {
+  bucket = "ortelius-bucket"
 }
