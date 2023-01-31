@@ -49,7 +49,6 @@
 - Kind
 - Kubectl
 - Terraform
-- Crossplane
 - Localstack
 
 ## Kind Ortelius Cluster Details
