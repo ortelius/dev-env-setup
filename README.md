@@ -1,5 +1,5 @@
-# [Ortelius](https://ortelius.io/) & [Localstack](https://docs.localstack.cloud/overview/)
-- [Ortelius \& Localstack](#ortelius--localstack)
+# [Ortelius](https://ortelius.io/) & [Localstack](https://docs.localstack.cloud/overview/) local deployment
+- [Ortelius \& Localstack local deployment](#ortelius--localstack-local-deployment)
   - [What you need?](#what-you-need)
   - [Kind Ortelius Cluster Details](#kind-ortelius-cluster-details)
     - [Context `kind-ortelius`](#context-kind-ortelius)
