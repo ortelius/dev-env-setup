@@ -1,7 +1,7 @@
 # [Ortelius](https://ortelius.io/) & [Localstack](https://docs.localstack.cloud/overview/)
 - [Ortelius \& Localstack](#ortelius--localstack)
   - [What you need?](#what-you-need)
-  - [Kind IF06 Cluster Details](#kind-if06-cluster-details)
+  - [Kind Ortelius Cluster Details](#kind-ortelius-cluster-details)
     - [Context `kind-ortelius`](#context-kind-ortelius)
     - [Namespaces `ortelius` `localstack`](#namespaces-ortelius-localstack)
     - [Nodes](#nodes)
@@ -48,7 +48,7 @@
 - Crossplane
 - Localstack
 
-## Kind IF06 Cluster Details
+## Kind Ortelius Cluster Details
 ### Context `kind-ortelius`
 - List all the contexts
 ```
