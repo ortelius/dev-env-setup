@@ -39,6 +39,7 @@
     - [GitHub Octant](#github-octant)
       - [Notable Plugins](#notable-plugins)
       - [Octant Port Forward to an Endpoint](#octant-port-forward-to-an-endpoint)
+  - [local.gd](#localgd)
   - [Localstack](#localstack)
     - [GitHub LocalStack](#github-localstack)
       - [AWS CLI Local](#aws-cli-local)
@@ -259,6 +260,13 @@ Octant is a web-based graphical user interface (GUI) for exploring and analyzing
 #### Octant Port Forward to an Endpoint
 ![Octant Port Forward to S3!](images/octant/01-octant-port-forward-s3.jpg)
 
+## [local.gd](https://local.gd/)
+- The easiest way to serve localhost.
+- DNS that always resolves to 127.0.0.1.
+- Use mysite.local.gd when developing locally and it'll resolve to 127.0.0.1 just like magic! Any subdomain like *.local.gd will work.
+- It's like xip.io and nip.io but straight up easier since we always point to 127.0.0.1.
+- We use Netlify DNS so we're pretty sure you're always within 10ms of a DNS server, wherever you are. It's super quick!
+
 ## [Localstack](https://docs.localstack.cloud/overview/)
 ### [GitHub LocalStack](https://github.com/localstack)
 
@@ -267,8 +275,7 @@ LocalStack is a fully functional local AWS cloud stack that enables developers t
 - LocalStack is installed using Helm Charts via Terraform [here](https://github.com/localstack/helm-charts)
 - [LocalStack Quickstart](https://docs.localstack.cloud/getting-started/quickstart/)
 - [Localstack Serverless Plugin](https://github.com/localstack/serverless-localstack)
-- `IMPORTANT` The hardcoded port comes from the LocalStack Helm Chart values.yaml - e.g. http://localhost:31566
-- You can get the node port in Octant by referring to this image [Octant Port Forward to an Endpoint](#octant-port-forward-to-an-endpoint)
+- `IMPORTANT` The hardcoded port comes from the LocalStack Helm Chart values.yaml - e.g. http://s3.local.gd:31566
 
 #### [AWS CLI Local](https://github.com/localstack/awscli-local)
 - This package provides the `awslocal` command, which is a thin wrapper around the aws command line interface for use with LocalStack.
