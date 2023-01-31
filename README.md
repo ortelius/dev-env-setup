@@ -263,9 +263,10 @@ Octant is a web-based graphical user interface (GUI) for exploring and analyzing
 ## [local.gd](https://local.gd/)
 - The easiest way to serve localhost.
 - DNS that always resolves to 127.0.0.1.
-- Use mysite.local.gd when developing locally and it'll resolve to 127.0.0.1 just like magic! Any subdomain like *.local.gd will work.
-- It's like xip.io and nip.io but straight up easier since we always point to 127.0.0.1.
-- We use Netlify DNS so we're pretty sure you're always within 10ms of a DNS server, wherever you are. It's super quick!
+- Use `mysite.local.gd` when developing locally and it'll resolve to `127.0.0.1`
+- Any subdomain like `*.local.gd` will work.
+- It's like `xip.io` and `nip.io` but straight up easier since we always point to `127.0.0.1`
+- We use Netlify DNS so we're pretty sure you're always within 10ms of a DNS server, wherever you are.
 
 ## [Localstack](https://docs.localstack.cloud/overview/)
 ### [GitHub LocalStack](https://github.com/localstack)
