@@ -42,6 +42,7 @@
   - [Localstack](#localstack)
     - [GitHub LocalStack](#github-localstack)
       - [AWS CLI Local](#aws-cli-local)
+      - [Configurations](#configurations)
       - [AWS Copilot](#aws-copilot)
       - [LocalStack Container](#localstack-container)
       - [LocalStack S3 Endpoint](#localstack-s3-endpoint)
@@ -265,6 +266,16 @@ LocalStack is a fully functional local AWS cloud stack that enables developers t
 
 #### [AWS CLI Local](https://github.com/localstack/awscli-local)
 - This package provides the awslocal command, which is a thin wrapper around the aws command line interface for use with LocalStack.
+
+#### Configurations
+
+You can use the following environment variables for configuration:
+- `LOCALSTACK_HOST`: Set the hostname for the LocalStack instance.
+- Useful when you have LocalStack bound to a different host (e.g., within docker-compose).
+- `EDGE_PORT`: Port number to use when connecting to LocalStack services. Defaults to 4566.
+- `USE_SSL`: Whether to use https endpoint URLs. Defaults to false.
+- `DEFAULT_REGION`: Set the default region. Overrides `AWS_DEFAULT_REGION` environment variable.
+
 ```
 aws --endpoint-url=http://localhost:53282 kinesis list-streams
 StreamNames: []
