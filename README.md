@@ -291,7 +291,7 @@ You can use the following environment variables for configuration:
 - `DEFAULT_REGION`: Set the default region. Overrides `AWS_DEFAULT_REGION` environment variable.
 
 ```
-aws --endpoint-url=http://localhost:4566 kinesis list-streams
+awslocal --endpoint-url=http://localhost:31566 kinesis list-streams
 StreamNames: []
 ```
 #### [AWS Copilot](https://github.com/localstack/copilot-cli-local)
