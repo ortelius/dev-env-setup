@@ -21,3 +21,9 @@ variable "ortelius_namespace" {
   description = "The Ortelius namespace"
   default     = "ortelius"
 }
+
+variable "localstack_namespace" {
+  type        = string
+  description = "The Localstack namespace"
+  default     = "localstack"
+}
