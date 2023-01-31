@@ -291,7 +291,7 @@ StreamNames: []
 
 #### [AWS Lamba Golang Runtime](https://github.com/localstack/awslamba-go-runtime)
 - Custom Golang runtime for the execution of AWS Lambdas used in LocalStack.
-- This is a modification of the custom runtime of lambdaci (Thank you guys!)
+- This is a modification of the custom runtime of lambda ci.
 - This custom runtime avoids using the /var folder as main place where to locate other files.
 - It contains the source code of the docker-lambda mockserver to build the binary.
 
