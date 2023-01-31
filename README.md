@@ -54,9 +54,9 @@
 ```
 kubectl config get context
 ```
-- Switch to the kind-if06 context
+- Switch to the kind-ortelius context
 ```
-kubectl config use-context kind-if06
+kubectl config use-context kind-ortelius
 ```
 - Help with contexts
 ```
