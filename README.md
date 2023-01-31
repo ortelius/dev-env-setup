@@ -266,13 +266,13 @@ LocalStack is a fully functional local AWS cloud stack that enables developers t
 - LocalStack is installed using Helm Charts via Terraform [here](https://github.com/localstack/helm-charts)
 - [LocalStack Quickstart](https://docs.localstack.cloud/getting-started/quickstart/)
 - [Localstack Serverless Plugin](https://github.com/localstack/serverless-localstack)
-- `IMPORTANT` If you are port forwarding remember to use the node port - e.g. http://localhost:53282
+- `IMPORTANT` If you are port forwarding remember to override the default port with the node port - e.g. http://localhost:53282
 - You can get the node port in Octant by referring to this image [Octant Port Forward to an Endpoint](#octant-port-forward-to-an-endpoint)
 
 #### [AWS CLI Local](https://github.com/localstack/awscli-local)
 - This package provides the awslocal command, which is a thin wrapper around the aws command line interface for use with LocalStack.
 
-#### Configurations
+#### [Configurations](https://docs.localstack.cloud/references/configuration/)
 
 You can use the following environment variables for configuration:
 - `LOCALSTACK_HOST`: Set the hostname for the LocalStack instance.
@@ -282,12 +282,12 @@ You can use the following environment variables for configuration:
 - `DEFAULT_REGION`: Set the default region. Overrides `AWS_DEFAULT_REGION` environment variable.
 
 ```
-aws --endpoint-url=http://localhost:53282 kinesis list-streams
+aws --endpoint-url=http://localhost:4566 kinesis list-streams
 StreamNames: []
 ```
 #### [AWS Copilot](https://github.com/localstack/copilot-cli-local)
 - This repo provides copilotlocal, a command-line interface (CLI) with the same features as the original copilot CLI, but using the local API endpoints provided by LocalStack.
-- The patch applied in this repo essentially redirects any AWS API calls to the local endpoints under [http://localhost:53282](http://localhost:53282.
+- The patch applied in this repo essentially redirects any AWS API calls to the local endpoints under [http://localhost:4566](http://localhost:4566.
 
 #### [AWS Lamba Golang Runtime](https://github.com/localstack/awslamba-go-runtime)
 - Custom Golang runtime for the execution of AWS Lambdas used in LocalStack.
