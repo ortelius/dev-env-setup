@@ -276,7 +276,7 @@ LocalStack is a fully functional local AWS cloud stack that enables developers t
 - LocalStack is installed using Helm Charts via Terraform [here](https://github.com/localstack/helm-charts)
 - [LocalStack Quickstart](https://docs.localstack.cloud/getting-started/quickstart/)
 - [Localstack Serverless Plugin](https://github.com/localstack/serverless-localstack)
-- `IMPORTANT` The hardcoded port comes from the LocalStack Helm Chart values.yaml `http://s3.local.gd:31566` which is configured under exta port mapping for KinD
+- `IMPORTANT` The hardcoded port comes from the LocalStack Helm Chart values.yaml `http://s3.local.gd:31566` which is configured under exta port mappings for KinD
 
 #### [AWS CLI Local](https://github.com/localstack/awscli-local)
 - This package provides the `awslocal` command, which is a thin wrapper around the aws command line interface for use with LocalStack.
