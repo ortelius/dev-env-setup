@@ -264,6 +264,10 @@ LocalStack is a fully functional local AWS cloud stack that enables developers t
 
 #### [AWS CLI Local](https://github.com/localstack/awscli-local)
 - This package provides the awslocal command, which is a thin wrapper around the aws command line interface for use with LocalStack.
+```
+aws --endpoint-url=http://localhost:53282 kinesis list-streams
+StreamNames: []
+```
 
 #### LocalStack Container
 ![Localstack on Kind!](images/localstack/01-localstack-kind-pod.jpg)
