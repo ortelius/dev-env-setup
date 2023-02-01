@@ -35,18 +35,18 @@ resource "kind_cluster" "ortelius" {
         host_port      = 4566
         listen_address = "0.0.0.0"
       }
-      # ortelius nginx port
-      extra_port_mappings {
-        container_port = 31406
-        host_port      = 31406
-        listen_address = "0.0.0.0"
-      }
-      # ortelius nginx port
-      extra_port_mappings {
-        container_port = 31804
-        host_port      = 31804
-        listen_address = "0.0.0.0"
-      }
+      ## ortelius nginx port
+      #extra_port_mappings {
+      #  container_port = 31406
+      #  host_port      = 31406
+      #  listen_address = "0.0.0.0"
+      #}
+      ## ortelius nginx port
+      #extra_port_mappings {
+      #  container_port = 31804
+      #  host_port      = 31804
+      #  listen_address = "0.0.0.0"
+      #}
     }
 
     node {
