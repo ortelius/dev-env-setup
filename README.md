@@ -372,6 +372,8 @@ Java utilities and JUnit integration for LocalStack.
 ## [DevSpaces](https://devspace.sh/)
 ### [Componeelm Chart](https://www.devspace.sh/component-chart/docs/introduction)
 ### [GitHub DevSpaces](https://github.com/devspace-sh/devspace)
+- What is [DevSpace](https://www.devspace.sh/docs/getting-started/introduction)
+- Follow Getting Started [here](https://www.devspace.sh/docs/getting-started/installation)
 
 ## [Dev Containers](https://containers.dev/)
 - [Developing inside a container](https://code.visualstudio.com/docs/devcontainers/containers)
