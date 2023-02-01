@@ -63,6 +63,7 @@
 - Kubectl
 - Terraform
 - Localstack
+- DevSpaces
 - Operating System agnostic
 
 ## Kind Ortelius Cluster Details
