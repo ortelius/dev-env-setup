@@ -291,7 +291,7 @@ LocalStack is a fully functional local AWS cloud stack that enables developers t
 ```
 localstack_api_key = "YOUR API KEY GOES HERE"
 ```
-- localstack.yaml contains the Helm Chart overrides
+- `localstack.yaml` contains the Helm Chart overrides
 ```
 image:
   repository: localstack/localstack-pro
