@@ -50,10 +50,10 @@
         - [Prerequisites](#prerequisites)
       - [LocalStack Container](#localstack-container)
       - [LocalStack S3 Endpoint](#localstack-s3-endpoint)
-  - [Dev Containers](#dev-containers)
   - [DevSpaces](#devspaces)
     - [Componeelm Chart](#componeelm-chart)
     - [GitHub DevSpaces](#github-devspaces)
+  - [Dev Containers](#dev-containers)
 
 ## What you need?
 - Docker
@@ -324,13 +324,13 @@ Java utilities and JUnit integration for LocalStack.
 #### LocalStack S3 Endpoint
 ![LocalStack S3 Endpoint!](images/localstack/02-localstack-s3-endpoint.jpg)
 
+## [DevSpaces](https://devspace.sh/)
+### [Componeelm Chart](https://www.devspace.sh/component-chart/docs/introduction)
+### [GitHub DevSpaces](https://github.com/devspace-sh/devspace)
+
 ## [Dev Containers](https://containers.dev/)
 - [Developing inside a container](https://code.visualstudio.com/docs/devcontainers/containers)
 - [Introduction to Dev Containers](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers)
 - [Beginners Series to Dev Containers](https://learn.microsoft.com/en-us/shows/beginners-series-to-dev-containers/)
 - [Getting Started with Dev Containers](https://microsoft.github.io/code-with-engineering-playbook/developer-experience/devcontainers/)
 - [VSCode Dev Containers Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers&WT.mc_id=devcloud-11496-buhollan)
-
-## [DevSpaces](https://devspace.sh/)
-### [Componeelm Chart](https://www.devspace.sh/component-chart/docs/introduction)
-### [GitHub DevSpaces](https://github.com/devspace-sh/devspace)
