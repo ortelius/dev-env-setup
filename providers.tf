@@ -69,7 +69,7 @@ provider "aws" {
     rds            = "http://localhost:4566"
     redshift       = "http://localhost:4566"
     route53        = "http://localhost:4566"
-    s3             = "http://s3.local.gd:31566"
+    s3             = "http://s3.local.gd:4566"
     secretsmanager = "http://localhost:4566"
     ses            = "http://localhost:4566"
     sns            = "http://localhost:4566"

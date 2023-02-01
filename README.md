@@ -42,6 +42,7 @@
   - [local.gd](#localgd)
   - [Localstack](#localstack)
     - [GitHub LocalStack](#github-localstack)
+      - [IMPORTANT: LocalStack Pro](#important-localstack-pro)
       - [AWS CLI Local](#aws-cli-local)
       - [Configurations](#configurations)
       - [AWS Copilot](#aws-copilot)
@@ -270,7 +271,7 @@ Octant is a web-based graphical user interface (GUI) for exploring and analyzing
 - Use `mysite.local.gd` when developing locally and it'll resolve to `127.0.0.1`
 - Any subdomain like `*.local.gd` will work.
 - It's like `xip.io` and `nip.io` but straight up easier since we always point to `127.0.0.1`
-- We use Netlify DNS so we're pretty sure you're always within 10ms of a DNS server, wherever you are.
+- We use `Netlify` DNS so we're pretty sure you're always within 10ms of a DNS server, wherever you are.
 
 ## [Localstack](https://docs.localstack.cloud/overview/)
 ### [GitHub LocalStack](https://github.com/localstack)
@@ -280,8 +281,52 @@ LocalStack is a fully functional local AWS cloud stack that enables developers t
 - LocalStack is installed using Helm Charts via Terraform [here](https://github.com/localstack/helm-charts)
 - [LocalStack Quickstart](https://docs.localstack.cloud/getting-started/quickstart/)
 - [Localstack Serverless Plugin](https://github.com/localstack/serverless-localstack)
-- `IMPORTANT` The hardcoded port comes from the LocalStack Helm Chart `values.yaml` `http://s3.local.gd:31566` which is configured under exta port mappings for KinD
+- Please find the LocalStack endpoints in `provider.tf`
+- All endpoints are referenced as `http://localhost:4566` with S3 as the exception `http://s3.local.gd` due to some sub-domain trickery
+- Not all endpoints are supported in the free version, please refer [here](https://docs.localstack.cloud/user-guide/aws/feature-coverage/) for supported features
 
+#### IMPORTANT: LocalStack Pro
+- Provision has been made for those that have an API KEY
+- Create a file in the root of the repo named as below:
+`localstack_apikey.auto.tfvars`
+```
+localstack_api_key = "YOUR API KEY GOES HERE"
+```
+- localstack.yaml contains the Helm Chart overrides
+```
+image:
+  repository: localstack/localstack-pro
+
+extraEnvVars:
+- name: LOCALSTACK_API_KEY
+  valueFrom:
+    secretKeyRef:
+      name: localstack-apikey
+      key: localstack-apikey
+      optional: true
+```
+- Git Ignore ignores `localstack_apikey.auto.tfvars`
+`.gitignore`
+```
+# secret
+*.auto.tfvars
+```
+- In `main.tf` you will find the creation of the secret in the `localstack` namespace as below which references the ignored `localstack_apikey.auto.tfvars` file
+```
+# ONLY ENABLE THIS IF YOU HAVE A LOCALSTACK PRO API KEY
+resource "kubectl_manifest" "localstack_apikey" {
+  yaml_body = <<YAML
+apiVersion: v1
+kind: Secret
+metadata:
+  name: localstack-apikey
+  namespace: localstack
+type: Opaque
+data:
+  localstack-apikey: ${base64encode(var.localstack_api_key)}
+YAML
+}
+```
 #### [AWS CLI Local](https://github.com/localstack/awscli-local)
 - This package provides the `awslocal` command, which is a thin wrapper around the aws command line interface for use with LocalStack.
 
@@ -295,7 +340,7 @@ You can use the following environment variables for configuration:
 - `DEFAULT_REGION`: Set the default region. Overrides `AWS_DEFAULT_REGION` environment variable.
 
 ```
-awslocal --endpoint-url=http://localhost:31566 kinesis list-streams
+awslocal --endpoint-url=http://localhost:4566 kinesis list-streams
 StreamNames: []
 ```
 #### [AWS Copilot](https://github.com/localstack/copilot-cli-local)

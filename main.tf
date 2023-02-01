@@ -55,6 +55,20 @@ resource "kind_cluster" "ortelius" {
   }
 }
 
+# ONLY ENABLE THIS IF YOU HAVE A LOCALSTACK PRO API KEY
+#resource "kubectl_manifest" "localstack_apikey" {
+#  yaml_body = <<YAML
+#apiVersion: v1
+#kind: Secret
+#metadata:
+#  name: localstack-apikey
+#  namespace: localstack
+#type: Opaque
+#data:
+#  localstack-apikey: ${base64encode(var.localstack_api_key)}
+#YAML
+#}
+
 # ortelius https://artifacthub.io/packages/helm/ortelius/ortelius
 # postgresql https://artifacthub.io/packages/helm/bitnami/postgresql-ha
 resource "helm_release" "ortelius" {
@@ -77,6 +91,8 @@ resource "helm_release" "localstack" {
   create_namespace = true
   recreate_pods    = true
   depends_on       = [kind_cluster.ortelius]
+  # ONLY ENABLE THIS IF YOU HAVE A LOCALSTACK PRO API KEY
+  #values           = [file("localstack.yaml")]
 }
 
 resource "aws_s3_bucket" "ortelius_bucket" {
