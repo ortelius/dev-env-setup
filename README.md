@@ -381,8 +381,9 @@ The component chart allows you to define application components (e.g. a database
 
 #### Why?
 
-Compared to manually creating Helm charts, the component chart allows you to define your application components using a unified Helm chart. This provides the following benefits:
+Compared to manually creating Helm charts, the component chart allows you to define your application components using a unified Helm chart.
 
+This provides the following benefits:
 - 70% less YAML to maintain (only values.yaml for chart)
 - Highly flexible configuration via values.yaml
 - Fast and easy definition of Kubernetes resources
