@@ -10,12 +10,6 @@ variable "kind_cluster_config_path" {
   default     = "~/.kube/config"
 }
 
-variable "ingress_nginx_namespace" {
-  type        = string
-  description = "The nginx ingress namespace"
-  default     = "ingress-nginx"
-}
-
 variable "ortelius_namespace" {
   type        = string
   description = "The Ortelius namespace"
