@@ -1,6 +1,6 @@
 # [Ortelius](https://ortelius.io/) & [Localstack](https://docs.localstack.cloud/overview/) Local Deployment
 - [Ortelius \& Localstack Local Deployment](#ortelius--localstack-local-deployment)
-  - [What you need?](#what-you-need)
+  - [Tools of the trade](#tools-of-the-trade)
   - [Kind Ortelius Cluster Details](#kind-ortelius-cluster-details)
     - [Context `kind-ortelius`](#context-kind-ortelius)
     - [Namespaces `ortelius` `localstack`](#namespaces-ortelius-localstack)
@@ -57,7 +57,7 @@
       - [Why?](#why)
   - [Dev Containers](#dev-containers)
 
-## What you need?
+## Tools of the trade
 - Docker
 - Kind
 - Kubectl
