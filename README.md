@@ -39,7 +39,7 @@
     - [GitHub Octant](#github-octant)
       - [Notable Plugins](#notable-plugins)
       - [Octant Port Forward to an Endpoint](#octant-port-forward-to-an-endpoint)
-  - [local.gd](#localgd)
+  - [local.gd | DNS @127.0.0.1](#localgd--dns-127001)
   - [Localstack](#localstack)
     - [GitHub LocalStack](#github-localstack)
       - [IMPORTANT: LocalStack Pro](#important-localstack-pro)
@@ -265,7 +265,7 @@ Octant is a web-based graphical user interface (GUI) for exploring and analyzing
 #### Octant Port Forward to an Endpoint
 ![Octant Port Forward to S3!](images/octant/01-octant-port-forward-s3.jpg)
 
-## [local.gd](https://local.gd/)
+## [local.gd](https://local.gd/) | DNS @127.0.0.1
 - The easiest way to serve localhost.
 - DNS that always resolves to 127.0.0.1.
 - Use `mysite.local.gd` when developing locally and it'll resolve to `127.0.0.1`
