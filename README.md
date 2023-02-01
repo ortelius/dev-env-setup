@@ -52,8 +52,9 @@
       - [LocalStack Container](#localstack-container)
       - [LocalStack S3 Endpoint](#localstack-s3-endpoint)
   - [DevSpaces](#devspaces)
-    - [Componeelm Chart](#componeelm-chart)
     - [GitHub DevSpaces](#github-devspaces)
+    - [Component Helm Chart](#component-helm-chart)
+      - [Why?](#why)
   - [Dev Containers](#dev-containers)
 
 ## What you need?
@@ -370,10 +371,22 @@ Java utilities and JUnit integration for LocalStack.
 ![LocalStack S3 Endpoint!](images/localstack/02-localstack-s3-endpoint.jpg)
 
 ## [DevSpaces](https://devspace.sh/)
-### [Componeelm Chart](https://www.devspace.sh/component-chart/docs/introduction)
 ### [GitHub DevSpaces](https://github.com/devspace-sh/devspace)
 - What is [DevSpace](https://www.devspace.sh/docs/getting-started/introduction)
 - Follow Getting Started [here](https://www.devspace.sh/docs/getting-started/installation)
+
+### [Component Helm Chart](https://www.devspace.sh/component-chart/docs/introduction)
+
+The component chart allows you to define application components (e.g. a database, an API server, a webserver with static files) and deploy them using Helm. Helm is the package manager for Kubernetes and allows you to manage these components (e.g. upgrading).
+
+#### Why?
+
+Compared to manually creating Helm charts, the component chart allows you to define your application components using a unified Helm chart. This provides the following benefits:
+
+- 70% less YAML to maintain (only values.yaml for chart)
+- Highly flexible configuration via values.yaml
+- Fast and easy definition of Kubernetes resources
+- Kubernetes best practices (e.g. recommended annotations and labels)
 
 ## [Dev Containers](https://containers.dev/)
 - [Developing inside a container](https://code.visualstudio.com/docs/devcontainers/containers)
