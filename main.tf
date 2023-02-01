@@ -17,21 +17,22 @@ resource "kind_cluster" "ortelius" {
       kubeadm_config_patches = [
         "kind: InitConfiguration\nnodeRegistration:\n  kubeletExtraArgs:\n    node-labels: \"kubernetes.io/os=linux\"\n"
       ]
-
+      # http port mapping
       extra_port_mappings {
         container_port = 80
-        host_port      = 80
+        host_port      = 9080
         listen_address = "0.0.0.0"
       }
+      # ssl port mapping
       extra_port_mappings {
         container_port = 443
-        host_port      = 443
+        host_port      = 9443
         listen_address = "0.0.0.0"
       }
       # localstack port
       extra_port_mappings {
         container_port = 31566
-        host_port      = 31566
+        host_port      = 4566
         listen_address = "0.0.0.0"
       }
       # ortelius nginx port
@@ -62,8 +63,8 @@ resource "helm_release" "ortelius" {
   repository       = "https://ortelius.github.io/ortelius-charts/"
   namespace        = var.ortelius_namespace
   create_namespace = true
+  recreate_pods    = true
   depends_on       = [kind_cluster.ortelius]
-  timeout          = 600
 }
 
 # localstack https://docs.localstack.cloud/overview/
@@ -74,10 +75,11 @@ resource "helm_release" "localstack" {
   repository       = "https://helm.localstack.cloud"
   namespace        = var.localstack_namespace
   create_namespace = true
+  recreate_pods    = true
   depends_on       = [kind_cluster.ortelius]
-  #timeout          = 600
 }
 
 resource "aws_s3_bucket" "ortelius_bucket" {
-  bucket = "ortelius-bucket"
+  bucket     = "ortelius-bucket"
+  depends_on = [helm_release.localstack]
 }

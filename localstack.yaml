@@ -1,0 +1,10 @@
+image:
+  repository: localstack/localstack-pro
+
+extraEnvVars:
+- name: LOCALSTACK_API_KEY
+  valueFrom:
+    secretKeyRef:
+      name: localstack-apikey
+      key: localstack-apikey
+      optional: true
