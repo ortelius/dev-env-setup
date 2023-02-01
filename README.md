@@ -287,9 +287,7 @@ LocalStack is a fully functional local AWS cloud stack that enables developers t
 
 #### IMPORTANT: LocalStack Pro
 - Provision has been made for those that have an API KEY
-- Create a file in the root of the repo named as below:
-
-`localstack_apikey.auto.tfvars`
+- Create a file in the root of the repo named `localstack_apikey.auto.tfvars`
 ```
 localstack_api_key = "YOUR API KEY GOES HERE"
 ```
