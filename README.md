@@ -305,6 +305,7 @@ extraEnvVars:
       optional: true
 ```
 - Git Ignore ignores `localstack_apikey.auto.tfvars`
+
 `.gitignore`
 ```
 # secret
