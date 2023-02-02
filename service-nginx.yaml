@@ -24,10 +24,6 @@ ingress:
     privatekkey: |
       -----BEGIN PRIVATE KEY-----
       -----END PRIVATE KEY-----
-spec:
-  selector:
-    app: {{ include "ms-nginx.name" . }}
-    tier: frontend
   ports:
     - port: 80
       targetPort: 80
@@ -38,4 +34,4 @@ spec:
       targetPort: 443
       protocol: TCP
       name: https
-      nodeport: 31566
+      nodePort: 31566
