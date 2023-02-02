@@ -19,13 +19,13 @@ resource "kind_cluster" "ortelius" {
       ]
       # http port mapping
       extra_port_mappings {
-        container_port = 80
+        container_port = 30341
         host_port      = 9080
         listen_address = "0.0.0.0"
       }
       # ssl port mapping
       extra_port_mappings {
-        container_port = 443
+        container_port = 32089
         host_port      = 9443
         listen_address = "0.0.0.0"
       }
