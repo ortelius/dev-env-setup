@@ -1,0 +1,41 @@
+# Default values for ms-nginx.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+replicaCount: 1
+image:
+  repository: quay.io/ortelius/ms-nginx
+  tag: svc_cat-v10.0.30-g0e1144
+  sha: sha256:2b888db6a207dbe01e83f42fd2af96a8863c3d7500fb51e8bb86eabf02a99e23
+  pullPolicy: Always
+ingress:
+  enum:
+    alb: "OFF"
+    volumemnt: ""
+    sslcert: "ON"
+    ssloff: "OFF"
+  type: ssloff # alb, volumemnt, sslcert, ssloff
+  alb_certificate_arn:
+  alb_subnets:
+  dnsname: console.ortelius.io
+  sslcert:
+    chainedcert: |
+      -----BEGIN CERTIFICATE-----
+      -----END CERTIFICATE-----
+    privatekkey: |
+      -----BEGIN PRIVATE KEY-----
+      -----END PRIVATE KEY-----
+spec:
+  selector:
+    app: {{ include "ms-nginx.name" . }}
+    tier: frontend
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+      name: http
+      nodePort: 30341
+    - port: 443
+      targetPort: 443
+      protocol: TCP
+      name: https
+      nodeport: 31566

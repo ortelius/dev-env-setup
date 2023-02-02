@@ -20,13 +20,13 @@ resource "kind_cluster" "ortelius" {
       # http port mapping
       extra_port_mappings {
         container_port = 30341
-        host_port      = 9080
+        host_port      = 80
         listen_address = "0.0.0.0"
       }
       # ssl port mapping
       extra_port_mappings {
         container_port = 32089
-        host_port      = 9443
+        host_port      = 443
         listen_address = "0.0.0.0"
       }
       # localstack port
@@ -35,18 +35,6 @@ resource "kind_cluster" "ortelius" {
         host_port      = 4566
         listen_address = "0.0.0.0"
       }
-      ## ortelius nginx port
-      #extra_port_mappings {
-      #  container_port = 31406
-      #  host_port      = 31406
-      #  listen_address = "0.0.0.0"
-      #}
-      ## ortelius nginx port
-      #extra_port_mappings {
-      #  container_port = 31804
-      #  host_port      = 31804
-      #  listen_address = "0.0.0.0"
-      #}
     }
 
     node {
