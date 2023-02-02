@@ -58,6 +58,9 @@
   - [DevSpaces](#devspaces)
     - [GitHub DevSpaces](#github-devspaces)
       - [Note: Additional tools required for the container](#note-additional-tools-required-for-the-container)
+      - [How](#how)
+    - [Connect VSCode](#connect-vscode)
+      - [VScode Extensions](#vscode-extensions)
     - [Component Helm Chart](#component-helm-chart)
       - [Why?](#why)
   - [Dev Containers](#dev-containers)
@@ -400,6 +403,79 @@ Java utilities and JUnit integration for LocalStack.
 
 #### Note: Additional tools required for the container
 - awslocal cli
+
+#### How
+- Download the CLI [here](https://devspace.sh/cli/docs/getting-started/installation)
+- Init DevSpace in your repo and use the existing `Dockerfile` and `devspace.yaml`  by following the prompts.
+- Currently it is using the Microsoft Universal [Dev Container](https://github.com/devcontainers/images/tree/main/src/universal) which I have built and pushed to my DockerHub
+- The Microsoft Universersal Dev Container has the following language platforms Python, Node.js, JavaScript, TypeScript, C++, Java, C#, F#, .NET Core, PHP, Go, Ruby, Conda
+```
+devspace init
+```
+- run the UI
+```
+devspace ui
+```
+- start coding
+```
+devspace dev
+
+warn Are you using the correct namespace?
+warn Current namespace: 'default'
+warn Last    namespace: 'devspace'
+
+? Which namespace do you want to use? devspace
+info Using namespace 'devspace'
+info Using kube context 'kind-if06'
+info Created namespace: devspace
+deploy:app Deploying chart component-chart (app) with helm...
+deploy:app Deployed helm chart (Release revision: 1)
+deploy:app Successfully deployed app with helm
+dev:app Waiting for pod to become ready...
+dev:app DevSpace is waiting, because Pod app-devspace-6dcdc9bf56-trrrc has status: ContainerCreating
+dev:app DevSpace is waiting, because Pod app-devspace-6dcdc9bf56-trrrc has status: ContainerCreating
+dev:app DevSpace is waiting, because Pod app-devspace-6dcdc9bf56-trrrc has status: ContainerCreating
+dev:app DevSpace is waiting, because Pod app-devspace-6dcdc9bf56-trrrc has status: ContainerCreating
+dev:app DevSpace is waiting, because Pod app-devspace-6dcdc9bf56-trrrc has status: ContainerCreating
+dev:app DevSpace is waiting, because Pod app-devspace-6dcdc9bf56-trrrc has status: ContainerCreating
+dev:app DevSpace is waiting, because Pod app-devspace-6dcdc9bf56-trrrc has status: ContainerCreating
+dev:app DevSpace is waiting, because Pod app-devspace-6dcdc9bf56-trrrc has status: ContainerCreating
+dev:app DevSpace is waiting, because Pod app-devspace-6dcdc9bf56-trrrc has status: ContainerCreating
+dev:app Selected pod app-devspace-6dcdc9bf56-trrrc
+dev:app ports Port forwarding started on: 2345 -> 2345
+dev:app sync  Sync started on: ./ <-> /app
+dev:app sync  Waiting for initial sync to complete
+dev:app sync  Initial sync completed
+dev:app ssh   Port forwarding started on: 10479 -> 8022
+dev:app proxy Port forwarding started on: 11920 <- 10567
+dev:app ssh   Use 'ssh app.kind-crossplane.devspace' to connect via SSH
+dev:app term  Opening shell to container-0:app-devspace-6dcdc9bf56-trrrc (pod:container)
+```
+
+### Connect VSCode
+#### VScode Extensions
+- Install the `Remote-SSH` extension [here](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)
+- Click on the `Remote Explorer` icon
+
+![VSCode Remote Explorer!](images/vscode/01-remote-explorer.jpg)
+
+- SSH Settings
+```
+# DevSpace Start app.kind-crossplane.devspace
+Host app.kind-crossplane.devspace
+  HostName localhost
+  LogLevel error
+  Port 10479
+  IdentityFile "/Users/tvl/.devspace/ssh/id_devspace_ecdsa"
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+  User devspace
+# DevSpace End app.kind-crossplane.devspace
+```
+- Install PostgreSQL Database Manager for database admin from inside your vscode [here](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-postgresql-client2)
+- The extension supports many database engines so don't be misled by the name
+
+![VSCode PostgreSQL!](images/vscode/02-postgresql-extension.jpg)
 
 ### [Component Helm Chart](https://www.devspace.sh/component-chart/docs/introduction)
 
