@@ -57,6 +57,7 @@
       - [LocalStack S3 Endpoint](#localstack-s3-endpoint-1)
   - [DevSpaces](#devspaces)
     - [GitHub DevSpaces](#github-devspaces)
+      - [Note: Additional tools required for the container](#note-additional-tools-required-for-the-container)
     - [Component Helm Chart](#component-helm-chart)
       - [Why?](#why)
   - [Dev Containers](#dev-containers)
@@ -396,7 +397,9 @@ Java utilities and JUnit integration for LocalStack.
 ## [DevSpaces](https://devspace.sh/)
 ### [GitHub DevSpaces](https://github.com/devspace-sh/devspace)
 - What is [DevSpace](https://www.devspace.sh/docs/getting-started/introduction)
-- Follow Getting Started [here](https://www.devspace.sh/docs/getting-started/installation)
+
+#### Note: Additional tools required for the container
+- awslocal cli
 
 ### [Component Helm Chart](https://www.devspace.sh/component-chart/docs/introduction)
 
