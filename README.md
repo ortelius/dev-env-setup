@@ -43,14 +43,18 @@
   - [Localstack](#localstack)
     - [GitHub LocalStack](#github-localstack)
       - [IMPORTANT: LocalStack Pro](#important-localstack-pro)
+      - [LocalStack VSCode Extension](#localstack-vscode-extension)
+      - [LocalStack Docs](#localstack-docs)
+      - [LocalStack Container](#localstack-container)
+      - [LocalStack S3 Endpoint](#localstack-s3-endpoint)
       - [AWS CLI Local](#aws-cli-local)
       - [Configurations](#configurations)
       - [AWS Copilot](#aws-copilot)
       - [AWS Lamba Golang Runtime](#aws-lamba-golang-runtime)
       - [LocalStack Java Utils](#localstack-java-utils)
         - [Prerequisites](#prerequisites)
-      - [LocalStack Container](#localstack-container)
-      - [LocalStack S3 Endpoint](#localstack-s3-endpoint)
+      - [LocalStack Container](#localstack-container-1)
+      - [LocalStack S3 Endpoint](#localstack-s3-endpoint-1)
   - [DevSpaces](#devspaces)
     - [GitHub DevSpaces](#github-devspaces)
     - [Component Helm Chart](#component-helm-chart)
@@ -63,6 +67,7 @@
 - Kubectl
 - Terraform
 - Localstack
+- VSCode
 - DevSpaces
 - Operating System agnostic
 
@@ -329,6 +334,23 @@ data:
 YAML
 }
 ```
+#### LocalStack VSCode Extension
+- `Commandeer` extension [here](https://marketplace.visualstudio.com/items?itemName=Commandeer.commandeer)
+
+![Commandeer!](images/vscode/03-commandeer-extension.jpg)
+
+#### [LocalStack Docs](https://github.com/localstack/docs)
+LocalStack Docs is using the following technology stack
+- Hugo to generate the static site.
+- Docsy as a theme for Hugo.
+- GitHub Pages to automatically deploy every commit on the main branch of this repository on `docs.localstack.cloud`.
+
+#### LocalStack Container
+![Localstack on Kind!](images/localstack/01-localstack-kind-pod.jpg)
+
+#### LocalStack S3 Endpoint
+![LocalStack S3 Endpoint!](images/localstack/02-localstack-s3-endpoint.jpg)
+
 #### [AWS CLI Local](https://github.com/localstack/awscli-local)
 - This package provides the `awslocal` command, which is a thin wrapper around the aws command line interface for use with LocalStack.
 
