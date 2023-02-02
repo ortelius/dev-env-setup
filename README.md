@@ -53,8 +53,8 @@
       - [AWS Lamba Golang Runtime](#aws-lamba-golang-runtime)
       - [LocalStack Java Utils](#localstack-java-utils)
         - [Prerequisites](#prerequisites)
-  - [DevSpaces](#devspaces)
-    - [GitHub DevSpaces](#github-devspaces)
+  - [DevSpace](#devspace)
+    - [GitHub DevSpace](#github-devspace)
       - [Note: Additional tools required for the container](#note-additional-tools-required-for-the-container)
       - [How](#how)
     - [Connect VSCode](#connect-vscode)
@@ -389,8 +389,8 @@ Java utilities and JUnit integration for LocalStack.
 - Docker
 - LocalStack
 
-## [DevSpaces](https://devspace.sh/)
-### [GitHub DevSpaces](https://github.com/devspace-sh/devspace)
+## [DevSpace](https://devspace.sh/)
+### [GitHub DevSpace](https://github.com/devspace-sh/devspace)
 - What is [DevSpace](https://www.devspace.sh/docs/getting-started/introduction)
 
 #### Note: Additional tools required for the container
