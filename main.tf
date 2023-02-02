@@ -67,6 +67,7 @@ resource "helm_release" "ortelius" {
   create_namespace = true
   recreate_pods    = true
   depends_on       = [kind_cluster.ortelius]
+  values           = [file("service-nginx.yaml")]
 }
 
 # localstack https://docs.localstack.cloud/overview/
