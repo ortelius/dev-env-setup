@@ -53,8 +53,6 @@
       - [AWS Lamba Golang Runtime](#aws-lamba-golang-runtime)
       - [LocalStack Java Utils](#localstack-java-utils)
         - [Prerequisites](#prerequisites)
-      - [LocalStack Container](#localstack-container-1)
-      - [LocalStack S3 Endpoint](#localstack-s3-endpoint-1)
   - [DevSpaces](#devspaces)
     - [GitHub DevSpaces](#github-devspaces)
       - [Note: Additional tools required for the container](#note-additional-tools-required-for-the-container)
@@ -390,12 +388,6 @@ Java utilities and JUnit integration for LocalStack.
 - Maven
 - Docker
 - LocalStack
-
-#### LocalStack Container
-![Localstack on Kind!](images/localstack/01-localstack-kind-pod.jpg)
-
-#### LocalStack S3 Endpoint
-![LocalStack S3 Endpoint!](images/localstack/02-localstack-s3-endpoint.jpg)
 
 ## [DevSpaces](https://devspace.sh/)
 ### [GitHub DevSpaces](https://github.com/devspace-sh/devspace)
