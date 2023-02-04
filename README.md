@@ -73,6 +73,8 @@
 - DevSpaces
 - Operating System agnostic
 
+![Architecture!](images/architecture.png)
+
 ## Kind Ortelius Cluster Details
 ### Context `kind-ortelius`
 - List all the contexts
