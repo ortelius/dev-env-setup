@@ -81,6 +81,7 @@ resource "helm_release" "localstack" {
   create_namespace = true
   recreate_pods    = true
   depends_on       = [kind_cluster.ortelius]
+  timeout = 600
   # ONLY ENABLE THIS IF YOU HAVE A LOCALSTACK PRO API KEY
   #values           = [file("localstack.yaml")]
 }
