@@ -12,7 +12,10 @@ terraform {
       source  = "gavinbunney/kubectl"
       version = "~>1.14.0"
     }
-
+    kustomization = {
+      source  = "kbst/kustomize"
+      version = "v0.2.0-beta.3"
+    }
     helm = {
       source  = "hashicorp/helm"
       version = "~>2.7.1"
