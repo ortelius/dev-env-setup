@@ -1,5 +1,7 @@
 # kind https://kind.sigs.k8s.io/-
-provider "kind" {}
+provider "kind" {
+  # configuration options
+}
 
 resource "kind_cluster" "ortelius" {
   name            = var.kind_cluster_name
@@ -36,7 +38,6 @@ resource "kind_cluster" "ortelius" {
         listen_address = "0.0.0.0"
       }
     }
-
     node {
       role = "worker"
     }
@@ -81,7 +82,7 @@ resource "helm_release" "localstack" {
   create_namespace = true
   recreate_pods    = true
   depends_on       = [kind_cluster.ortelius]
-  timeout = 600
+  timeout          = 600
   # ONLY ENABLE THIS IF YOU HAVE A LOCALSTACK PRO API KEY
   #values           = [file("localstack.yaml")]
 }
@@ -89,4 +90,17 @@ resource "helm_release" "localstack" {
 resource "aws_s3_bucket" "ortelius_bucket" {
   bucket     = "ortelius-bucket"
   depends_on = [helm_release.localstack]
+}
+
+provider "kustomize" {
+  # Configuration options
+}
+data "kustomization" "wazuh" {
+  # path to kustomization directory
+  path = "wazuh/kustomization.yml"
+}
+
+resource "kustomization_resource" "wazuh" {
+  for_each = data.kustomization.wazuh.ids
+  manifest = data.kustomization.wazuh.manifests[each.value]
 }
