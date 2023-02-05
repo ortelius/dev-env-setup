@@ -91,13 +91,3 @@ resource "aws_s3_bucket" "ortelius_bucket" {
   bucket     = "ortelius-bucket"
   depends_on = [helm_release.localstack]
 }
-
-data "kustomization" "wazuh" {
-  # path to kustomization directory
-  path = "wazuh/kustomization.yml"
-}
-
-resource "kustomization_resource" "wazuh" {
-  for_each = data.kustomization.wazuh.ids
-  manifest = data.kustomization.wazuh.manifests[each.value]
-}

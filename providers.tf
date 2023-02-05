@@ -4,26 +4,24 @@ terraform {
       source  = "tehcyx/kind"
       version = "~>0.0.15"
     }
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~>4.52.0"
-    }
+
     kubectl = {
       source  = "gavinbunney/kubectl"
       version = "~>1.14.0"
     }
+
     helm = {
       source  = "hashicorp/helm"
       version = "~>2.7.1"
     }
-    kustomization = {
-      source = "nazarewk-iac/kustomization"
-      version = "~>0.0.2"
+
+    null = {
+      source  = "hashicorp/null"
+      version = "~>3.2.0"
     }
-    }
+  }
   required_version = "~>1.3.5"
 }
-
 
 provider "kubectl" {
   apply_retry_count      = 15
