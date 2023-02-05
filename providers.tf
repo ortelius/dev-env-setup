@@ -16,7 +16,11 @@ terraform {
       source  = "hashicorp/helm"
       version = "~>2.7.1"
     }
-  }
+    kustomization = {
+      source = "nazarewk-iac/kustomization"
+      version = "~>0.0.2"
+    }
+    }
   required_version = "~>1.3.5"
 }
 
@@ -78,8 +82,4 @@ provider "aws" {
     stepfunctions  = "http://localhost:4566"
     sts            = "http://localhost:4566"
   }
-}
-
-provider "kustomize" {
-  # Configuration options
 }
