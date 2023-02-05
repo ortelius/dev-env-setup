@@ -16,8 +16,10 @@ terraform {
       source  = "hashicorp/helm"
       version = "~>2.7.1"
     }
+  }
   required_version = "~>1.3.5"
 }
+
 
 provider "kubectl" {
   apply_retry_count      = 15
@@ -76,4 +78,8 @@ provider "aws" {
     stepfunctions  = "http://localhost:4566"
     sts            = "http://localhost:4566"
   }
+}
+
+provider "kustomize" {
+  # Configuration options
 }

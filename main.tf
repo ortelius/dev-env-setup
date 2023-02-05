@@ -68,8 +68,8 @@ resource "helm_release" "ortelius" {
   create_namespace = true
   recreate_pods    = true
   depends_on       = [kind_cluster.ortelius]
-  values           = [file("service-nginx.yaml")]
   timeout          = 600
+  #values           = [file("service-nginx.yaml")]
 }
 
 # localstack https://docs.localstack.cloud/overview/
@@ -92,9 +92,6 @@ resource "aws_s3_bucket" "ortelius_bucket" {
   depends_on = [helm_release.localstack]
 }
 
-provider "kustomize" {
-  # Configuration options
-}
 data "kustomization" "wazuh" {
   # path to kustomization directory
   path = "wazuh/kustomization.yml"
