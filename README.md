@@ -83,6 +83,8 @@
 - Use a port forward with kubectl to the ms-nginx microservice
 ```
 kubectl port-forward TYPE/NAME [options] LOCAL_PORT:REMOTE_PORT
+
+kubectl port-forward -h
 ```
 
 ### Context `kind-ortelius`
