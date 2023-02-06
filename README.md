@@ -80,7 +80,7 @@
 
 ## Kind Ortelius Cluster Details
 ### How to access Ortelius 
-- Use a port forward with kubectl
+- Use a port forward with kubectl to the ms-nginx microservice
 ```
 kubectl port-forward TYPE/NAME [options] LOCAL_PORT:REMOTE_PORT
 ```
