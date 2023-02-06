@@ -82,7 +82,7 @@
 ### How to access Ortelius 
 - Use a port forward with kubectl
 ```
-
+kubectl port-forward TYPE/NAME [options] LOCAL_PORT:REMOTE_PORT
 ```
 
 ### Context `kind-ortelius`
