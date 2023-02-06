@@ -1,5 +1,5 @@
 version: v2beta1
-name: dev-env-setup
+name: kind-crossplane
 
 # This is a list of `pipelines` that DevSpace can execute (you can define your own)
 pipelines:
@@ -52,7 +52,7 @@ dev:
       - path: ./:/app
     # Open a terminal and use the following command to start it
     terminal:
-      command: ./devspace_start.sh
+      command: ./app/devspace_start.sh
     # Inject a lightweight SSH server into the container (so your IDE can connect to the remote dev env)
     ssh:
       enabled: true
@@ -62,6 +62,9 @@ dev:
       - command: kubectl
       - command: helm
       - gitCredentials: true
+    # Forward the following ports to be able access your application via localhost
+    ports:
+      - port: "2345"
 
 # Use the `commands` section to define repeatable dev workflows for this project
 commands:
