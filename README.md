@@ -423,7 +423,7 @@ warn Last    namespace: 'devspace'
 
 ? Which namespace do you want to use? devspace
 info Using namespace 'devspace'
-info Using kube context 'kind-if06'
+info Using kube context 'kind-ortelius'
 info Created namespace: devspace
 deploy:app Deploying chart component-chart (app) with helm...
 deploy:app Deployed helm chart (Release revision: 1)
@@ -445,7 +445,7 @@ dev:app sync  Waiting for initial sync to complete
 dev:app sync  Initial sync completed
 dev:app ssh   Port forwarding started on: 10479 -> 8022
 dev:app proxy Port forwarding started on: 11920 <- 10567
-dev:app ssh   Use 'ssh app.kind-crossplane.devspace' to connect via SSH
+dev:app ssh   Use 'ssh app.dev-env-setup.devspace' to connect via SSH
 dev:app term  Opening shell to container-0:app-devspace-6dcdc9bf56-trrrc (pod:container)
 ```
 
@@ -458,8 +458,8 @@ dev:app term  Opening shell to container-0:app-devspace-6dcdc9bf56-trrrc (pod:co
 
 - SSH Settings
 ```
-# DevSpace Start app.kind-crossplane.devspace
-Host app.kind-crossplane.devspace
+# DevSpace Start app.dev-env-setup.devspace
+Host app.dev-env-setup.devspace
   HostName localhost
   LogLevel error
   Port 10479
@@ -467,7 +467,7 @@ Host app.kind-crossplane.devspace
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
   User devspace
-# DevSpace End app.kind-crossplane.devspace
+# DevSpace End app.dev-env-setup.devspace
 ```
 - Install PostgreSQL Database Manager for database admin from inside your vscode [here](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-postgresql-client2)
 - The extension supports many database engines so don't be misled by the name
