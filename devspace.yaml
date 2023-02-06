@@ -46,10 +46,10 @@ dev:
     # Search for the container that runs this image
     imageSelector: thevestedleopard/app
     # Replace the container image with this dev-optimized image (allows to skip image building during development)
-    devImage: thevestedleopard/devuniversal
+    devImage: ghcr.io/loft-sh/devspace-containers/alpine:3
     # Sync files between the local filesystem and the development container
     sync:
-      - path: ./:/app
+      - path: ./
     # Open a terminal and use the following command to start it
     terminal:
       command: ./devspace_start.sh
@@ -62,11 +62,8 @@ dev:
       - command: kubectl
       - command: helm
       - gitCredentials: true
-    # Forward the following ports to be able access your application via localhost
-    ports:
-      - port: "2345"
 
-# Use the `commands` section to define repeatable dev workflows for this project
+# Use the `commands` section to define repeatable dev workflows for this project 
 commands:
   migrate-db:
     command: |-
