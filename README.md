@@ -79,6 +79,12 @@
 
 
 ## Kind Ortelius Cluster Details
+### How to access Ortelius 
+- Use a port forward with kubectl
+```
+
+```
+
 ### Context `kind-ortelius`
 - List all the contexts
 ```
