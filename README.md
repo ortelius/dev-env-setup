@@ -83,7 +83,7 @@ Ortelius is central catalog of supply chain and DevOps intelligence. It is desig
 
 Ortelius aggregates DevOps, security and supply chain data for each independent component moving through the pipeline. It is particularly useful in cloud-native, microservices architectures where the logical application becomes ambiguous. Ortelius tracks who is consuming shared components, versions them when they are updated and then creates new release candidates for every logical applicatio that is impacted by a component change. It then aggregates that data to the logical application level so you don't have to.
 
-The latest version of Ortelius is maintained by the Ortelius Community managed by the Continuous Delivery Foundation (Linux Foundation). It was originally created by DeployHub and OpenMake Software. Our mission is to simplify the adoption of modern architecture through a world-class microservice catalog driven by a supportive and diverse global open source community.
+The latest version of Ortelius is maintained by the Ortelius Community managed by the [Continuous Delivery Foundation](https://cd.foundation/) (Linux Foundation). It was originally created by DeployHub and OpenMake Software. Our mission is to simplify the adoption of modern architecture through a world-class microservice catalog driven by a supportive and diverse global open source community.
 
 #### Terraform Structure
 ![Architecture!](images/01-architecture.png)
