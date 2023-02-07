@@ -2,6 +2,7 @@
 - [Ortelius \& Localstack Local Deployment](#ortelius--localstack-local-deployment)
   - [Tools of the trade](#tools-of-the-trade)
   - [Kind Ortelius Cluster Details](#kind-ortelius-cluster-details)
+    - [How to access Ortelius](#how-to-access-ortelius)
     - [Context `kind-ortelius`](#context-kind-ortelius)
     - [Namespaces `ortelius` `localstack`](#namespaces-ortelius-localstack)
     - [Nodes](#nodes)
@@ -79,14 +80,16 @@
 
 
 ## Kind Ortelius Cluster Details
-### How to access Ortelius 
+### How to access Ortelius
 - Use a port forward with kubectl to the ms-nginx microservice service
+- `kubectl port-forward TYPE/NAME [options] LOCAL_PORT:REMOTE_PORT`
+- kubectl port-forward help
 ```
-kubectl get svc -n ortelius
-
-kubectl port-forward TYPE/NAME [options] LOCAL_PORT:REMOTE_PORT
-
 kubectl port-forward -h
+```
+- 8080 represents the local port on your machine http://localhost:8080
+```
+kubectl port-forward svc/ms-nginx 8080:80 -n ortelius
 ```
 
 ### Context `kind-ortelius`
@@ -499,7 +502,7 @@ This provides the following benefits:
 - Kubernetes best practices (e.g. recommended annotations and labels)
 
 ## [Dev Containers](https://containers.dev/)
-- This is Microsoft specific but it gives context to the idea of dev containers 
+- This is Microsoft specific but it gives context to the idea of dev containers
 - [Developing inside a container](https://code.visualstudio.com/docs/devcontainers/containers)
 - [Introduction to Dev Containers](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers)
 - [Beginners Series to Dev Containers](https://learn.microsoft.com/en-us/shows/beginners-series-to-dev-containers/)
