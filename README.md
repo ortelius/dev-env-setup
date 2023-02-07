@@ -78,7 +78,6 @@
 
 ![Architecture!](images/02-architecture.png)
 
-
 ## Kind Ortelius Cluster Details
 ### How to access Ortelius
 - Use a port forward with kubectl to the ms-nginx microservice service
@@ -422,7 +421,7 @@ Java utilities and JUnit integration for LocalStack.
 - Download the CLI [here](https://devspace.sh/cli/docs/getting-started/installation)
 - Init DevSpace in your repo and use the existing `Dockerfile` and `devspace.yaml`  by following the prompts.
 - Currently it is using the Microsoft Universal [Dev Container](https://github.com/devcontainers/images/tree/main/src/universal) which I have built and pushed to my DockerHub
-- The Microsoft Universersal Dev Container has the following language platforms Python, Node.js, JavaScript, TypeScript, C++, Java, C#, F#, .NET Core, PHP, Go, Ruby, Conda
+- The Microsoft Universersal Dev Container has the following language platforms `Python, Node.js, JavaScript, TypeScript, C++, Java, C#, F#, .NET Core, PHP, Go, Ruby, Conda`
 ```
 devspace init
 ```
@@ -464,6 +463,10 @@ dev:app ssh   Port forwarding started on: 10479 -> 8022
 dev:app proxy Port forwarding started on: 11920 <- 10567
 dev:app ssh   Use 'ssh app.dev-env-setup.devspace' to connect via SSH
 dev:app term  Opening shell to container-0:app-devspace-6dcdc9bf56-trrrc (pod:container)
+```
+- On the command line switch to the `bash shell`
+```
+bash
 ```
 
 ### Connect VSCode

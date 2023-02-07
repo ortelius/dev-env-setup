@@ -19,13 +19,13 @@ resource "kind_cluster" "ortelius" {
       kubeadm_config_patches = [
         "kind: InitConfiguration\nnodeRegistration:\n  kubeletExtraArgs:\n    node-labels: \"kubernetes.io/os=linux\"\n"
       ]
-      # http port mapping
+      # ortelius http port
       extra_port_mappings {
         container_port = 30341
         host_port      = 80
         listen_address = "0.0.0.0"
       }
-      # ssl port mapping
+      # ortelius ssl port
       extra_port_mappings {
         container_port = 32089
         host_port      = 443
