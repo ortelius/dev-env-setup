@@ -1,6 +1,7 @@
 # [Ortelius](https://ortelius.io/) & [Localstack](https://docs.localstack.cloud/overview/) Local Deployment
 - [Ortelius \& Localstack Local Deployment](#ortelius--localstack-local-deployment)
   - [Tools of the trade](#tools-of-the-trade)
+  - [Ortelius](#ortelius)
   - [Kind Ortelius Cluster Details](#kind-ortelius-cluster-details)
     - [How to access Ortelius](#how-to-access-ortelius)
     - [Context `kind-ortelius`](#context-kind-ortelius)
@@ -65,6 +66,7 @@
   - [Dev Containers](#dev-containers)
 
 ## Tools of the trade
+- Ortelius
 - Docker
 - Kind
 - Kubectl
@@ -73,6 +75,14 @@
 - VSCode
 - DevSpaces
 - Operating System agnostic
+
+## [Ortelius](https://ortelius.io/)
+
+Ortelius is central catalog of supply chain and DevOps intelligence. It is designed to track and version composition details for every component of your software supply chain along with all consuming logical applications. With Ortelius, you can easily view your logical application's SBOM, CVEs, service dependencies, and inventory based on versions, even in a decoupled microservices architecture.
+
+Ortelius aggregates DevOps, security and supply chain data for each independent component moving through the pipeline. It is particularly useful in cloud-native, microservices architectures where the logical application becomes ambiguous. Ortelius tracks who is consuming shared components, versions them when they are updated and then creates new release candidates for every logical applicatio that is impacted by a component change. It then aggregates that data to the logical application level so you don't have to.
+
+The latest version of Ortelius is maintained by the Ortelius Community managed by the Continuous Delivery Foundation (Linux Foundation). It was originally created by DeployHub and OpenMake Software. Our mission is to simplify the adoption of modern architecture through a world-class microservice catalog driven by a supportive and diverse global open source community.
 
 ![Architecture!](images/01-architecture.png)
 
