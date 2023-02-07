@@ -478,7 +478,15 @@ dev:app term  Opening shell to container-0:app-devspace-6dcdc9bf56-trrrc (pod:co
 ```
 - On the command line switch to the `bash shell`
 ```
-bash
+devspace ./app # bash
+```
+```
+root@app-devspace-6dcdc9bf56-6snnf:/# cd app
+```
+```
+root@app-devspace-6dcdc9bf56-6snnf:/app# ls
+Dockerfile  README.md     app            devspace_start.sh  localstack.yaml  module.tf  outputs.tf  plan.out      service-nginx.yaml  variables.tf
+LICENSE     TF-README.md  devspace.yaml  images             main.tf          ortelius   plan.json   providers.tf  terraform.tfstate   wazuh
 ```
 
 ### Connect VSCode
