@@ -91,6 +91,10 @@ kubectl port-forward -h
 ```
 kubectl port-forward svc/ms-nginx 8080:80 -n ortelius
 ```
+- 8443 represents the local port on your machine http://localhost:8443
+```
+kubectl port-forward svc/ms-nginx 8443:443 -n ortelius
+```
 
 ### Context `kind-ortelius`
 - List all the contexts
