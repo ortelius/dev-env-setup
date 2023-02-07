@@ -494,7 +494,7 @@ LICENSE     TF-README.md  devspace.yaml  images             main.tf          ort
 - Install the `Remote-SSH` extension [here](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)
 - Click on the `Remote Explorer` icon
 
-![VSCode Remote Explorer!](images/vscode/01-remote-explorer.jpg)
+![VSCode Remote Explorer](images/vscode/01-remote-explorer.jpg)
 
 - SSH Settings
 ```
