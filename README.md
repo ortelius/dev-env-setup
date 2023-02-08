@@ -267,6 +267,15 @@ Kubernetes is an open-source platform for automating deployment, scaling, and ma
 - Use [Devdocs](https://devdocs.io/) and the official documentation [here](https://kubernetes.io/docs/home/)
 - Add the `aliases` & `auto complete` which are in the `cheat sheet`
 
+- Real time logging of a pod
+```
+kubectl logs ms-nginx-6ccbb5f95c-9gjg7 -n ortelius -f
+```
+- Remote into a pod
+```
+kubectl -n ortelius exec -it ms-nginx-6ccbb5f95c-9gjg7 -n ortelius -c ms-nginx -- sh
+```
+
 #### Combine Kubens & Kubectx with Fuzzy Finder
 - `kubectx` is a tool to switch between contexts (clusters) on kubectl faster.
 - `kubens` is a tool to switch between Kubernetes namespaces (and configure them for kubectl) easily.
