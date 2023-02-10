@@ -562,7 +562,11 @@ For information about how to configure an organization to be billed for codespac
 
 The following storage and core hours of usage are included, free of charge, for personal accounts:
 
-![VSCode PostgreSQL!](images/codespace/01-billing-codespace.jpg)
+![Codespace billing!](images/codespace/01-billing-codespace.jpg)
+
+- You will be notified by email when you have used 75%, 90%, and 100% of your included quotas
+
+![Codespace billing!](images/codespace/02-pricing-for-paid-usage-codespace.jpg)
 
 ## [Dev Containers](https://containers.dev/)
 - [Developing inside a container](https://code.visualstudio.com/docs/devcontainers/containers)
