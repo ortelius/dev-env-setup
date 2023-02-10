@@ -46,7 +46,7 @@
   - [Localstack](#localstack)
     - [GitHub LocalStack](#github-localstack)
       - [IMPORTANT: LocalStack Pro](#important-localstack-pro)
-      - [LocalStack VSCode Extension](#localstack-vscode-extension)
+      - [LocalStack VS Code Extension](#localstack-vs-code-extension)
       - [LocalStack Docs](#localstack-docs)
       - [LocalStack Container](#localstack-container)
       - [LocalStack S3 Endpoint](#localstack-s3-endpoint)
@@ -60,8 +60,8 @@
     - [GitHub DevSpace](#github-devspace)
       - [Note: Additional tools required for the container](#note-additional-tools-required-for-the-container)
       - [How](#how)
-    - [Connect VSCode](#connect-vscode)
-      - [VScode Extensions](#vscode-extensions)
+    - [Connect VS Code](#connect-vs-code)
+      - [VS Code Extensions](#vs-code-extensions)
     - [Component Helm Chart](#component-helm-chart)
       - [Why?](#why)
   - [Codespace](#codespace)
@@ -77,7 +77,7 @@
 - Kubectl
 - Terraform
 - Localstack
-- VSCode
+- VS Code
 - [DevSpace](https://www.devspace.sh/)
 - Operating System agnostic
 
@@ -382,7 +382,7 @@ data:
 YAML
 }
 ```
-#### LocalStack VSCode Extension
+#### LocalStack VS Code Extension
 - `Commandeer` extension [here](https://marketplace.visualstudio.com/items?itemName=Commandeer.commandeer)
 
 ![Commandeer!](images/vscode/03-commandeer-extension.jpg)
@@ -502,12 +502,12 @@ Dockerfile  README.md     app            devspace_start.sh  localstack.yaml  mod
 LICENSE     TF-README.md  devspace.yaml  images             main.tf          ortelius   plan.json   providers.tf  terraform.tfstate   wazuh
 ```
 
-### Connect VSCode
-#### VScode Extensions
+### Connect VS Code
+#### VS Code Extensions
 - Install the `Remote-SSH` extension [here](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)
 - Click on the `Remote Explorer` icon
 
-![VSCode Remote Explorer!](images/vscode/01-remote-explorer.jpg)
+![VS Code Remote Explorer!](images/vscode/01-remote-explorer.jpg)
 
 - SSH Settings
 ```
@@ -525,7 +525,7 @@ Host app.dev-env-setup.devspace
 - Install PostgreSQL Database Manager for database admin from inside your vscode [here](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-postgresql-client2)
 - The extension supports many database engines so don't be misled by the name
 
-![VSCode PostgreSQL!](images/vscode/02-postgresql-extension.jpg)
+![VS Code PostgreSQL!](images/vscode/02-postgresql-extension.jpg)
 
 ### [Component Helm Chart](https://www.devspace.sh/component-chart/docs/introduction)
 
