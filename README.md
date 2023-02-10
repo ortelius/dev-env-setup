@@ -438,6 +438,7 @@ Java utilities and JUnit integration for LocalStack.
 ## [DevSpace](https://devspace.sh/)
 ### [GitHub DevSpace](https://github.com/devspace-sh/devspace)
 - What is [DevSpace](https://www.devspace.sh/docs/getting-started/introduction)
+- Devspace could be used for the local Terraform environment whereas Codespaces is more suited for a developer on the repos themselves
 
 #### Note: Additional tools required for the container
 - awslocal cli
