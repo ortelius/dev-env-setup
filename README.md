@@ -64,6 +64,10 @@
       - [VScode Extensions](#vscode-extensions)
     - [Component Helm Chart](#component-helm-chart)
       - [Why?](#why)
+  - [Codespace](#codespace)
+      - [Billing for Codespaces](#billing-for-codespaces)
+      - [Charges are billed to an organization or enterprise when all of the following are true:](#charges-are-billed-to-an-organization-or-enterprise-when-all-of-the-following-are-true)
+      - [Monthly included storage and core hours for personal accounts](#monthly-included-storage-and-core-hours-for-personal-accounts)
   - [Dev Containers](#dev-containers)
 
 ## Tools of the trade
@@ -536,6 +540,29 @@ This provides the following benefits:
 - Highly flexible configuration via values.yaml
 - Fast and easy definition of Kubernetes resources
 - Kubernetes best practices (e.g. recommended annotations and labels)
+
+## [Codespace](https://docs.github.com/en/codespaces/overview)
+
+A codespace is a development environment that's hosted in the cloud. You can customize your project for GitHub Codespaces by committing configuration files to your repository (often known as Configuration-as-Code), which creates a repeatable codespace configuration for all users of your project.
+
+#### [Billing for Codespaces](https://docs.github.com/en/codespaces/overview#billing-for-codespaces)
+
+- GitHub Codespaces is paid for either by an organization, an enterprise, or a personal account.
+- The Free and Pro plans for personal accounts include free use of GitHub Codespaces up to a fixed amount of usage every month.
+
+#### Charges are billed to an organization or enterprise when all of the following are true:
+- The repository from which a codespace is started (or the parent repository, in the case of a forked repository) is owned by an organization.
+- The organization is configured to be billed for codespaces created from the repository or forks of the repository.
+- The user creating the codespace belongs to the organization, or is an outside collaborator affiliated with the organization, and the organization has chosen to pay for this user's use of organization-owned codespaces.
+- Otherwise use of GitHub Codespaces applies to the personal account of the person who created the codespace, and either consumes some of the monthly included usage for their personal account, or their account is billed according to their usage in excess of their included quotas.
+
+For information about how to configure an organization to be billed for codespace usage, see "Enabling GitHub Codespaces for your organization." The Free, Team, and Enterprise plans for organization and enterprise accounts do not include any free use of GitHub Codespaces.
+
+#### Monthly included storage and core hours for personal accounts
+
+The following storage and core hours of usage are included, free of charge, for personal accounts:
+
+![VSCode PostgreSQL!](images/codespace/01-billing-codespace.jpg)
 
 ## [Dev Containers](https://containers.dev/)
 - This is Microsoft specific but it gives context to the idea of dev containers
