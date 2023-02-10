@@ -565,7 +565,6 @@ The following storage and core hours of usage are included, free of charge, for 
 ![VSCode PostgreSQL!](images/codespace/01-billing-codespace.jpg)
 
 ## [Dev Containers](https://containers.dev/)
-- This is Microsoft specific but it gives context to the idea of dev containers
 - [Developing inside a container](https://code.visualstudio.com/docs/devcontainers/containers)
 - [Introduction to Dev Containers](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers)
 - [Beginners Series to Dev Containers](https://learn.microsoft.com/en-us/shows/beginners-series-to-dev-containers/)
