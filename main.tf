@@ -91,3 +91,15 @@ resource "aws_s3_bucket" "ortelius_bucket" {
   bucket     = "ortelius-bucket"
   depends_on = [helm_release.localstack]
 }
+
+resource "helm_release" "backstage" {
+  name             = "backstage"
+  chart            = "backstage"
+  repository       = "https://github.com/ortelius/backstage"
+  namespace        = var.backstage_namespace
+  create_namespace = true
+  recreate_pods    = true
+  depends_on       = [kind_cluster.ortelius]
+  timeout          = 900
+  #values           = [file("service-nginx.yaml")]
+}

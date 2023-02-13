@@ -27,3 +27,9 @@ variable "localstack_api_key" {
   description = "LocalStack API Key"
   default     = null
 }
+
+variable "backstage_namespace" {
+  type        = string
+  description = "The Backstage namespace"
+  default     = "backstage"
+}
