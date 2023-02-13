@@ -90,5 +90,4 @@ resource "helm_release" "localstack" {
 resource "aws_s3_bucket" "ortelius_bucket" {
   bucket     = "ortelius-bucket"
   depends_on = [helm_release.localstack]
-  timeout          = 600
 }
