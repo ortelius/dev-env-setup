@@ -21,3 +21,9 @@ variable "localstack_namespace" {
   description = "The Localstack namespace"
   default     = "localstack"
 }
+
+variable "localstack_api_key" {
+  type        = string
+  description = "LocalStack API Key"
+  default     = null
+}
