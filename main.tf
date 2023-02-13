@@ -100,6 +100,6 @@ resource "helm_release" "backstage" {
   create_namespace = true
   recreate_pods    = true
   depends_on       = [kind_cluster.ortelius]
-  timeout          = 900
+  #timeout          = 900
   #values           = [file("service-nginx.yaml")]
 }

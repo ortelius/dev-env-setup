@@ -1,0 +1,18 @@
+{{- if .Values.app.podDisruptionBudget.enabled -}}
+apiVersion: {{ include "backstage.pdb.apiVersion" . }}
+kind: PodDisruptionBudget
+metadata:
+  name: {{ include "backstage.appFullname" . }}
+  labels:
+    {{- include "backstage.appLabels" . | nindent 4 }}
+spec:
+  selector:
+    matchLabels:
+      {{- include "backstage.appSelectorLabels" . | nindent 6 }}
+{{- if .Values.app.podDisruptionBudget.minAvailable }}
+  minAvailable: {{ .Values.app.podDisruptionBudget.minAvailable }}
+{{- end  }}
+{{- if .Values.app.podDisruptionBudget.maxUnavailable }}
+  maxUnavailable: {{ .Values.app.podDisruptionBudget.maxUnavailable }}
+{{- end  }}
+{{- end -}}

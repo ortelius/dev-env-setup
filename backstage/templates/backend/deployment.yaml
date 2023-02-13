@@ -1,0 +1,156 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "backstage.backendFullname" . }}
+  labels:
+    {{- include "backstage.backendLabels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.backend.replicaCount }}
+  selector:
+    matchLabels:
+      {{- include "backstage.backendSelectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      annotations:
+        checksum/config: {{ .Values.appConfig | toYaml | sha256sum }}
+    {{- with .Values.backend.podAnnotations }}
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+      labels:
+        {{- include "backstage.backendSelectorLabels" . | nindent 8 }}
+      {{- with .Values.backend.podLabels }}
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+    spec:
+      {{- with .Values.backend.image.pullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "backstage.backendServiceAccountName" . }}
+      {{- with .Values.backend.podSecurityContext }}
+      securityContext:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.backend.priorityClassName }}
+      priorityClassName: {{ . | quote }}
+      {{- end }}
+      containers:
+        - name: backstage
+          {{- with .Values.backend.securityContext }}
+          securityContext:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          image: {{ include "backstage.backendImage" . }}
+          imagePullPolicy: {{ .Values.backend.image.pullPolicy }}
+          env:
+            - name: POSTGRES_CONNECTION_STRING
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.psql.connectionString.secret }}
+                  key: {{ .Values.psql.connectionString.key }}
+            - name: POSTGRES_HOST
+              value: {{ .Values.psql.host | quote }}
+            - name: POSTGRES_PORT
+              value: {{ .Values.psql.port | default "5432" | quote }}
+            - name: POSTGRES_USER
+              value: {{ .Values.psql.username | quote }}
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.psql.password.secret }}
+                  key: {{ .Values.psql.password.key }}
+            - name: GITHUB_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: backstage-secrets
+                  key: GITHUB_TOKEN
+            - name: GITHUB_OAUTH_CLIENT_ID
+              valueFrom:
+                secretKeyRef:
+                  name: backstage-secrets
+                  key: GITHUB_OAUTH_CLIENT_ID
+            - name: GITHUB_OAUTH_CLIENT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: backstage-secrets
+                  key: GITHUB_OAUTH_CLIENT_SECRET
+            - name: AWS_ACCESS_KEY_ID
+              valueFrom:
+                secretKeyRef:
+                  name: backstage-secrets
+                  key: AWS_ACCESS_KEY_ID
+            - name: AWS_ACCESS_KEY_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: backstage-secrets
+                  key: AWS_ACCESS_KEY_SECRET
+            - name: AWS_DEFAULT_REGION
+              value: ap-southeast-2
+            - name: KUBERNETES_URL
+              valueFrom:
+                secretKeyRef:
+                  name: backstage-secrets
+                  key: KUBERNETES_URL
+            - name: KUBERNETES_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: backstage-secrets
+                  key: KUBERNETES_TOKEN
+            - name: ARGOCD_BASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: backstage-secrets
+                  key: ARGOCD_BASE_URL
+            - name: ARGOCD_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: backstage-secrets
+                  key: ARGOCD_USERNAME
+            - name: ARGOCD_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: backstage-secrets
+                  key: ARGOCD_PASSWORD
+            - name: ARGOCD_AUTH_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: backstage-secrets
+                  key: ARGOCD_AUTH_TOKEN
+            {{- with .Values.backend.env }}
+            {{- toYaml . | nindent 12 }}
+            {{- end }}
+          ports:
+            - name: http
+              containerPort: {{ .Values.appConfig.backend.listen.port | default 7007 }}
+              protocol: TCP
+          volumeMounts:
+            - mountPath: /app/app-config.yaml
+              name: config
+              subPath: app-config.yaml
+            - name: github-app-credentials
+              mountPath: /app/github-app-credentials.yaml
+              subPath: github-app-credentials.yaml
+          {{- with .Values.backend.resources }}
+          resources:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+      volumes:
+        - name: config
+          configMap:
+            name: {{ include "backstage.backendConfigName" . }}
+        - name: github-app-credentials
+          secret:
+            secretName: github-app-credentials
+            optional: true
+      {{- with .Values.backend.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.backend.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.backend.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}

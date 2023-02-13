@@ -1,0 +1,286 @@
+# -- Override the name of the chart.
+nameOverride: ""
+# -- Override the fullname of the chart.
+fullnameOverride: ""
+
+app:
+  image:
+    # -- App image repository.
+    repository: ghcr.io/ortelius/backstage/app
+    # -- App image tag @default -- `{{ .Chart.AppVersion }}`
+    tag: "0.0.1"
+    # -- App image pull policy.
+    pullPolicy: IfNotPresent
+    # -- App image pull secrets.
+    pullSecrets:
+      - name: ghcr
+
+  serviceAccount:
+    # -- App if `true`, create a new service account.
+    create: true
+    # -- App annotations to add to the service account
+    annotations: {}
+    # -- App service account to be used. If not set and serviceAccount.create is true, a name is generated using the full name template.
+    name: ""
+
+  autoscaling:
+    # -- App if `true`, create a HPA for the deployment.
+    enabled: false
+    # -- App minimum number of pod replicas.
+    minReplicas: 1
+    # -- App maximum number of pod replicas.
+    maxReplicas: 3
+    # -- App target CPU utilisation for the pod.
+    targetCPUUtilizationPercentage: 60
+    # -- App target memory utilisation for the pod.
+    targetMemoryUtilizationPercentage:
+
+  # https://kubernetes.io/docs/tasks/run-application/configure-pdb/
+  podDisruptionBudget:
+    # -- App if `true`, create a PDB for the deployment.
+    enabled: false
+    # -- (int) App set the PDB minimum available pods.
+    minAvailable:
+    # -- (int) App set the PDB maximum unavailable pods.
+    maxUnavailable:
+
+  # -- App annotations to add to the pod.
+  podAnnotations: {}
+
+  # -- App labels to add to the pod.
+  podLabels: {}
+
+  # -- App security context for the container.
+  securityContext: {}
+
+  # -- App security context for the pod.
+  podSecurityContext: {}
+
+  # -- App priority class name to use.
+  priorityClassName: ""
+
+  # --  The liveness probe.
+  # @default -- see values.yaml
+  livenessProbe:
+    httpGet:
+      path: /healthcheck
+      port: http
+
+  # -- App the readiness probe.
+  # @default -- see values.yaml
+  readinessProbe:
+    httpGet:
+      path: /healthcheck
+      port: http
+
+  service:
+    # -- App service type.
+    type: ClusterIP
+    # -- App annotations to add to the service.
+    annotations: {}
+    # --  Service port.
+    port: 80
+
+  ingress:
+    # -- App if `true`, create an ingress object.
+    enabled: true
+    # -- App ingress annotations.
+    annotations:
+      kubernetes.io/ingress.class: nginx
+
+    ingressClassName: ""
+    # -- App ingress hosts.
+    hosts:
+      - backstage.ortelius.io
+    # -- App ingress TLS configuration
+    tls: []
+
+  # -- App resource requests and limits for the clamav container.
+  resources: {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  #   requests:
+  #     cpu: 100m
+  #     memory: 128Mi
+  #   limits:
+  #     cpu: 100m
+  #     memory: 128Mi
+
+  # -- App number of replicas to create.
+  replicaCount: 1
+
+  # -- App node labels for pod assignment.
+  nodeSelector: {}
+
+  # -- App tolerations for pod assignment.
+  tolerations: []
+
+  # -- App affinity for pod assignment.
+  affinity: {}
+
+  # -- Frontend environment variables for the container.
+  env: []
+
+backend:
+  image:
+    # -- Backend image repository.
+    repository: ghcr.io/ortelius/backstage/backend
+    # -- Backend image tag @default -- `{{ .Chart.AppVersion }}`
+    tag: "0.0.1"
+    # -- Backend image pull policy.
+    pullPolicy: IfNotPresent
+    # -- Backend image pull secrets.
+    pullSecrets:
+      - name: ghcr
+
+  serviceAccount:
+    # -- Backend if `true`, create a new service account.
+    create: true
+    # -- Backend annotations to add to the service account
+    annotations: {}
+    # -- Backend service account to be used. If not set and serviceAccount.create is true, a name is generated using the full name template.
+    name: ""
+
+  autoscaling:
+    # -- Backend if `true`, create a HPA for the deployment.
+    enabled: false
+    # -- Backend minimum number of pod replicas.
+    minReplicas: 1
+    # -- Backend maximum number of pod replicas.
+    maxReplicas: 3
+    # -- Backend target CPU utilisation for the pod.
+    targetCPUUtilizationPercentage: 60
+    # -- Backend target memory utilisation for the pod.
+    targetMemoryUtilizationPercentage:
+
+  # https://kubernetes.io/docs/tasks/run-application/configure-pdb/
+  podDisruptionBudget:
+    # -- Backend if `true`, create a PDB for the deployment.
+    enabled: false
+    # -- (int) Backend set the PDB minimum available pods.
+    minAvailable:
+    # -- (int) Backend set the PDB maximum unavailable pods.
+    maxUnavailable:
+
+  # -- Backend annotations to add to the pod.
+  podAnnotations: {}
+
+  # -- Backend labels to add to the pod.
+  podLabels: {}
+    #app.kubernetes.io/component: backend
+
+  # -- Backend security context for the container.
+  securityContext: {}
+
+  # -- Backend security context for the pod.
+  podSecurityContext: {}
+
+  # -- Backend priority class name to use.
+  priorityClassName: ""
+
+  # --  The liveness probe.
+  # @default -- see values.yaml
+  livenessProbe:
+    httpGet:
+      path: /healthcheck
+      port: http
+
+  # -- Backend the readiness probe.
+  # @default -- see values.yaml
+  readinessProbe:
+    httpGet:
+      path: /healthcheck
+      port: http
+
+  service:
+    # -- Backend service type.
+    type: ClusterIP
+    # -- Backend annotations to add to the service.
+    annotations: {}
+    # --  Service port.
+    port: 80
+
+  ingress:
+    # -- Backend if `true`, create an ingress object.
+    enabled: false
+    # -- Backend ingress annotations.
+    annotations: {}
+    # -- Backend ingress class to use.
+    ingressClassName: ""
+    # -- Backend ingress hosts.
+    hosts: []
+    # -- Backend ingress TLS configuration
+    tls: []
+
+  # -- Backend resource requests and limits for the clamav container.
+  resources: {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  #   requests:
+  #     cpu: 100m
+  #     memory: 128Mi
+  #   limits:
+  #     cpu: 100m
+  #     memory: 128Mi
+
+  # -- Backend number of replicas to create.
+  replicaCount: 1
+
+  # -- Backend node labels for pod assignment.
+  nodeSelector: {}
+
+  # -- Backend tolerations for pod assignment.
+  tolerations: []
+
+  # -- Backend affinity for pod assignment.
+  affinity: {}
+
+  # -- Backend environment variables for the container.
+  env: []
+
+# -- Settings are only required if you wish to use an existing postgresql instance
+psql:
+  host: backstage-dev.cdlwn75w6jqv.ap-southeast-2.rds.amazonaws.com
+  port: 5432
+  username: backstage
+  password:
+    secret: postgres-secrets
+    key: POSTGRES_PASSWORD
+  connectionString:
+    secret: postgres-secrets
+    key: POSTGRES_CONNECTION_STRING
+
+postgresql:
+   # -- If `true`, executes subchart PostgreSQL from Bitnami, [reference](https://artifacthub.io/packages/helm/bitnami/postgresql).
+  enabled: false
+
+# -- Backstage application config, [reference](https://backstage.io/docs/conf/writing).
+# @default -- see values.yaml
+appConfig:
+  app:
+    title: Ortelius Backstage
+    baseUrl: https://backstage.ortelius.io
+  organization:
+    name: ortelius
+  backend:
+    baseUrl: https://backstage.ortelius.io
+    listen:
+      port: 7007
+    cors:
+      origin: https://backstage.ortelius.io
+      methods: [GET, POST, PUT, DELETE]
+      credentials: true
+    database:
+      client: pg
+      ## Environment variables provide based on postgresql or psql.
+      connection:
+        host: ${POSTGRES_HOST}
+        port: ${POSTGRES_PORT}
+        user: ${POSTGRES_USER}
+        password: ${POSTGRES_PASSWORD}
+  techdocs:
+    builder: external
