@@ -19,18 +19,18 @@ resource "kind_cluster" "ortelius" {
       kubeadm_config_patches = [
         "kind: InitConfiguration\nnodeRegistration:\n  kubeletExtraArgs:\n    node-labels: \"kubernetes.io/os=linux\"\n"
       ]
-      # ortelius http port
-      extra_port_mappings {
-        container_port = 30341
-        host_port      = 80
-        listen_address = "0.0.0.0"
-      }
-      # ortelius ssl port
-      extra_port_mappings {
-        container_port = 32089
-        host_port      = 443
-        listen_address = "0.0.0.0"
-      }
+#      # ortelius http port
+#      extra_port_mappings {
+#        container_port = 30341
+#        host_port      = 80
+#        listen_address = "0.0.0.0"
+#      }
+#      # ortelius ssl port
+#      extra_port_mappings {
+#        container_port = 32089
+#        host_port      = 443
+#        listen_address = "0.0.0.0"
+#      }
       # localstack port
       extra_port_mappings {
         container_port = 31566
@@ -68,7 +68,7 @@ resource "helm_release" "ortelius" {
   create_namespace = true
   recreate_pods    = true
   depends_on       = [kind_cluster.ortelius]
-  timeout          = 600
+  timeout          = 900
   #values           = [file("service-nginx.yaml")]
 }
 
@@ -82,7 +82,7 @@ resource "helm_release" "localstack" {
   create_namespace = true
   recreate_pods    = true
   depends_on       = [kind_cluster.ortelius]
-  timeout          = 600
+  timeout          = 900
   # ONLY ENABLE THIS IF YOU HAVE A LOCALSTACK PRO API KEY
   values           = [file("localstack.yaml")]
 }
