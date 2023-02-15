@@ -87,7 +87,8 @@ resource "helm_release" "localstack" {
   # ONLY ENABLE THIS IF YOU HAVE A LOCALSTACK PRO API KEY
   #values           = [file("localstack.yaml")]
 }
-
+# creates an S3 bucket called ortelius
+# accessible at http://s3.local.gd
 resource "aws_s3_bucket" "ortelius_bucket" {
   bucket     = "ortelius-bucket"
   depends_on = [helm_release.localstack]
