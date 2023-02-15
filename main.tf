@@ -21,7 +21,7 @@ resource "kind_cluster" "ortelius" {
       ]
       # ortelius http port
       extra_port_mappings {
-        container_port = 50000
+        container_port = 30000
         host_port      = 8080
         listen_address = "0.0.0.0"
       }
@@ -45,18 +45,18 @@ resource "kind_cluster" "ortelius" {
 }
 
 # ONLY ENABLE THIS IF YOU HAVE A LOCALSTACK PRO API KEY
-resource "kubectl_manifest" "localstack_apikey" {
-  yaml_body = <<YAML
-apiVersion: v1
-kind: Secret
-metadata:
-  name: localstack-apikey
-  namespace: localstack
-type: Opaque
-data:
-  localstack-apikey: ${base64encode(var.localstack_api_key)}
-YAML
-}
+# resource "kubectl_manifest" "localstack_apikey" {
+#   yaml_body = <<YAML
+# apiVersion: v1
+# kind: Secret
+# metadata:
+#   name: localstack-apikey
+#   namespace: localstack
+# type: Opaque
+# data:
+#   localstack-apikey: ${base64encode(var.localstack_api_key)}
+# YAML
+# }
 
 # ortelius https://artifacthub.io/packages/helm/ortelius/ortelius
 # postgresql https://artifacthub.io/packages/helm/bitnami/postgresql-ha
@@ -75,7 +75,7 @@ resource "helm_release" "ortelius" {
 
   set {
     name  = "ms-nginx.ingress.nodePort"
-    value = "50000"
+    value = "30000"
   }
 }
 
