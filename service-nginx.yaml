@@ -1,3 +1,0 @@
-ms-nginx:
-  ingress:
-    nodePort: 50000
