@@ -1,7 +1,0 @@
-DockerRepo: quay.io/ortelius/ms-compitem-crud
-DockerSha: f1639b6517cf
-DockerTag: deploy-v10.0.0.104-g58a578d
-image:
-  repository: quay.io/ortelius/ms-compitem-crud
-  tag: main-v10.0.3-g449e79
-  sha: sha256:2d00c0e3b6fccd754b0a757199939eb8c2cd676f5d1e71031b96ba6fa8faddfa

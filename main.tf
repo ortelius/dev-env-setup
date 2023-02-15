@@ -70,10 +70,12 @@ resource "helm_release" "ortelius" {
   depends_on       = [kind_cluster.ortelius]
   timeout          = 900
   dependency_update = true
+  version = "10.0.78"
+  replace = true
 
   set {
     name  = "ms-nginx.ingress.nodePort"
-    value = 50000
+    value = "50000"
   }
 }
 
