@@ -55,17 +55,17 @@ resource "kind_cluster" "ortelius" {
 # ortelius https://artifacthub.io/packages/helm/ortelius/ortelius
 # postgresql https://artifacthub.io/packages/helm/bitnami/postgresql-ha
 resource "helm_release" "ortelius" {
-  name             = "ortelius"
-  chart            = "ortelius"
-  repository       = "https://ortelius.github.io/ortelius-charts/"
-  namespace        = var.ortelius_namespace
-  create_namespace = true
-  recreate_pods    = true
-  depends_on       = [kind_cluster.ortelius]
-  timeout          = 900
+  name              = "ortelius"
+  chart             = "ortelius"
+  repository        = "https://ortelius.github.io/ortelius-charts/"
+  namespace         = var.ortelius_namespace
+  create_namespace  = true
+  recreate_pods     = true
+  depends_on        = [kind_cluster.ortelius]
+  timeout           = 900
   dependency_update = true
-  version = "10.0.78"
-  replace = true
+  version           = "10.0.78"
+  replace           = true
 
   set {
     name  = "ms-nginx.ingress.nodePort"
