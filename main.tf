@@ -19,12 +19,12 @@ resource "kind_cluster" "ortelius" {
       kubeadm_config_patches = [
         "kind: InitConfiguration\nnodeRegistration:\n  kubeletExtraArgs:\n    node-labels: \"kubernetes.io/os=linux\"\n"
       ]
-#      # ortelius http port
-#      extra_port_mappings {
-#        container_port = 30341
-#        host_port      = 80
-#        listen_address = "0.0.0.0"
-#      }
+      # ortelius http port
+      extra_port_mappings {
+        container_port = 50000
+        host_port      = 8080
+        listen_address = "0.0.0.0"
+      }
 #      # ortelius ssl port
 #      extra_port_mappings {
 #        container_port = 32089
@@ -69,7 +69,12 @@ resource "helm_release" "ortelius" {
   recreate_pods    = true
   depends_on       = [kind_cluster.ortelius]
   timeout          = 900
-  #values           = [file("service-nginx.yaml")]
+  dependency_update = true
+
+  set {
+    name  = "ms-nginx.ingress.nodePort"
+    value = 50000
+  }
 }
 
 # localstack https://docs.localstack.cloud/overview/
@@ -92,14 +97,14 @@ resource "aws_s3_bucket" "ortelius_bucket" {
   depends_on = [helm_release.localstack]
 }
 
-resource "helm_release" "backstage" {
-  name             = "backstage"
-  chart            = "backstage"
-  repository       = "https://github.com/ortelius/backstage"
-  namespace        = var.backstage_namespace
-  create_namespace = true
-  recreate_pods    = true
-  depends_on       = [kind_cluster.ortelius]
-  #timeout          = 900
+#resource "helm_release" "backstage" {
+#  name             = "backstage"
+#  chart            = "backstage"
+#  repository       = "https://github.com/ortelius/backstage"
+#  namespace        = var.backstage_namespace
+#  create_namespace = true
+#  recreate_pods    = true
+#  depends_on       = [helm_release.ortelius]
+#  timeout          = 900
   #values           = [file("service-nginx.yaml")]
-}
+#}
