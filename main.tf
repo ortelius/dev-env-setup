@@ -91,7 +91,7 @@ resource "helm_release" "localstack" {
   depends_on       = [kind_cluster.ortelius]
   timeout          = 900
   # ONLY ENABLE THIS IF YOU HAVE A LOCALSTACK PRO API KEY
-  values           = [file("localstack.yaml")]
+  values = [file("localstack.yaml")]
 }
 # creates an S3 bucket called ortelius
 # accessible at http://s3.local.gd
@@ -114,19 +114,19 @@ resource "helm_release" "postgresql" {
   replace           = true
 
   set_sensitive {
-    name = "auth.postgresPassword"
+    name  = "auth.postgresPassword"
     value = "postgres"
   }
   set_sensitive {
-    name = "auth.username"
+    name  = "auth.username"
     value = "postgres"
   }
   set_sensitive {
-    name = "auth.password"
+    name  = "auth.password"
     value = "postgres"
   }
   set {
-    name = "primary.service.nodePorts.postgresql"
+    name  = "primary.service.nodePorts.postgresql"
     value = "35432"
   }
 }
