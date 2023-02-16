@@ -70,6 +70,19 @@ resource "helm_release" "postgresql" {
   timeout           = 900
   dependency_update = true
   replace           = true
+
+  set {
+    name = "auth.postgresPassword"
+    value = "postgres"
+  }
+  set {
+    name = "auth.username"
+    value = "postgres"
+  }
+  set {
+    name = "auth.password"
+    value = "postgres"
+  }
 }
 
 # ONLY ENABLE THIS IF YOU HAVE A LOCALSTACK PRO API KEY
