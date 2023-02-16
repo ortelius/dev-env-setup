@@ -77,15 +77,15 @@ resource "helm_release" "postgresql" {
   dependency_update = true
   replace           = true
 
-  set {
+  set_sensitive {
     name = "auth.postgresPassword"
     value = "postgres"
   }
-  set {
+  set_sensitive {
     name = "auth.username"
     value = "postgres"
   }
-  set {
+  set_sensitive {
     name = "auth.password"
     value = "postgres"
   }
