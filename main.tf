@@ -38,22 +38,8 @@ resource "kind_cluster" "ortelius" {
   }
 }
 
-# ONLY ENABLE THIS IF YOU HAVE A LOCALSTACK PRO API KEY
-# resource "kubectl_manifest" "localstack_apikey" {
-#   yaml_body = <<YAML
-# apiVersion: v1
-# kind: Secret
-# metadata:
-#   name: localstack-apikey
-#   namespace: localstack
-# type: Opaque
-# data:
-#   localstack-apikey: ${base64encode(var.localstack_api_key)}
-# YAML
-# }
-
-# ortelius https://artifacthub.io/packages/helm/ortelius/ortelius
-# postgresql https://artifacthub.io/packages/helm/bitnami/postgresql-ha
+# ortelius
+# https://artifacthub.io/packages/helm/ortelius/ortelius
 resource "helm_release" "ortelius" {
   name              = "ortelius"
   chart             = "ortelius"
@@ -71,6 +57,34 @@ resource "helm_release" "ortelius" {
     value = "30000"
   }
 }
+
+# ortelius postgresql
+# https://artifacthub.io/packages/helm/bitnami/postgresql
+resource "helm_release" "postgresql" {
+  name              = "postgresql"
+  chart             = "bitname"
+  repository        = "https://charts.bitnami.com/bitnami"
+  namespace         = var.ortelius_namespace
+  recreate_pods     = true
+  depends_on        = [helm_release.ortelius]
+  timeout           = 900
+  dependency_update = true
+  replace           = true
+}
+
+# ONLY ENABLE THIS IF YOU HAVE A LOCALSTACK PRO API KEY
+# resource "kubectl_manifest" "localstack_apikey" {
+#   yaml_body = <<YAML
+# apiVersion: v1
+# kind: Secret
+# metadata:
+#   name: localstack-apikey
+#   namespace: localstack
+# type: Opaque
+# data:
+#   localstack-apikey: ${base64encode(var.localstack_api_key)}
+# YAML
+# }
 
 # localstack https://docs.localstack.cloud/overview/
 # localstack helm charts https://github.com/localstack/helm-charts
