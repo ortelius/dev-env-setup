@@ -62,7 +62,7 @@ resource "helm_release" "ortelius" {
 # https://artifacthub.io/packages/helm/bitnami/postgresql
 resource "helm_release" "postgresql" {
   name              = "postgresql"
-  chart             = "bitname"
+  chart             = "bitnami"
   repository        = "https://charts.bitnami.com/bitnami"
   namespace         = var.ortelius_namespace
   recreate_pods     = true
