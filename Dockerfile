@@ -1,9 +1,4 @@
-#-------------------------------------------------------------------------------------------------------------
-# Copyright (c) Microsoft Corporation. All rights reserved.
-# Licensed under the MIT License. See https://go.microsoft.com/fwlink/?linkid=2090316 for license information.
-#-------------------------------------------------------------------------------------------------------------
-
-FROM ubuntu:focal
+FROM mcr.microsoft.com/devcontainers/base:jammy
 
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     # Restore man command
@@ -35,25 +30,6 @@ RUN LANG="C.UTF-8" \
         # By default pip is not available in the buildpacks image
         python-pip-whl \
         python3-pip \
-        #.NET Core related pre-requisites
-        libc6 \
-        libgcc1 \
-        libgssapi-krb5-2 \
-        libncurses5 \
-        liblttng-ust0 \
-        libssl-dev \
-        libstdc++6 \
-        zlib1g \
-        libuuid1 \
-        libunwind8 \
-        sqlite3 \
-        libsqlite3-dev \
-        software-properties-common \
-        tk-dev \
-        uuid-dev \
-        curl \
-        gettext \
-    && rm -rf /var/lib/apt/lists/* \
     # This is the folder containing 'links' to benv and build script generator
     && apt-get update \
     && apt-get upgrade -y \
