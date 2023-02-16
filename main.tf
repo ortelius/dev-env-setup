@@ -21,13 +21,19 @@ resource "kind_cluster" "ortelius" {
       ]
       # ortelius http port
       extra_port_mappings {
-        container_port = 30000
+        container_port = 38080
         host_port      = 8080
+        listen_address = "0.0.0.0"
+      }
+      # postgresql port
+      extra_port_mappings {
+        container_port = 35432
+        host_port      = 5432
         listen_address = "0.0.0.0"
       }
       # localstack port
       extra_port_mappings {
-        container_port = 31566
+        container_port = 34566
         host_port      = 4566
         listen_address = "0.0.0.0"
       }
@@ -82,6 +88,10 @@ resource "helm_release" "postgresql" {
   set {
     name = "auth.password"
     value = "postgres"
+  }
+  set {
+    name = "primary.service.nodePorts.postgresql"
+    value = "35432"
   }
 }
 
