@@ -919,14 +919,14 @@ readReplicas:
     ## @param readReplicas.service.ports.postgresql PostgreSQL service port
     ##
     ports:
-      postgresql: 5432
+      postgresql: 31432
     ## Node ports to expose
     ## NOTE: choose port between <30000-32767>
     ## @param readReplicas.service.nodePorts.postgresql Node port for PostgreSQL
     ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport
     ##
     nodePorts:
-      postgresql: "31432"
+      postgresql: "31433"
     ## @param readReplicas.service.clusterIP Static clusterIP or None for headless services
     ## e.g:
     ## clusterIP: None
