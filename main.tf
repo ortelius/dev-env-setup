@@ -51,6 +51,7 @@ resource "helm_release" "postgresql" {
   chart             = "postgresql"
   repository        = "https://charts.bitnami.com/bitnami"
   namespace         = var.ortelius_namespace
+  create_namespace  = true
   recreate_pods     = true
   depends_on        = [kind_cluster.ortelius]
   timeout           = 900
@@ -66,7 +67,6 @@ resource "helm_release" "ortelius" {
   chart             = "ortelius"
   repository        = "https://ortelius.github.io/ortelius-charts/"
   namespace         = var.ortelius_namespace
-  create_namespace  = true
   recreate_pods     = true
   depends_on        = [helm_release.postgresql]
   timeout           = 900
