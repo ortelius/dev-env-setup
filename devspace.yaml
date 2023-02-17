@@ -52,7 +52,7 @@ dev:
       - path: ./:/app
     # Open a terminal and use the following command to start it
     terminal:
-      command: ./devspace_start.sh
+      command: ./app/devspace_start.sh
     # Inject a lightweight SSH server into the container (so your IDE can connect to the remote dev env)
     ssh:
       enabled: true
