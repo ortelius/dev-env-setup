@@ -85,14 +85,6 @@ resource "helm_release" "ortelius" {
     name = "ms-nginx.ingress.type"
     value = "ssloff"
   }
-  set {
-    name = "ms-nginx.ingress.dnsname"
-    value = "postgres.local.gd"
-  }
-  set {
-    name = "ms-general.dbhost"
-    value = "postgresql.default.svc.cluster.local"
-  }
 }
 
 # ONLY ENABLE THIS IF YOU HAVE A LOCALSTACK PRO API KEY
