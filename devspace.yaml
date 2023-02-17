@@ -49,7 +49,7 @@ dev:
     devImage: thevestedleopard/devuniversal #ghcr.io/loft-sh/devspace-containers/alpine:3
     # Sync files between the local filesystem and the development container
     sync:
-      - path: ./
+      - path: ./:/app
     # Open a terminal and use the following command to start it
     terminal:
       command: ./devspace_start.sh
