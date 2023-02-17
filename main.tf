@@ -64,6 +64,20 @@ resource "helm_release" "ortelius" {
   }
 }
 
+# ortelius postgresql
+# https://artifacthub.io/packages/helm/bitnami/postgresql
+resource "helm_release" "postgresql" {
+  name              = "postgresql"
+  chart             = "postgresql"
+  repository        = "https://charts.bitnami.com/bitnami"
+  namespace         = var.ortelius_namespace
+  recreate_pods     = true
+  depends_on        = [helm_release.ortelius]
+  timeout           = 900
+  dependency_update = true
+  replace           = true
+  values = [file("values-postgresql.yaml")]
+}
 
 # ONLY ENABLE THIS IF YOU HAVE A LOCALSTACK PRO API KEY
 # resource "kubectl_manifest" "localstack_apikey" {
@@ -99,34 +113,3 @@ resource "helm_release" "ortelius" {
 #   bucket     = "ortelius-bucket"
 #   depends_on = [helm_release.localstack]
 # }
-
-# ortelius postgresql
-# https://artifacthub.io/packages/helm/bitnami/postgresql
-resource "helm_release" "postgresql" {
-  name              = "postgresql"
-  chart             = "postgresql"
-  repository        = "https://charts.bitnami.com/bitnami"
-  namespace         = var.ortelius_namespace
-  recreate_pods     = true
-  depends_on        = [helm_release.ortelius]
-  timeout           = 900
-  dependency_update = true
-  replace           = true
-
-  set_sensitive {
-    name  = "auth.postgresPassword"
-    value = "postgres"
-  }
-  set_sensitive {
-    name  = "auth.username"
-    value = "postgres"
-  }
-  set_sensitive {
-    name  = "auth.password"
-    value = "postgres"
-  }
-  set {
-    name  = "primary.service.nodePorts.postgresql"
-    value = "35432"
-  }
-}
