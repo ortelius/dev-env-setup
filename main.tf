@@ -62,6 +62,18 @@ resource "helm_release" "ortelius" {
     name  = "ms-nginx.ingress.nodePort"
     value = "30000"
   }
+  set {
+    name = "ms-general.dbpass"
+    value = "postgres"
+  }
+  set {
+    name = "ms-nginx.ingress.type"
+    value = "ssloff"
+  }
+  set {
+    name = "ms-nginx.ingress.dnsname"
+    value = "postgres.local.gd"
+  }
 }
 
 # ortelius postgresql

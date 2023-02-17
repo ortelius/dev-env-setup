@@ -915,7 +915,7 @@ readReplicas:
   service:
     ## @param readReplicas.service.type Kubernetes Service type
     ##
-    type: ClusterIP
+    type: NodePort
     ## @param readReplicas.service.ports.postgresql PostgreSQL service port
     ##
     ports:
@@ -926,7 +926,7 @@ readReplicas:
     ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport
     ##
     nodePorts:
-      postgresql: ""
+      postgresql: "35432"
     ## @param readReplicas.service.clusterIP Static clusterIP or None for headless services
     ## e.g:
     ## clusterIP: None
