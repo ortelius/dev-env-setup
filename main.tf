@@ -27,7 +27,7 @@ resource "kind_cluster" "ortelius" {
       }
       # postgresql port
       extra_port_mappings {
-        container_port = 35432
+        container_port = 31432
         host_port      = 5432
         listen_address = "0.0.0.0"
       }
