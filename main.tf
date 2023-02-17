@@ -74,6 +74,10 @@ resource "helm_release" "ortelius" {
     name = "ms-nginx.ingress.dnsname"
     value = "postgres.local.gd"
   }
+  set {
+    name = "ms-general.dbhost"
+    value = "postgresql.default.svc.cluster.local"
+  }
 }
 
 # ortelius postgresql
