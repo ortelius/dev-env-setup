@@ -136,6 +136,7 @@ postgres
 ```
 ![Connection Settings](images/dbeaver/1-connection-settings.jpg)
 - Ortelius Database Tables
+
 ![Ortelius Database Tables](images/dbeaver/2-ortelius-db-tables.jpg)
 
 ### Kind Ortelius Cluster Details
