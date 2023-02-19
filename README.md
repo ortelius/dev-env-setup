@@ -7,6 +7,7 @@
     - [How to access Ortelius](#how-to-access-ortelius)
     - [How to access PostgreSQL](#how-to-access-postgresql)
       - [DBeaver](#dbeaver)
+      - [Connection settings](#connection-settings)
     - [Kind Ortelius Cluster Details](#kind-ortelius-cluster-details)
       - [Context `kind-ortelius`](#context-kind-ortelius)
       - [Namespaces `ortelius` `localstack`](#namespaces-ortelius-localstack)
@@ -118,9 +119,11 @@ The latest version of Ortelius is maintained by the Ortelius Community managed b
 - You can use DBeaver Community Edition which is available [here](https://dbeaver.io/)
 - Support ChatGPT integration for smart completion and code generation as an optional extension
 - [Apache License 2.0](https://dbeaver.io/product/dbeaver_license.txt)
-- Connection settings
+
+#### Connection settings
+- Password
 ```
-Password: postgres
+postgres
 ```
 ![Connection Settings](images/dbeaver/1-connection-settings.jpg)
 - Ortelius Database Tables
