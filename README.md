@@ -119,6 +119,9 @@ The latest version of Ortelius is maintained by the Ortelius Community managed b
 - Support ChatGPT integration for smart completion and code generation as an optional extension
 - [Apache License 2.0](https://dbeaver.io/product/dbeaver_license.txt)
 - Connection settings
+```
+Password: postgres
+```
 ![Connection Settings](images/dbeaver/1-connection-settings.jpg)
 - Ortelius Database Tables
 ![Ortelius Database Tables](images/dbeaver/2-ortelius-db-tables.jpg)
