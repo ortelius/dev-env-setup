@@ -6,6 +6,7 @@
   - [Ortelius](#ortelius-1)
     - [How to access Ortelius](#how-to-access-ortelius)
     - [How to access PostgreSQL](#how-to-access-postgresql)
+      - [DBeaver](#dbeaver)
     - [Kind Ortelius Cluster Details](#kind-ortelius-cluster-details)
       - [Context `kind-ortelius`](#context-kind-ortelius)
       - [Namespaces `ortelius` `localstack`](#namespaces-ortelius-localstack)
@@ -73,7 +74,7 @@
   - [Dev Containers](#dev-containers)
 
 ## Tools of the trade
-- Ortelius
+- [Ortelius](https://ortelius.io)
 - Docker
 - Kind
 - Kubectl
@@ -96,7 +97,7 @@ The latest version of Ortelius is maintained by the Ortelius Community managed b
 
 ![Architecture](images/02-architecture.png)
 
-## Ortelius
+## [Ortelius](https://ortelius.io/)
 - Helm Charts are [here](https://github.com/ortelius/ortelius-charts)
 - Chart.yaml is [here](https://github.com/ortelius/ortelius-charts/blob/master/Chart.yaml)
 ### How to access Ortelius
@@ -111,6 +112,10 @@ The latest version of Ortelius is maintained by the Ortelius Community managed b
       }
 ```
 ### How to access PostgreSQL
+#### DBeaver
+
+Free multi-platform database tool for developers, database administrators, analysts and all people who need to work with databases. Supports all popular databases: MySQL, PostgreSQL, SQLite, Oracle, DB2, SQL Server, Sybase, MS Access, Teradata, Firebird, Apache Hive, Phoenix, Presto, etc.
+
 - You can use DBeaver Community Edition which is available [here](https://dbeaver.io/)
 - Connection settings
 
