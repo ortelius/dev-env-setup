@@ -100,7 +100,8 @@ The latest version of Ortelius is maintained by the Ortelius Community managed b
 - Helm Charts are [here](https://github.com/ortelius/ortelius-charts)
 - Chart.yaml is [here](https://github.com/ortelius/ortelius-charts/blob/master/Chart.yaml)
 ### How to access Ortelius
-- Use can access Ortelius at http://localhost:8080/dmadminweb/Home#dhmain due to the Kind extra port mappings to a NodePort
+- Use can access Ortelius at http://localhost:8080/dmadminweb/Home#dhmain
+- Ortelius HTTP Kind extra port mappings to a NodePort
 ```
       # ortelius http port
       extra_port_mappings {
