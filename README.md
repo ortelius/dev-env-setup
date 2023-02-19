@@ -113,6 +113,15 @@ The latest version of Ortelius is maintained by the Ortelius Community managed b
       }
 ```
 ### How to access PostgreSQL
+- PostgreSQL Kind extra port mappings to a NodePort
+```
+      # postgresql port
+      extra_port_mappings {
+        container_port = 31432
+        host_port      = 5432
+        listen_address = "0.0.0.0"
+      }
+```
 #### DBeaver
 - Free multi-platform database tool for developers, database administrators, analysts and all people who need to work with databases.
 - Supports all popular databases: `MySQL, PostgreSQL, SQLite, Oracle, DB2, SQL Server, Sybase, MS Access, Teradata, Firebird, Apache Hive, Phoenix, Presto, etc`.
