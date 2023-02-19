@@ -3,11 +3,13 @@
   - [Tools of the trade](#tools-of-the-trade)
   - [Ortelius](#ortelius)
       - [Terraform Structure](#terraform-structure)
-  - [Kind Ortelius Cluster Details](#kind-ortelius-cluster-details)
+  - [Ortelius](#ortelius-1)
     - [How to access Ortelius](#how-to-access-ortelius)
-    - [Context `kind-ortelius`](#context-kind-ortelius)
-    - [Namespaces `ortelius` `localstack`](#namespaces-ortelius-localstack)
-    - [Nodes](#nodes)
+    - [How to access PostgreSQL](#how-to-access-postgresql)
+    - [Kind Ortelius Cluster Details](#kind-ortelius-cluster-details)
+      - [Context `kind-ortelius`](#context-kind-ortelius)
+      - [Namespaces `ortelius` `localstack`](#namespaces-ortelius-localstack)
+      - [Nodes](#nodes)
   - [Docker.com](#dockercom)
     - [GitHub Docker](#github-docker)
   - [Terraform](#terraform)
@@ -90,14 +92,16 @@ Ortelius aggregates DevOps, security and supply chain data for each independent 
 The latest version of Ortelius is maintained by the Ortelius Community managed by the [Continuous Delivery Foundation](https://cd.foundation/) (Linux Foundation). It was originally created by [DeployHub](https://www.deployhub.com/) and [OpenMake Software](https://www.openmakesoftware.com/). Our mission is to simplify the adoption of modern architecture through a world-class microservice catalog driven by a supportive and diverse global open source community.
 
 #### Terraform Structure
-![Architecture!](images/01-architecture.png)
+![Architecture](images/01-architecture.png)
 
-![Architecture!](images/02-architecture.png)
+![Architecture](images/02-architecture.png)
 
-## Kind Ortelius Cluster Details
+## Ortelius
+- Helm Charts are [here](https://github.com/ortelius/ortelius-charts)
+- Chart.yaml is [here](https://github.com/ortelius/ortelius-charts/blob/master/Chart.yaml)
 ### How to access Ortelius
 - Use can access Ortelius at http://localhost:8080/dmadminweb/Home#dhmain due to the Kind extra port mappings to a NodePort
-  ```
+```
       # ortelius http port
       extra_port_mappings {
         container_port = 30000
@@ -105,8 +109,17 @@ The latest version of Ortelius is maintained by the Ortelius Community managed b
         listen_address = "0.0.0.0"
       }
 ```
+### How to access PostgreSQL
+- You can use DBeaver Community Edition which is available [here](https://dbeaver.io/)
+- Connection settings
 
-### Context `kind-ortelius`
+![Connection Settings](images/dbeaver/1-connection-settings.jpg)
+
+![Ortelius Database Tables](images/dbeaver/2-ortelius-db-tables.jpg)
+
+
+### Kind Ortelius Cluster Details
+#### Context `kind-ortelius`
 - List all the contexts
 ```
 kubectl config get context
@@ -119,12 +132,12 @@ kubectl config use-context kind-ortelius
 ```
 kubectl config -h
 ```
-### Namespaces `ortelius` `localstack`
+#### Namespaces `ortelius` `localstack`
 - List all namespaces
 ```
 kubectl get namespace -A
 ```
-### Nodes
+#### Nodes
 - Control Plane `ortelius-control-plane`
 - Worker `ortelius-worker`
 ```
