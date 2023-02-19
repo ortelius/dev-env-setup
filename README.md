@@ -96,19 +96,14 @@ The latest version of Ortelius is maintained by the Ortelius Community managed b
 
 ## Kind Ortelius Cluster Details
 ### How to access Ortelius
-- Use a port forward with kubectl to the ms-nginx microservice service
-- `kubectl port-forward TYPE/NAME [options] LOCAL_PORT:REMOTE_PORT`
-- kubectl port-forward help
-```
-kubectl port-forward -h
-```
-- 8080 represents the local port on your machine http://localhost:8080
-```
-kubectl port-forward svc/ms-nginx 8080:80 -n ortelius
-```
-- 8443 represents the local port on your machine http://localhost:8443
-```
-kubectl port-forward svc/ms-nginx 8443:443 -n ortelius
+- Use can access Ortelius at http://localhost:8080/dmadminweb/Home#dhmain due to the Kind extra port mappings to a NodePort
+  ```
+      # ortelius http port
+      extra_port_mappings {
+        container_port = 30000
+        host_port      = 8080
+        listen_address = "0.0.0.0"
+      }
 ```
 
 ### Context `kind-ortelius`
