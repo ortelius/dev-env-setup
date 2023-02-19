@@ -116,7 +116,7 @@ The latest version of Ortelius is maintained by the Ortelius Community managed b
 - Free multi-platform database tool for developers, database administrators, analysts and all people who need to work with databases.
 - Supports all popular databases: `MySQL, PostgreSQL, SQLite, Oracle, DB2, SQL Server, Sybase, MS Access, Teradata, Firebird, Apache Hive, Phoenix, Presto, etc`.
 - You can use DBeaver Community Edition which is available [here](https://dbeaver.io/)
-- Support ChatGPT integration for smart completion and code generation as optional extension)
+- Support ChatGPT integration for smart completion and code generation as an optional extension
 - [Apache License 2.0](https://dbeaver.io/product/dbeaver_license.txt)
 - Connection settings
 ![Connection Settings](images/dbeaver/1-connection-settings.jpg)
