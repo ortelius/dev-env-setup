@@ -92,7 +92,7 @@ resource "helm_release" "ortelius" {
     name = "ms-nginx.ingress.dnsname"
     value = ""
   }
-  # helm chart for postgres based on alpine (no CVEs).
+  # helm chart for postgres based on alpine (no CVEs)
   # use this to deploy to kind and include a Statefulset for postgres
   set {
     name = "global.postgresql.enabled"
