@@ -24,11 +24,6 @@ resource "kind_cluster" "ortelius" {
       kubeadm_config_patches = [
         "kind: InitConfiguration\nnodeRegistration:\n  kubeletExtraArgs:\n    node-labels: \"kubernetes.io/os=linux\"\n"
       ]
-      extra_port_mappings {
-        container_port = 443
-        host_port      = 443
-        listen_address = "0.0.0.0"
-      }
       # ortelius http port
       extra_port_mappings {
         container_port = 30000
@@ -67,35 +62,26 @@ resource "helm_release" "ortelius" {
   timeout           = 900
   dependency_update = true
   replace           = true
-  # node port for ui access
-  set {
-    name  = "ms-nginx.ingress.nodePort"
-    value = "30000"
-  }
-  set {
-    name  = "ms-postgres.ingress.nodePort"
-    value = "30001"
-  }
+
   # postgres password
   set {
     name  = "ms-general.dbpass"
     value = "postgres"
   }
-  # ssl off
-  set {
-    name  = "ms-nginx.ingress.type"
-    value = "ssloff"
-  }
-  # wildcard hostname for the ingress e.g. http://localhost:8080/dmadminweb/Home#dhmain
-  set {
-    name  = "ms-nginx.ingress.dnsname"
-    value = ""
-  }
-  # helm chart for postgres based on alpine (no CVEs)
-  # use this to deploy to kind and include a Statefulset for postgres
+  # postgres global
   set {
     name  = "global.postgresql.enabled"
     value = "true"
+  }
+  # global ingress nginx controller
+  set {
+    name  = "global.ingress-nginx-controller"
+    value = "true"
+  }
+  # node port for ui access
+  set {
+    name  = "ms-nginx.ingress.nodePort"
+    value = "30000"
   }
 }
 
