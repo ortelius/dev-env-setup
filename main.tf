@@ -72,38 +72,38 @@ resource "helm_release" "ortelius" {
     name  = "ms-nginx.ingress.nodePort"
     value = "30000"
   }
-    set {
+  set {
     name  = "ms-postgres.ingress.nodePort"
     value = "30001"
   }
   # postgres password
   set {
-    name = "ms-general.dbpass"
+    name  = "ms-general.dbpass"
     value = "postgres"
   }
   # ssl off
   set {
-    name = "ms-nginx.ingress.type"
+    name  = "ms-nginx.ingress.type"
     value = "ssloff"
   }
   # wildcard hostname for the ingress e.g. http://localhost:8080/dmadminweb/Home#dhmain
   set {
-    name = "ms-nginx.ingress.dnsname"
+    name  = "ms-nginx.ingress.dnsname"
     value = ""
   }
   # helm chart for postgres based on alpine (no CVEs)
   # use this to deploy to kind and include a Statefulset for postgres
   set {
-    name = "global.postgresql.enabled"
+    name  = "global.postgresql.enabled"
     value = "true"
   }
 }
 
 # ONLY ENABLE THIS IF YOU HAVE A LOCALSTACK PRO API KEY
 resource "kubectl_manifest" "localstack_apikey" {
-  depends_on        = [helm_release.ortelius]
+  depends_on = [helm_release.ortelius]
   apply_only = true
-  yaml_body = <<YAML
+  yaml_body  = <<YAML
 apiVersion: v1
 kind: Secret
 metadata:
@@ -118,15 +118,15 @@ YAML
 # localstack https://docs.localstack.cloud/overview/
 # localstack helm charts https://github.com/localstack/helm-charts
 resource "helm_release" "localstack" {
-  name             = "localstack"
-  chart            = "localstack"
-  repository       = "https://helm.localstack.cloud"
+  name       = "localstack"
+  chart      = "localstack"
+  repository = "https://helm.localstack.cloud"
   #namespace        = var.localstack_namespace
-  namespace         = var.ortelius_namespace
+  namespace = var.ortelius_namespace
   # create_namespace = true
-  recreate_pods    = true
-  depends_on       = [helm_release.ortelius]
-  timeout          = 900
+  recreate_pods = true
+  depends_on    = [helm_release.ortelius]
+  timeout       = 900
   # ONLY ENABLE THIS IF YOU HAVE A LOCALSTACK PRO API KEY
   values = [file("localstack.yaml")]
 }
