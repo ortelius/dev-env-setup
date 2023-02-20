@@ -63,7 +63,6 @@ resource "helm_release" "ortelius" {
   namespace         = var.ortelius_namespace
   create_namespace  = true
   recreate_pods     = true
-  #depends_on        = [helm_release.postgresql]
   depends_on        = [kind_cluster.ortelius]
   timeout           = 900
   dependency_update = true
@@ -102,6 +101,8 @@ resource "helm_release" "ortelius" {
 
 # ONLY ENABLE THIS IF YOU HAVE A LOCALSTACK PRO API KEY
 resource "kubectl_manifest" "localstack_apikey" {
+  depends_on        = [helm_release.ortelius]
+  apply_only = true
   yaml_body = <<YAML
 apiVersion: v1
 kind: Secret
