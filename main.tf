@@ -73,21 +73,31 @@ resource "helm_release" "ortelius" {
   dependency_update = true
   replace           = true
 
+  # node port for ui access
   set {
     name  = "ms-nginx.ingress.nodePort"
     value = "30000"
   }
+  # postgres password
   set {
     name = "ms-general.dbpass"
     value = "postgres"
   }
+  # ssl off
   set {
     name = "ms-nginx.ingress.type"
     value = "ssloff"
   }
+  # wildcard ingress
   set {
     name = "ms-nginx.ingress.dnsname"
     value = ""
+  }
+  # helm chart for postgres based on alpine (no CVEs).
+  # use this to deploy to kind and include a Statefulset for postgres
+  set {
+    name = "global.postgresql.enabled"
+    value = "true"
   }
 }
 
