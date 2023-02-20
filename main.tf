@@ -1,3 +1,8 @@
+# localstack use|
+# use the tflocal terraform wrapper for the terraform deployment &
+# https://docs.localstack.cloud/user-guide/integrations/terraform/
+# awscli-local wrapper for using aws localstack endpoints
+# awscli-local | https://docs.localstack.cloud/user-guide/integrations/aws-cli/
 # kind https://kind.sigs.k8s.io/-
 provider "kind" {
   # configuration options
