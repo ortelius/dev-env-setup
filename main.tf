@@ -72,7 +72,6 @@ resource "helm_release" "ortelius" {
   timeout           = 900
   dependency_update = true
   replace           = true
-
   # node port for ui access
   set {
     name  = "ms-nginx.ingress.nodePort"
