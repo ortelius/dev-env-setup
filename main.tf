@@ -63,8 +63,7 @@ resource "helm_release" "ortelius" {
   dependency_update = true
   replace           = true
 
-  # postgres node port access on 5432
-  # from localhost
+  # postgres node port for database access from localhost
   set {
     name = "ms-postgres.nodePort"
     value = "30001"
@@ -84,7 +83,7 @@ resource "helm_release" "ortelius" {
     name  = "global.ingress.nginx.controller"
     value = "true"
   }
-  # node port for ui access
+  # node port for ui access from localhost
   set {
     name  = "ms-nginx.ingress.nodePort"
     value = "30000"
