@@ -65,7 +65,7 @@ resource "helm_release" "ortelius" {
 
   # postgres node port for database access from localhost
   set {
-    name = "ms-postgres.nodePort"
+    name  = "ms-postgres.nodePort"
     value = "30001"
   }
   # postgres password
@@ -112,12 +112,12 @@ resource "helm_release" "localstack" {
   name       = "localstack"
   chart      = "localstack"
   repository = "https://helm.localstack.cloud"
-  #namespace        = var.localstack_namespace
-  namespace = var.ortelius_namespace
-  # create_namespace = true
-  recreate_pods = true
-  depends_on    = [helm_release.ortelius]
-  timeout       = 900
+  namespace  = var.localstack_namespace
+  #namespace = var.ortelius_namespace
+  create_namespace = true
+  recreate_pods    = true
+  depends_on       = [helm_release.ortelius]
+  timeout          = 900
   # ONLY ENABLE THIS IF YOU HAVE A LOCALSTACK PRO API KEY
   values = [file("localstack.yaml")]
 }
