@@ -21,12 +21,6 @@ resource "kind_cluster" "ortelius" {
       ]
       # ortelius http port
       extra_port_mappings {
-        container_port = 80
-        host_port      = 80
-        listen_address = "0.0.0.0"
-      }
-      # ortelius http port
-      extra_port_mappings {
         container_port = 30000
         host_port      = 8080
         listen_address = "0.0.0.0"
