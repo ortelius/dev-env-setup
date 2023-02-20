@@ -119,7 +119,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: localstack-apikey
-  namespace: localstack
+  namespace: ortelius
 type: Opaque
 data:
   localstack-apikey: ${base64encode(var.localstack_api_key)}
