@@ -50,22 +50,6 @@ resource "kind_cluster" "ortelius" {
   }
 }
 
-# ortelius postgresql
-# https://artifacthub.io/packages/helm/bitnami/postgresql
-#resource "helm_release" "postgresql" {
-#  name              = "postgresql"
-#  chart             = "postgresql"
-#  repository        = "https://charts.bitnami.com/bitnami"
-#  namespace         = var.ortelius_namespace
-#  create_namespace  = true
-#  recreate_pods     = true
-#  depends_on        = [kind_cluster.ortelius]
-#  timeout           = 900
-#  dependency_update = true
-#  replace           = true
-#  values = [file("values-postgresql.yaml")]
-#}
-
 # ortelius
 # https://artifacthub.io/packages/helm/ortelius/ortelius
 resource "helm_release" "ortelius" {
