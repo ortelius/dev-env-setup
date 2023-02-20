@@ -126,7 +126,7 @@ resource "helm_release" "localstack" {
   values = [file("localstack.yaml")]
 }
 # creates an S3 bucket called ortelius
-# accessible at http://s3.local.gd
+# accessible at http://s3.local.gd:4566/ortelius-bucket
 resource "aws_s3_bucket" "ortelius_bucket" {
   bucket     = "ortelius-bucket"
   depends_on = [helm_release.ortelius]
