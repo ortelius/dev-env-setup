@@ -24,7 +24,7 @@ terraform {
 }
 
 provider "kubectl" {
-  apply_retry_count      = 15
+  #apply_retry_count      = 15
   host                   = kind_cluster.ortelius.endpoint
   cluster_ca_certificate = kind_cluster.ortelius.cluster_ca_certificate
   client_certificate     = kind_cluster.ortelius.client_certificate
