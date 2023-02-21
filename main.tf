@@ -1,7 +1,7 @@
 # localstack use|
-# use the tflocal terraform wrapper for the terraform deployment &
+# use the tflocal terraform wrapper for the terraform deployment
 # https://docs.localstack.cloud/user-guide/integrations/terraform/
-# awscli-local wrapper for using aws localstack endpoints
+# use the awscli-local wrapper for using aws localstack endpoints
 # awscli-local | https://docs.localstack.cloud/user-guide/integrations/aws-cli/
 # kind https://kind.sigs.k8s.io/-
 provider "kind" {
@@ -111,12 +111,12 @@ resource "helm_release" "localstack" {
   name       = "localstack"
   chart      = "localstack"
   repository = "https://helm.localstack.cloud"
-  namespace  = var.localstack_namespace
-  #namespace = var.ortelius_namespace
-  create_namespace = true
-  recreate_pods    = true
-  depends_on       = [helm_release.ortelius]
-  timeout          = 900
+  #namespace  = var.localstack_namespace
+  namespace = var.ortelius_namespace
+  #create_namespace = true
+  recreate_pods = true
+  depends_on    = [helm_release.ortelius]
+  timeout       = 900
   # ONLY ENABLE THIS IF YOU HAVE A LOCALSTACK PRO API KEY
   values = [file("localstack.yaml")]
 }
