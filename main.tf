@@ -79,7 +79,7 @@ resource "helm_release" "ortelius" {
   }
   # node port for postgres access from localhost
   set {
-    name  = "ms-postgres.nodePort"
+    name  = "ms-postgres.ingress.nodePort"
     value = "31316"
   }
   # postgres password
