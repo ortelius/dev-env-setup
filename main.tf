@@ -38,9 +38,14 @@ resource "kind_cluster" "ortelius" {
       }
       # localstack port
       extra_port_mappings {
-        container_port = 34566
+        container_port = 31566
         host_port      = 4566
         listen_address = "0.0.0.0"
+      }
+      # postgres persistent volume
+      extra_mounts {
+        host_path      = "/tmp/postgres"
+        container_path = "/pgdata"
       }
     }
     node {
@@ -92,7 +97,6 @@ resource "helm_release" "ortelius" {
 # ONLY ENABLE THIS IF YOU HAVE A LOCALSTACK PRO API KEY
 #resource "kubectl_manifest" "localstack_apikey" {
 #  depends_on = [helm_release.ortelius]
-#  apply_only = true
 #  yaml_body  = <<YAML
 #apiVersion: v1
 #kind: Secret
