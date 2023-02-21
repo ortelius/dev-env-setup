@@ -95,19 +95,19 @@ resource "helm_release" "ortelius" {
 }
 
 # ONLY ENABLE THIS IF YOU HAVE A LOCALSTACK PRO API KEY
-#resource "kubectl_manifest" "localstack_apikey" {
-#  depends_on = [helm_release.ortelius]
-#  yaml_body  = <<YAML
-#apiVersion: v1
-#kind: Secret
-#metadata:
-#  name: localstack-apikey
-#  namespace: ortelius
-#type: Opaque
-#data:
-#  localstack-apikey: ${base64encode(var.localstack_api_key)}
-#YAML
-#}
+resource "kubectl_manifest" "localstack_apikey" {
+  depends_on = [helm_release.ortelius]
+  yaml_body  = <<YAML
+apiVersion: v1
+kind: Secret
+metadata:
+  name: localstack-apikey
+  namespace: ortelius
+type: Opaque
+data:
+  localstack-apikey: ${base64encode(var.localstack_api_key)}
+YAML
+}
 
 # localstack https://docs.localstack.cloud/overview/
 # localstack helm charts https://github.com/localstack/helm-charts
