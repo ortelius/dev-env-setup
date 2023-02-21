@@ -32,7 +32,7 @@ resource "kind_cluster" "ortelius" {
       }
       # postgresql port
       extra_port_mappings {
-        container_port = 30001
+        container_port = 31316
         host_port      = 5432
         listen_address = "0.0.0.0"
       }
@@ -62,22 +62,6 @@ resource "helm_release" "ortelius" {
   timeout           = 900
   dependency_update = true
   replace           = true
-
-  # postgres node port for database access from localhost
-  set {
-    name  = "ms-postgres.nodePort"
-    value = "30001"
-  }
-  # postgres password
-  set {
-    name  = "ms-general.dbpass"
-    value = "postgres"
-  }
-  # postgres global
-  set {
-    name  = "global.postgresql.enabled"
-    value = "true"
-  }
   # global ingress nginx controller
   set {
     name  = "global.ingress.nginx.controller"
@@ -88,23 +72,38 @@ resource "helm_release" "ortelius" {
     name  = "ms-nginx.ingress.nodePort"
     value = "30000"
   }
+  # postgres global
+  set {
+    name  = "global.postgresql.enabled"
+    value = "true"
+  }
+  # node port for postgres access from localhost
+  set {
+    name  = "ms-postgres.nodePort"
+    value = "31316"
+  }
+  # postgres password
+  set {
+    name  = "ms-general.dbpass"
+    value = "postgres"
+  }
 }
 
 # ONLY ENABLE THIS IF YOU HAVE A LOCALSTACK PRO API KEY
-resource "kubectl_manifest" "localstack_apikey" {
-  depends_on = [helm_release.ortelius]
-  apply_only = true
-  yaml_body  = <<YAML
-apiVersion: v1
-kind: Secret
-metadata:
-  name: localstack-apikey
-  namespace: ortelius
-type: Opaque
-data:
-  localstack-apikey: ${base64encode(var.localstack_api_key)}
-YAML
-}
+#resource "kubectl_manifest" "localstack_apikey" {
+#  depends_on = [helm_release.ortelius]
+#  apply_only = true
+#  yaml_body  = <<YAML
+#apiVersion: v1
+#kind: Secret
+#metadata:
+#  name: localstack-apikey
+#  namespace: ortelius
+#type: Opaque
+#data:
+#  localstack-apikey: ${base64encode(var.localstack_api_key)}
+#YAML
+#}
 
 # localstack https://docs.localstack.cloud/overview/
 # localstack helm charts https://github.com/localstack/helm-charts
@@ -123,7 +122,7 @@ resource "helm_release" "localstack" {
 }
 # creates an S3 bucket called ortelius
 # accessible at http://s3.local.gd:4566/ortelius-bucket
-resource "aws_s3_bucket" "ortelius-bucket" {
-  bucket     = "ortelius-bucket"
-  depends_on = [helm_release.localstack]
-}
+#resource "aws_s3_bucket" "ortelius-bucket" {
+#  bucket     = "ortelius-bucket"
+#  depends_on = [helm_release.localstack]
+#}
