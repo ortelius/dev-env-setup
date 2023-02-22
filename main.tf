@@ -75,7 +75,7 @@ resource "helm_release" "ortelius" {
   # node port for ui access from localhost
   set {
     name  = "ms-nginx.ingress.nodePort"
-    value = "30000"
+    value = "31000"
   }
   # postgres global
   set {
