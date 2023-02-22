@@ -15,10 +15,10 @@
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.55.0 |
-| <a name="provider_helm"></a> [helm](#provider\_helm) | 2.7.1 |
-| <a name="provider_kind"></a> [kind](#provider\_kind) | 0.0.16 |
-| <a name="provider_kubectl"></a> [kubectl](#provider\_kubectl) | 1.14.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | ~>4.55.0 |
+| <a name="provider_helm"></a> [helm](#provider\_helm) | ~>2.7.1 |
+| <a name="provider_kind"></a> [kind](#provider\_kind) | ~>0.0.15 |
+| <a name="provider_kubectl"></a> [kubectl](#provider\_kubectl) | ~>1.14.0 |
 
 ## Modules
 

@@ -101,6 +101,7 @@ resource "helm_release" "ortelius" {
 }
 
 # ONLY ENABLE THIS IF YOU HAVE A LOCALSTACK PRO API KEY
+# OTHERWISE COMMENT THIS OUT
 resource "kubectl_manifest" "localstack_apikey" {
   depends_on = [helm_release.ortelius]
   yaml_body  = <<YAML
@@ -128,6 +129,7 @@ resource "helm_release" "localstack" {
   depends_on    = [helm_release.ortelius]
   timeout       = 900
   # ONLY ENABLE THIS IF YOU HAVE A LOCALSTACK PRO API KEY
+  # OTHERWISE COMMENT THIS LINE OUT
   values = [file("localstack.yaml")]
 }
 # creates an S3 bucket called ortelius
