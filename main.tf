@@ -102,39 +102,39 @@ resource "helm_release" "ortelius" {
 
 # ONLY ENABLE THIS IF YOU HAVE A LOCALSTACK PRO API KEY
 # OTHERWISE COMMENT THIS OUT
-resource "kubectl_manifest" "localstack_apikey" {
-  depends_on = [helm_release.ortelius]
-  yaml_body  = <<YAML
-apiVersion: v1
-kind: Secret
-metadata:
-  name: localstack-apikey
-  namespace: ortelius
-type: Opaque
-data:
-  localstack-apikey: ${base64encode(var.localstack_api_key)}
-YAML
-}
+#resource "kubectl_manifest" "localstack_apikey" {
+#  depends_on = [helm_release.ortelius]
+#  yaml_body  = <<YAML
+#apiVersion: v1
+#kind: Secret
+#metadata:
+#  name: localstack-apikey
+#  namespace: ortelius
+#type: Opaque
+#data:
+#  localstack-apikey: ${base64encode(var.localstack_api_key)}
+#YAML
+#}
 
 # localstack https://docs.localstack.cloud/overview/
 # localstack helm charts https://github.com/localstack/helm-charts
-resource "helm_release" "localstack" {
-  name       = "localstack"
-  chart      = "localstack"
-  repository = "https://helm.localstack.cloud"
-  #namespace  = var.localstack_namespace
-  namespace = var.ortelius_namespace
-  #create_namespace = true
-  recreate_pods = true
-  depends_on    = [helm_release.ortelius]
-  timeout       = 900
-  # ONLY ENABLE THIS IF YOU HAVE A LOCALSTACK PRO API KEY
-  # OTHERWISE COMMENT THIS LINE OUT
-  values = [file("localstack.yaml")]
-}
+#resource "helm_release" "localstack" {
+#  name       = "localstack"
+#  chart      = "localstack"
+#  repository = "https://helm.localstack.cloud"
+#  #namespace  = var.localstack_namespace
+#  namespace = var.ortelius_namespace
+#  #create_namespace = true
+#  recreate_pods = true
+#  depends_on    = [helm_release.ortelius]
+#  timeout       = 900
+#  # ONLY ENABLE THIS IF YOU HAVE A LOCALSTACK PRO API KEY
+#  # OTHERWISE COMMENT THIS LINE OUT
+#  values = [file("localstack.yaml")]
+#}
 # creates an S3 bucket called ortelius
 # accessible at http://s3.local.gd:4566/ortelius-bucket
-resource "aws_s3_bucket" "ortelius_bucket" {
-  bucket     = "ortelius-bucket"
-  depends_on = [helm_release.localstack]
-}
+#resource "aws_s3_bucket" "ortelius_bucket" {
+#  bucket     = "ortelius-bucket"
+#  depends_on = [helm_release.localstack]
+#}
