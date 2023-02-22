@@ -43,11 +43,11 @@ resource "kind_cluster" "ortelius" {
         listen_address = "0.0.0.0"
       }
       # localstack port
-      extra_port_mappings {
-        container_port = 31566
-        host_port      = 4566
-        listen_address = "0.0.0.0"
-      }
+      #extra_port_mappings {
+      #  container_port = 31566
+      #  host_port      = 4566
+      #  listen_address = "0.0.0.0"
+      #}
       # postgres persistent volume
       extra_mounts {
         host_path      = "/tmp/postgres"

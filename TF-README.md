@@ -14,8 +14,8 @@
 
 | Name | Version |
 |------|---------|
-| <a name="provider_helm"></a> [helm](#provider\_helm) | 2.7.1 |
-| <a name="provider_kind"></a> [kind](#provider\_kind) | 0.0.16 |
+| <a name="provider_helm"></a> [helm](#provider\_helm) | ~>2.7.1 |
+| <a name="provider_kind"></a> [kind](#provider\_kind) | ~>0.0.15 |
 
 ## Modules
 
