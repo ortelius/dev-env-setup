@@ -50,6 +50,11 @@ resource "kind_cluster" "ortelius" {
     }
     node {
       role = "worker"
+      # postgres persistent volume
+      extra_mounts {
+        host_path      = "/tmp/postgres"
+        container_path = "/pgdata"
+      }
     }
   }
 }
