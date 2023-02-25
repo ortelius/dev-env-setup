@@ -338,7 +338,6 @@ Octant is a web-based graphical user interface (GUI) for exploring and analyzing
 
 - Download [here](https://github.com/vmware-tanzu/octant)
 - Documentation [here](https://octant.dev/docs/)
-- Supports dark mode
 - Plugins [here](https://github.com/topics/octant-plugin)
 - [Licence](https://github.com/vmware-archive/octant/blob/master/LICENSE)
 
