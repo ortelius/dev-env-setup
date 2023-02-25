@@ -62,7 +62,7 @@
       - [VS Code Extensions](#vs-code-extensions)
     - [Component Helm Chart](#component-helm-chart)
       - [Why?](#why)
-- [KubeShark](#kubeshark)
+- [KubeShark Realtime visibility into K8's](#kubeshark-realtime-visibility-into-k8s)
 
 ## Project Description
 
@@ -495,7 +495,7 @@ This provides the following benefits:
 - Fast and easy definition of Kubernetes resources
 - Kubernetes best practices (e.g. recommended annotations and labels)
 
-# [KubeShark](https://kubeshark.co/)
+# [KubeShark](https://kubeshark.co/) Realtime visibility into K8's
 
 Real-time visibility into K8s' internal network, capturing, dissecting and monitoring all traffic and payloads going in, out and across containers, pods, nodes and clusters.
 
