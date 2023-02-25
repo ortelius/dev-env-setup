@@ -88,12 +88,12 @@ The great thing is this is all immutable and transportable to any operating syst
 - [Ortelius](https://ortelius.io)
 - [Docker](https://www.docker.com/products/docker-desktop/)
 - [Kind](https://kind.sigs.k8s.io/)
+- [Helm](https://helm.sh/)
 - [Kubectl](https://kubernetes.io/docs/tasks/tools/)
 - [Terraform](https://www.terraform.io/intro)
 - [Localstack](https://docs.localstack.cloud/overview/)
-- VS Code
+- [VS Code](https://code.visualstudio.com/)
 - [DevSpace](https://www.devspace.sh/)
-- Operating System agnostic
 
 ## [Ortelius](https://ortelius.io/)
 
