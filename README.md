@@ -6,7 +6,7 @@
       - [Terraform Structure](#terraform-structure)
   - [Ortelius](#ortelius-1)
     - [How to access Ortelius](#how-to-access-ortelius)
-    - [How to access PostgreSQL with DBeaver](#how-to-access-postgresql-with-dbeaver)
+    - [How to access PostgreSQL withDBeaver](#how-to-access-postgresql-withdbeaver)
       - [Connection settings](#connection-settings)
     - [Kind Ortelius Cluster Details](#kind-ortelius-cluster-details)
       - [Context `kind-ortelius`](#context-kind-ortelius)
@@ -108,7 +108,7 @@ The latest version of Ortelius is maintained by the Ortelius Community managed b
 - Use can access Ortelius at http://localhost:8080/dmadminweb/Home#dhmain
 - To log out http://localhost:8080/dmadminweb/Logout
 
-### How to access PostgreSQL with DBeaver
+### How to access PostgreSQL with[DBeaver](https://dbeaver.io/)
 - Free multi-platform database tool for developers, database administrators, analysts and all people who need to work with databases.
 - Supports all popular databases: `MySQL, PostgreSQL, SQLite, Oracle, DB2, SQL Server, Sybase, MS Access, Teradata, Firebird, Apache Hive, Phoenix, Presto, etc`.
 - You can use DBeaver Community Edition which is available [here](https://dbeaver.io/)
