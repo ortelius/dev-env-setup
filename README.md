@@ -62,7 +62,8 @@
       - [VS Code Extensions](#vs-code-extensions)
     - [Component Helm Chart](#component-helm-chart)
       - [Why?](#why)
-- [KubeShark Realtime visibility into K8's](#kubeshark-realtime-visibility-into-k8s)
+  - [KubeShark Realtime visibility into K8's](#kubeshark-realtime-visibility-into-k8s)
+    - [GitHub](#github)
 
 ## Project Description
 
@@ -495,13 +496,15 @@ This provides the following benefits:
 - Fast and easy definition of Kubernetes resources
 - Kubernetes best practices (e.g. recommended annotations and labels)
 
-# [KubeShark](https://kubeshark.co/) Realtime visibility into K8's
+## [KubeShark](https://kubeshark.co/) Realtime visibility into K8's
+### [GitHub](https://github.com/kubeshark/kubeshark)
 
 Real-time visibility into K8s' internal network, capturing, dissecting and monitoring all traffic and payloads going in, out and across containers, pods, nodes and clusters.
 
 - Install [here](https://kubeshark.co/)
 - Documentation is [here](https://docs.kubeshark.co/en/introduction)
-- Quick Start
+- [Licence](https://github.com/kubeshark/kubeshark/blob/master/LICENSE)
+- Tap Ortelius
 ```
 kubeshark tap -n ortelius
 ```
