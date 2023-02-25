@@ -401,6 +401,7 @@ StreamNames: []
 - Init DevSpace in your repo and use the existing `Dockerfile` and `devspace.yaml`  by following the prompts.
 - Currently it is using the Microsoft Universal [Dev Container](https://github.com/devcontainers/images/tree/main/src/universal) which I have built and pushed to my DockerHub
 - The Microsoft Universersal Dev Container has the following language platforms `Python, Node.js, JavaScript, TypeScript, C++, Java, C#, F#, .NET Core, PHP, Go, Ruby, Conda`
+- [Licence](https://github.com/devcontainers/images/blob/main/LICENSE)
 ```
 devspace init
 ```
