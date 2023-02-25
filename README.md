@@ -80,6 +80,7 @@ The great thing is this is all immutable and transportable to any operating syst
 ## Tools of the trade
 - [Ortelius](https://ortelius.io)
 - [Docker](https://www.docker.com/products/docker-desktop/)
+- [DBeaver](https://dbeaver.io/)
 - [Kind](https://kind.sigs.k8s.io/)
 - [Helm](https://helm.sh/)
 - [Kubectl](https://kubernetes.io/docs/tasks/tools/)
