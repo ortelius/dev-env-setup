@@ -337,6 +337,7 @@ Octant is a web-based graphical user interface (GUI) for exploring and analyzing
 - Documentation [here](https://octant.dev/docs/)
 - Supports dark mode
 - Plugins [here](https://github.com/topics/octant-plugin)
+- [Licence](https://github.com/vmware-archive/octant/blob/master/LICENSE)
 
 #### Notable Plugins
 - [Helm](https://github.com/bloodorangeio/octant-helm)
