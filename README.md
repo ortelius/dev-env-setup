@@ -1,5 +1,6 @@
 # [Ortelius](https://ortelius.io/) & [Localstack](https://docs.localstack.cloud/overview/) Local Deployment
 - [Ortelius \& Localstack Local Deployment](#ortelius--localstack-local-deployment)
+- [Project Description](#project-description)
   - [Tools of the trade](#tools-of-the-trade)
   - [Ortelius](#ortelius)
       - [Terraform Structure](#terraform-structure)
@@ -74,11 +75,25 @@
       - [Monthly included storage and core hours for personal accounts](#monthly-included-storage-and-core-hours-for-personal-accounts)
   - [Dev Containers](#dev-containers)
 
+# Project Description
+
+The goal is to open up the Microservices world and give visiblity to developers so that it does not feel like you are developing with a blind fold on. The entire package includes Kind (k8s), Docker (sudo K8s nodes stored in a container), Helm Charts (K8s templating)and Terraform (IaC).
+
+DBeaver or any suitable database client for Postgresql can be used to access the Postgresql database. The Postgres database is persisted using volume mounts.
+
+Devspace is the tool for deploying and connecting VS Code to the Dev Container inside the Ortelius namespace. The Dev Container will contain all the tools required for a development of that technology stack.
+
+Kubeshark can be used by the developer for Microservice API troubleshooting.
+
+As a final step to your development freedom you can add the LocalStack extension and develop against AWS services running locally on your machine by adding the LocalStack extension in your Docker Desktop.
+
+The great thing is this is all immutable and transportable to any operating system that supports Docker, Kubectl, Helm, Kind and Terraform.
+
 ## Tools of the trade
 - [Ortelius](https://ortelius.io)
-- Docker
-- Kind
-- Kubectl
+- [Docker](https://www.docker.com/products/docker-desktop/)
+- [Kind](https://kind.sigs.k8s.io/)
+- [Kubectl](https://kubernetes.io/docs/tasks/tools/)
 - Terraform
 - Localstack
 - VS Code

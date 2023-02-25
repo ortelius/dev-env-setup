@@ -44,7 +44,7 @@ resource "kind_cluster" "ortelius" {
       #}
       # postgres persistent volume
       extra_mounts {
-        host_path      = "/tmp/postgres"
+        host_path      = "/Users/tvl/Documents/postgres"
         container_path = "/pgdata"
       }
     }
@@ -52,7 +52,7 @@ resource "kind_cluster" "ortelius" {
       role = "worker"
       # postgres persistent volume
       extra_mounts {
-        host_path      = "/tmp/postgres"
+        host_path      = "/Users/tvl/Documents/postgres"
         container_path = "/pgdata"
       }
     }
