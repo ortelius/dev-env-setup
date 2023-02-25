@@ -80,7 +80,7 @@ Devspace is the tool for deploying and connecting VS Code to the Dev Container i
 
 Kubeshark can be used by the developer for Microservice API troubleshooting.
 
-As a final step to your development freedom you can add the LocalStack extension and develop against AWS services running locally on your machine by adding the LocalStack extension in your Docker Desktop.
+As a final step to your development freedom you can add the LocalStack extension in your Docker Desktop and develop against AWS services running locally on your machine.
 
 The great thing is this is all immutable and transportable to any operating system that supports Docker, Kubectl, Helm, Kind and Terraform.
 
