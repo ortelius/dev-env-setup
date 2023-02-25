@@ -1,5 +1,5 @@
-# [Ortelius](https://ortelius.io/) & [Localstack](https://docs.localstack.cloud/overview/) Local Deployment
-- [Ortelius \& Localstack Local Deployment](#ortelius--localstack-local-deployment)
+# [Ortelius](https://ortelius.io/) Local Deployment
+- [Ortelius Local Deployment](#ortelius-local-deployment)
   - [Project Description](#project-description)
   - [Tools of the trade](#tools-of-the-trade)
   - [Pre Flight Checks \& Troubleshooting Tips](#pre-flight-checks--troubleshooting-tips)
