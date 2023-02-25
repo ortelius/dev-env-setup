@@ -202,14 +202,14 @@ time terraform apply --auto-approve
 terraform apply --auto-approve
 ```
 
-<script async id="asciicast-XWgifRZ50ueG0dVFTqqJf1M7y" src="https://asciinema.org/a/XWgifRZ50ueG0dVFTqqJf1M7y.js"></script>
+<a href="https://asciinema.org/a/562847" target="_blank"><img src="https://asciinema.org/a/562847.svg" /></a>
 
 #### Destroy the deployment
 ```
 terraform destroy --auto-approve
 ```
 
-[![asciicast](https://asciinema.org/a/QYptvjiDNh3m89WA7QpC9sFPj.svg)](https://asciinema.org/a/QYptvjiDNh3m89WA7QpC9sFPj)
+<a href="https://asciinema.org/a/562837" target="_blank"><img src="https://asciinema.org/a/562837.svg" /></a>
 
 #### Logs
 
