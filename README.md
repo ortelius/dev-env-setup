@@ -65,6 +65,7 @@
       - [VS Code Extensions](#vs-code-extensions)
     - [Component Helm Chart](#component-helm-chart)
       - [Why?](#why)
+- [KubeShark](#kubeshark)
 
 # Project Description
 
@@ -519,3 +520,14 @@ This provides the following benefits:
 - Highly flexible configuration via values.yaml
 - Fast and easy definition of Kubernetes resources
 - Kubernetes best practices (e.g. recommended annotations and labels)
+
+# [KubeShark](https://kubeshark.co/)
+
+Real-time visibility into K8s' internal network, capturing, dissecting and monitoring all traffic and payloads going in, out and across containers, pods, nodes and clusters.
+
+- Install [here](https://kubeshark.co/)
+- Documentation is [here](https://docs.kubeshark.co/en/introduction)
+- Quick Start
+```
+kubeshark tap -n ortelius
+```
