@@ -98,6 +98,7 @@ The great thing is that this is immutable and transportable to any operating sys
 - If you get an `AJAX` error when trying to login then logout first with --> `http://localhost:8080/dmadminweb/Logout` or I guess you could try incognito mode (Its a cookie issue)
 - If you get incorrect username or password the database is probably borked, destroy and re-deploy
 - If everything goes complete haywire manually remove everything such as `*.tfstate` and the Ortelius Docker containers representing the Kind K8s nodes and execute `terraform plan -auto-approve` and `terraform apply -auto-approve`
+- Please make sure you have a folder in your root `/tmp/postgres` and please make sure you add this mount point to your Docker Desktop under `Settings --> Resources --> File Sharing`
 
 ## [Ortelius](https://ortelius.io/)
 

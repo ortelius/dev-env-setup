@@ -31,17 +31,12 @@ resource "kind_cluster" "ortelius" {
         host_port      = 5432
         listen_address = "0.0.0.0"
       }
-      # postgres persistent volume
-      extra_mounts {
-        host_path      = "/Users/tvl/Documents/postgres"
-        container_path = "/pgdata"
-      }
     }
     node {
       role = "worker"
       # postgres persistent volume
       extra_mounts {
-        host_path      = "/Users/tvl/Documents/postgres"
+        host_path      = "/tmp/postgres"
         container_path = "/pgdata"
       }
     }
