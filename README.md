@@ -201,6 +201,9 @@ time terraform apply --auto-approve
 ```
 terraform apply --auto-approve
 ```
+
+<script async id="asciicast-XWgifRZ50ueG0dVFTqqJf1M7y" src="https://asciinema.org/a/XWgifRZ50ueG0dVFTqqJf1M7y.js"></script>
+
 #### Destroy the deployment
 ```
 terraform destroy --auto-approve
