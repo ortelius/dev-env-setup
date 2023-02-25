@@ -50,7 +50,6 @@
   - [local.gd | DNS @127.0.0.1](#localgd--dns-127001)
   - [Localstack](#localstack)
     - [GitHub LocalStack](#github-localstack)
-      - [IMPORTANT: LocalStack Pro](#important-localstack-pro)
       - [LocalStack VS Code Extension](#localstack-vs-code-extension)
       - [LocalStack Docs](#localstack-docs)
       - [LocalStack Container](#localstack-container)
@@ -58,9 +57,6 @@
       - [AWS CLI Local](#aws-cli-local)
       - [Configurations](#configurations)
       - [AWS Copilot](#aws-copilot)
-      - [AWS Lamba Golang Runtime](#aws-lamba-golang-runtime)
-      - [LocalStack Java Utils](#localstack-java-utils)
-        - [Prerequisites](#prerequisites)
   - [DevSpace](#devspace)
     - [GitHub DevSpace](#github-devspace)
       - [Note: Additional tools required for the container](#note-additional-tools-required-for-the-container)
@@ -380,48 +376,6 @@ LocalStack is a fully functional local AWS cloud stack that enables developers t
 - All endpoints are referenced as `http://localhost:4566` with S3 as the exception `http://s3.local.gd` due to some sub-domain trickery
 - Not all endpoints are supported in the free version, please refer [here](https://docs.localstack.cloud/user-guide/aws/feature-coverage/) for supported features
 
-#### IMPORTANT: LocalStack Pro
-- Provision has been made for those that have an API KEY
-- Create a file in the root of the repo named `localstack_apikey.auto.tfvars` and add the below config
-```
-localstack_api_key = "YOUR API KEY GOES HERE"
-```
-- `localstack.yaml` contains the Helm Chart overrides
-```
-image:
-  repository: localstack/localstack-pro
-
-extraEnvVars:
-- name: LOCALSTACK_API_KEY
-  valueFrom:
-    secretKeyRef:
-      name: localstack-apikey
-      key: localstack-apikey
-      optional: true
-```
-- Git Ignore ignores `localstack_apikey.auto.tfvars`
-
-`.gitignore`
-```
-# secret
-*.auto.tfvars
-```
-- In `main.tf` you will find the creation of the secret in the `localstack` namespace as below which references the ignored `localstack_apikey.auto.tfvars` file
-```
-# ONLY ENABLE THIS IF YOU HAVE A LOCALSTACK PRO API KEY
-resource "kubectl_manifest" "localstack_apikey" {
-  yaml_body = <<YAML
-apiVersion: v1
-kind: Secret
-metadata:
-  name: localstack-apikey
-  namespace: localstack
-type: Opaque
-data:
-  localstack-apikey: ${base64encode(var.localstack_api_key)}
-YAML
-}
-```
 #### LocalStack VS Code Extension
 - `Commandeer` extension [here](https://marketplace.visualstudio.com/items?itemName=Commandeer.commandeer)
 
@@ -458,22 +412,6 @@ StreamNames: []
 #### [AWS Copilot](https://github.com/localstack/copilot-cli-local)
 - This repo provides copilotlocal, a command-line interface (CLI) with the same features as the original copilot CLI, but using the local API endpoints provided by LocalStack.
 - The patch applied in this repo essentially redirects any AWS API calls to the local endpoints under [http://localhost:4566](http://localhost:4566).
-
-#### [AWS Lamba Golang Runtime](https://github.com/localstack/awslamba-go-runtime)
-- Custom Golang runtime for the execution of AWS Lambdas used in LocalStack.
-- This is a modification of the custom runtime of lambda ci.
-- This custom runtime avoids using the /var folder as main place where to locate other files.
-- It contains the source code of the docker-lambda mockserver to build the binary.
-
-#### [LocalStack Java Utils](https://github.com/localstack/localstack-java-utils)
-
-Java utilities and JUnit integration for LocalStack.
-
-##### Prerequisites
-- Java
-- Maven
-- Docker
-- LocalStack
 
 ## [DevSpace](https://devspace.sh/)
 ### [GitHub DevSpace](https://github.com/devspace-sh/devspace)
