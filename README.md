@@ -81,7 +81,7 @@ The goal is to open up the Microservices world and give visiblity to developers 
 
 DBeaver or any suitable database client for Postgresql can be used to access the Postgresql database. The Postgres database is persisted using volume mounts.
 
-Devspace is the tool for deploying and connecting VS Code to the Dev Container inside the Ortelius namespace. The Dev Container will contain all the tools required for a development of that technology stack.
+Devspace is the tool for deploying and connecting VS Code to the Dev Container inside the Ortelius namespace. The Dev Container will contain all the tools required for development of that technology stack.
 
 Kubeshark can be used by the developer for Microservice API troubleshooting.
 
@@ -94,8 +94,8 @@ The great thing is this is all immutable and transportable to any operating syst
 - [Docker](https://www.docker.com/products/docker-desktop/)
 - [Kind](https://kind.sigs.k8s.io/)
 - [Kubectl](https://kubernetes.io/docs/tasks/tools/)
-- Terraform
-- Localstack
+- [Terraform](https://www.terraform.io/intro)
+- [Localstack](https://docs.localstack.cloud/overview/)
 - VS Code
 - [DevSpace](https://www.devspace.sh/)
 - Operating System agnostic
