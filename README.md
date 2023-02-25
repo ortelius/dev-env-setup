@@ -51,7 +51,6 @@
   - [Localstack](#localstack)
     - [GitHub LocalStack](#github-localstack)
       - [LocalStack VS Code Extension](#localstack-vs-code-extension)
-      - [LocalStack Container](#localstack-container)
       - [LocalStack S3 Endpoint](#localstack-s3-endpoint)
       - [AWS CLI Local](#aws-cli-local)
   - [DevSpace](#devspace)
@@ -380,9 +379,6 @@ LocalStack is a fully functional local AWS cloud stack that enables developers t
 - `Commandeer` extension [here](https://marketplace.visualstudio.com/items?itemName=Commandeer.commandeer)
 
 ![Commandeer!](images/vscode/03-commandeer-extension.jpg)
-
-#### LocalStack Container
-![Localstack on Kind!](images/localstack/01-localstack-kind-pod.jpg)
 
 #### LocalStack S3 Endpoint
 ![LocalStack S3 Endpoint!](images/localstack/02-localstack-s3-endpoint.jpg)
