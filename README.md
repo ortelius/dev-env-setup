@@ -56,7 +56,6 @@
       - [AWS CLI Local](#aws-cli-local)
   - [DevSpace](#devspace)
     - [GitHub DevSpace](#github-devspace)
-      - [Note: Additional tools required for the container](#note-additional-tools-required-for-the-container)
       - [How](#how)
     - [Connect VS Code](#connect-vs-code)
       - [VS Code Extensions](#vs-code-extensions)
@@ -393,9 +392,7 @@ StreamNames: []
 ### [GitHub DevSpace](https://github.com/devspace-sh/devspace)
 - What is [DevSpace](https://www.devspace.sh/docs/getting-started/introduction)
 - Devspace could be used for the local Terraform environment whereas Codespaces is more suited for a developer on the repos themselves
-
-#### Note: Additional tools required for the container
-- awslocal cli
+- [Licence](https://github.com/devspace-sh/devspace/blob/main/LICENSE)
 
 #### How
 - Download the CLI [here](https://devspace.sh/cli/docs/getting-started/installation)
