@@ -91,6 +91,7 @@ The great thing is this is all immutable and transportable to any operating syst
 - [Helm](https://helm.sh/)
 - [Kubectl](https://kubernetes.io/docs/tasks/tools/)
 - [Terraform](https://www.terraform.io/intro)
+- [Kubeshark](https://kubeshark.co/)
 - [Localstack](https://docs.localstack.cloud/overview/)
 - [VS Code](https://code.visualstudio.com/)
 - [DevSpace](https://www.devspace.sh/)
