@@ -205,6 +205,9 @@ terraform apply --auto-approve
 ```
 terraform destroy --auto-approve
 ```
+
+[![asciicast](https://asciinema.org/a/QYptvjiDNh3m89WA7QpC9sFPj.svg)](https://asciinema.org/a/QYptvjiDNh3m89WA7QpC9sFPj)
+
 #### Logs
 
 In total, there 5 log levels which can be used for debugging purposes:
