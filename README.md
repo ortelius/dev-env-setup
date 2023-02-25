@@ -504,7 +504,4 @@ Real-time visibility into K8s' internal network, capturing, dissecting and monit
 - Install [here](https://kubeshark.co/)
 - Documentation is [here](https://docs.kubeshark.co/en/introduction)
 - [Licence](https://github.com/kubeshark/kubeshark/blob/master/LICENSE)
-- Tap Ortelius
-```
-kubeshark tap -n ortelius
-```
+- Tap Ortelius `kubeshark tap -n ortelius`
