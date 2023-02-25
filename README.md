@@ -6,8 +6,7 @@
       - [Terraform Structure](#terraform-structure)
   - [Ortelius](#ortelius-1)
     - [How to access Ortelius](#how-to-access-ortelius)
-    - [How to access PostgreSQL](#how-to-access-postgresql)
-      - [DBeaver](#dbeaver)
+    - [How to access PostgreSQL with DBeaver](#how-to-access-postgresql-with-dbeaver)
       - [Connection settings](#connection-settings)
     - [Kind Ortelius Cluster Details](#kind-ortelius-cluster-details)
       - [Context `kind-ortelius`](#context-kind-ortelius)
@@ -106,26 +105,9 @@ The latest version of Ortelius is maintained by the Ortelius Community managed b
 - Chart.yaml is [here](https://github.com/ortelius/ortelius-charts/blob/master/Chart.yaml)
 ### How to access Ortelius
 - Use can access Ortelius at http://localhost:8080/dmadminweb/Home#dhmain
-- Ortelius HTTP Kind extra port mappings to a NodePort
-```
-      # ortelius http port
-      extra_port_mappings {
-        container_port = 30000
-        host_port      = 8080
-        listen_address = "0.0.0.0"
-      }
-```
-### How to access PostgreSQL
-- PostgreSQL Kind extra port mappings to a NodePort
-```
-      # postgresql port
-      extra_port_mappings {
-        container_port = 31432
-        host_port      = 5432
-        listen_address = "0.0.0.0"
-      }
-```
-#### DBeaver
+- To log out http://localhost:8080/dmadminweb/Logout
+
+### How to access PostgreSQL with DBeaver
 - Free multi-platform database tool for developers, database administrators, analysts and all people who need to work with databases.
 - Supports all popular databases: `MySQL, PostgreSQL, SQLite, Oracle, DB2, SQL Server, Sybase, MS Access, Teradata, Firebird, Apache Hive, Phoenix, Presto, etc`.
 - You can use DBeaver Community Edition which is available [here](https://dbeaver.io/)
