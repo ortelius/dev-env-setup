@@ -55,7 +55,6 @@
       - [LocalStack S3 Endpoint](#localstack-s3-endpoint)
       - [AWS CLI Local](#aws-cli-local)
       - [Configurations](#configurations)
-      - [AWS Copilot](#aws-copilot)
   - [DevSpace](#devspace)
     - [GitHub DevSpace](#github-devspace)
       - [Note: Additional tools required for the container](#note-additional-tools-required-for-the-container)
@@ -371,6 +370,8 @@ LocalStack is a fully functional local AWS cloud stack that enables developers t
 
 - LocalStack is installed using the Docker Desktop extension, please refer [here](https://docs.localstack.cloud/user-guide/tools/localstack-docker-extension/)
 - [LocalStack Quickstart](https://docs.localstack.cloud/getting-started/quickstart/)
+- [LocalStack CLI]()
+- [LocalStack CI](https://docs.localstack.cloud/user-guide/ci/)
 - [Localstack Serverless Plugin](https://github.com/localstack/serverless-localstack)
 - All endpoints are referenced as `http://localhost:4566`
 - Not all endpoints are supported in the free version, please refer [here](https://docs.localstack.cloud/user-guide/aws/feature-coverage/) for supported features
@@ -388,6 +389,10 @@ LocalStack is a fully functional local AWS cloud stack that enables developers t
 
 #### [AWS CLI Local](https://github.com/localstack/awscli-local)
 - This package provides the `awslocal` command, which is a thin wrapper around the aws command line interface for use with LocalStack.
+```
+awslocal --endpoint-url=http://localhost:4566 kinesis list-streams
+StreamNames: []
+```
 
 #### [Configurations](https://docs.localstack.cloud/references/configuration/)
 
@@ -397,14 +402,6 @@ You can use the following environment variables for configuration:
 - `EDGE_PORT`: Port number to use when connecting to LocalStack services. Defaults to 4566.
 - `USE_SSL`: Whether to use https endpoint URLs. Defaults to false.
 - `DEFAULT_REGION`: Set the default region. Overrides `AWS_DEFAULT_REGION` environment variable.
-
-```
-awslocal --endpoint-url=http://localhost:4566 kinesis list-streams
-StreamNames: []
-```
-#### [AWS Copilot](https://github.com/localstack/copilot-cli-local)
-- This repo provides copilotlocal, a command-line interface (CLI) with the same features as the original copilot CLI, but using the local API endpoints provided by LocalStack.
-- The patch applied in this repo essentially redirects any AWS API calls to the local endpoints under [http://localhost:4566](http://localhost:4566).
 
 ## [DevSpace](https://devspace.sh/)
 ### [GitHub DevSpace](https://github.com/devspace-sh/devspace)
