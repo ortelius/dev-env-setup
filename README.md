@@ -54,7 +54,6 @@
       - [LocalStack Container](#localstack-container)
       - [LocalStack S3 Endpoint](#localstack-s3-endpoint)
       - [AWS CLI Local](#aws-cli-local)
-      - [Configurations](#configurations)
   - [DevSpace](#devspace)
     - [GitHub DevSpace](#github-devspace)
       - [Note: Additional tools required for the container](#note-additional-tools-required-for-the-container)
@@ -369,6 +368,7 @@ Octant is a web-based graphical user interface (GUI) for exploring and analyzing
 LocalStack is a fully functional local AWS cloud stack that enables developers to develop and test their cloud applications offline. It provides an easy-to-use test/mocking framework for developing cloud applications, eliminating the need for a live AWS environment.
 
 - LocalStack is installed using the Docker Desktop extension, please refer [here](https://docs.localstack.cloud/user-guide/tools/localstack-docker-extension/)
+- [LocalStack Configurations](https://docs.localstack.cloud/references/configuration/)
 - [LocalStack Quickstart](https://docs.localstack.cloud/getting-started/quickstart/)
 - [LocalStack CLI](https://docs.localstack.cloud/references/localstack-cli-manual/)
 - [LocalStack AWS Local CLI](https://docs.localstack.cloud/user-guide/integrations/aws-cli/)
@@ -396,15 +396,6 @@ LocalStack is a fully functional local AWS cloud stack that enables developers t
 awslocal --endpoint-url=http://localhost:4566 kinesis list-streams
 StreamNames: []
 ```
-
-#### [Configurations](https://docs.localstack.cloud/references/configuration/)
-
-You can use the following environment variables for configuration:
-- `LOCALSTACK_HOST`: Set the hostname for the LocalStack instance.
-- Useful when you have LocalStack bound to a different host (e.g., within docker-compose).
-- `EDGE_PORT`: Port number to use when connecting to LocalStack services. Defaults to 4566.
-- `USE_SSL`: Whether to use https endpoint URLs. Defaults to false.
-- `DEFAULT_REGION`: Set the default region. Overrides `AWS_DEFAULT_REGION` environment variable.
 
 ## [DevSpace](https://devspace.sh/)
 ### [GitHub DevSpace](https://github.com/devspace-sh/devspace)
