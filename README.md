@@ -51,7 +51,6 @@
   - [Localstack](#localstack)
     - [GitHub LocalStack](#github-localstack)
       - [LocalStack VS Code Extension](#localstack-vs-code-extension)
-      - [LocalStack Docs](#localstack-docs)
       - [LocalStack Container](#localstack-container)
       - [LocalStack S3 Endpoint](#localstack-s3-endpoint)
       - [AWS CLI Local](#aws-cli-local)
@@ -370,10 +369,9 @@ Octant is a web-based graphical user interface (GUI) for exploring and analyzing
 
 LocalStack is a fully functional local AWS cloud stack that enables developers to develop and test their cloud applications offline. It provides an easy-to-use test/mocking framework for developing cloud applications, eliminating the need for a live AWS environment.
 
-- LocalStack is installed using Helm Charts via Terraform [here](https://github.com/localstack/helm-charts)
+- LocalStack is installed using the Docker Desktop extension, please refer [here](https://docs.localstack.cloud/user-guide/tools/localstack-docker-extension/)
 - [LocalStack Quickstart](https://docs.localstack.cloud/getting-started/quickstart/)
 - [Localstack Serverless Plugin](https://github.com/localstack/serverless-localstack)
-- Please find the LocalStack endpoints in `provider.tf`
 - All endpoints are referenced as `http://localhost:4566` with S3 as the exception `http://s3.local.gd` due to some sub-domain trickery
 - Not all endpoints are supported in the free version, please refer [here](https://docs.localstack.cloud/user-guide/aws/feature-coverage/) for supported features
 
@@ -381,12 +379,6 @@ LocalStack is a fully functional local AWS cloud stack that enables developers t
 - `Commandeer` extension [here](https://marketplace.visualstudio.com/items?itemName=Commandeer.commandeer)
 
 ![Commandeer!](images/vscode/03-commandeer-extension.jpg)
-
-#### [LocalStack Docs](https://github.com/localstack/docs)
-LocalStack Docs is using the following technology stack
-- Hugo to generate the static site.
-- Docsy as a theme for Hugo.
-- GitHub Pages to automatically deploy every commit on the main branch of this repository on `docs.localstack.cloud`.
 
 #### LocalStack Container
 ![Localstack on Kind!](images/localstack/01-localstack-kind-pod.jpg)
