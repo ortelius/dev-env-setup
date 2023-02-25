@@ -181,6 +181,7 @@ Terraform is an open-source tool for provisioning and managing infrastructure as
 - Install Terraform [here](https://www.terraform.io/downloads)
 - Documentation is [here](https://www.terraform.io/docs)
 - [Terms & Conditions](https://registry.terraform.io/terms)
+- [Licence](https://github.com/hashicorp/terraform/blob/main/LICENSE)
 
 #### Lets get going
 - Clone the repo
