@@ -309,11 +309,13 @@ kubectl -n ortelius exec -it ms-nginx-6ccbb5f95c-9gjg7 -n ortelius -c ms-nginx -
 - `kubectx` is a tool to switch between contexts (clusters) on kubectl faster.
 - `kubens` is a tool to switch between Kubernetes namespaces (and configure them for kubectl) easily.
 - Download `Kubens & Kubectx` [here](https://github.com/ahmetb/kubectx)
+- [Licence](https://github.com/ahmetb/kubectx/blob/master/LICENSE)
 
 #### FzF
 - Is a general-purpose command-line fuzzy finder.
 - Is an interactive Unix filter for command-line that can be used with any list; files, command history, processes, hostnames, bookmarks, git commits, etc.
 - Download `Fuzzy Finder` [here](https://github.com/junegunn/fzf)
+- [Licence](https://github.com/junegunn/fzf/blob/master/LICENSE)
 
 #### FzF in action
 
