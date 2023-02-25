@@ -228,6 +228,7 @@ Kind (Kubernetes in Docker) is a tool for running local Kubernetes clusters usin
 - Install [here](https://kind.sigs.k8s.io/docs/user/quick-start/#installation)
 - Documentation is [here](https://kind.sigs.k8s.io/docs/user/quick-start/)
 - [Terms & Conditions](https://www.apache.org/licenses/LICENSE-2.0)
+- [Licence](https://github.com/kubernetes-sigs/kind/blob/main/LICENSE)
 
 ### Why KinD?
 - kind supports multi-node (including HA) clusters
