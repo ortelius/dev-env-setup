@@ -16,18 +16,6 @@ variable "ortelius_namespace" {
   default     = "ortelius"
 }
 
-#variable "localstack_namespace" {
-#  type        = string
-#  description = "The Localstack namespace"
-#  default     = "localstack"
-#}
-
-#variable "localstack_api_key" {
-#  type        = string
-#  description = "LocalStack API Key"
-#  default     = null
-#}
-
 #variable "backstage_namespace" {
 #  type        = string
 #  description = "The Backstage namespace"

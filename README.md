@@ -1,7 +1,8 @@
 # [Ortelius](https://ortelius.io/) & [Localstack](https://docs.localstack.cloud/overview/) Local Deployment
 - [Ortelius \& Localstack Local Deployment](#ortelius--localstack-local-deployment)
-- [Project Description](#project-description)
+  - [Project Description](#project-description)
   - [Tools of the trade](#tools-of-the-trade)
+  - [Pre Flight Checks \& Troubleshooting Tips](#pre-flight-checks--troubleshooting-tips)
   - [Ortelius](#ortelius)
       - [Terraform Structure](#terraform-structure)
   - [Ortelius](#ortelius-1)
@@ -63,9 +64,11 @@
       - [Why?](#why)
 - [KubeShark](#kubeshark)
 
-# Project Description
+## Project Description
 
 The goal is to open up the Microservices world and give visiblity to developers so that it does not feel like you are developing with a blind fold on.
+
+Ortelius and its supporting Microservices are deployed into a Kind cluster using Terraform.
 
 DBeaver or any suitable database client for Postgresql can be used to access the Postgresql database. The Postgres database is persisted using volume mounts.
 
@@ -89,6 +92,13 @@ The great thing is this is all immutable and transportable to any operating syst
 - [Localstack](https://localstack.cloud/)
 - [VS Code](https://code.visualstudio.com/)
 - [DevSpace](https://www.devspace.sh/)
+
+## Pre Flight Checks & Troubleshooting Tips
+- If you have Helm Charts installed run `helm repo update`
+- Kube config is expected to be in the default location `$KUBECONFIG`
+- If you get an `AJAX` error when trying to login then logout first with --> `http://localhost:8080/dmadminweb/Logout` or I guess you could try incognito mode (Its a cookie issue)
+- If you get incorrect username or password the database is probably borked, destroy and re-deploy
+- If everything goes complete haywire manually remove everything such as `*.tfstate` and the Ortelius Docker containers representing the Kind K8s nodes and execute `terraform plan -auto-approve` and `terraform apply -auto-approve`
 
 ## [Ortelius](https://ortelius.io/)
 
