@@ -65,7 +65,7 @@
 
 # Project Description
 
-The goal is to open up the Microservices world and give visiblity to developers so that it does not feel like you are developing with a blind fold on. The entire package includes Kind (k8s), Docker (sudo K8s nodes stored in a container), Helm Charts (K8s templating)and Terraform (IaC).
+The goal is to open up the Microservices world and give visiblity to developers so that it does not feel like you are developing with a blind fold on.
 
 DBeaver or any suitable database client for Postgresql can be used to access the Postgresql database. The Postgres database is persisted using volume mounts.
 
