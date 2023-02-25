@@ -435,7 +435,7 @@ devspace ui
 ```
 - start coding
 ```
-devspace dev
+devspace dev -n ortelius
 
 warn Are you using the correct namespace?
 warn Current namespace: 'default'
