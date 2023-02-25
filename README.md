@@ -11,7 +11,7 @@
       - [Connection settings](#connection-settings)
     - [Kind Ortelius Cluster Details](#kind-ortelius-cluster-details)
       - [Context `kind-ortelius`](#context-kind-ortelius)
-      - [Namespaces `ortelius` `localstack`](#namespaces-ortelius-localstack)
+      - [Namespaces `ortelius`](#namespaces-ortelius)
       - [Nodes](#nodes)
   - [Docker.com](#dockercom)
     - [GitHub Docker](#github-docker)
@@ -149,7 +149,7 @@ kubectl config use-context kind-ortelius
 ```
 kubectl config -h
 ```
-#### Namespaces `ortelius` `localstack`
+#### Namespaces `ortelius`
 - List all namespaces
 ```
 kubectl get namespace -A
