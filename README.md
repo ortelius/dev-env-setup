@@ -369,6 +369,7 @@ LocalStack is a fully functional local AWS cloud stack that enables developers t
 - [Localstack Serverless Plugin](https://github.com/localstack/serverless-localstack)
 - All endpoints are referenced as `http://localhost:4566`
 - Not all endpoints are supported in the free version, please refer [here](https://docs.localstack.cloud/user-guide/aws/feature-coverage/) for supported features
+- [Licence](https://github.com/localstack/localstack/blob/master/LICENSE.txt)
 
 #### LocalStack VS Code Extension
 - `Commandeer` extension [here](https://marketplace.visualstudio.com/items?itemName=Commandeer.commandeer)
