@@ -370,7 +370,9 @@ LocalStack is a fully functional local AWS cloud stack that enables developers t
 
 - LocalStack is installed using the Docker Desktop extension, please refer [here](https://docs.localstack.cloud/user-guide/tools/localstack-docker-extension/)
 - [LocalStack Quickstart](https://docs.localstack.cloud/getting-started/quickstart/)
-- [LocalStack CLI]()
+- [LocalStack CLI](https://docs.localstack.cloud/references/localstack-cli-manual/)
+- [LocalStack AWS Local CLI](https://docs.localstack.cloud/user-guide/integrations/aws-cli/)
+- [LocalStack Terraform](https://docs.localstack.cloud/user-guide/integrations/terraform/)
 - [LocalStack CI](https://docs.localstack.cloud/user-guide/ci/)
 - [Localstack Serverless Plugin](https://github.com/localstack/serverless-localstack)
 - All endpoints are referenced as `http://localhost:4566`
