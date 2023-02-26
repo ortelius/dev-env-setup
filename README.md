@@ -47,7 +47,8 @@
     - [GitHub Octant](#github-octant)
       - [Notable Plugins](#notable-plugins)
       - [Octant Port Forward to an Endpoint](#octant-port-forward-to-an-endpoint)
-  - [local.gd | DNS @127.0.0.1](#localgd--dns-127001)
+  - [KubeShark Realtime visibility into K8's](#kubeshark-realtime-visibility-into-k8s)
+    - [GitHub](#github)
   - [DevSpace](#devspace)
     - [GitHub DevSpace](#github-devspace)
       - [How](#how)
@@ -55,8 +56,6 @@
       - [VS Code Extensions](#vs-code-extensions)
     - [Component Helm Chart](#component-helm-chart)
       - [Why?](#why)
-  - [KubeShark Realtime visibility into K8's](#kubeshark-realtime-visibility-into-k8s)
-    - [GitHub](#github)
   - [Localstack](#localstack)
     - [GitHub LocalStack](#github-localstack)
       - [LocalStack VS Code Extension](#localstack-vs-code-extension)
@@ -358,13 +357,15 @@ Octant is a web-based graphical user interface (GUI) for exploring and analyzing
 #### Octant Port Forward to an Endpoint
 ![Octant Port Forward to S3!](images/octant/01-octant-port-forward-s3.jpg)
 
-## [local.gd](https://local.gd/) | DNS @127.0.0.1
-- The easiest way to serve localhost.
-- DNS that always resolves to 127.0.0.1.
-- Use `mysite.local.gd` when developing locally and it'll resolve to `127.0.0.1`
-- Any subdomain like `*.local.gd` will work.
-- It's like `xip.io` and `nip.io` but straight up easier since we always point to `127.0.0.1`
-- We use `Netlify` DNS so we're pretty sure you're always within 10ms of a DNS server, wherever you are.
+## [KubeShark](https://kubeshark.co/) Realtime visibility into K8's
+### [GitHub](https://github.com/kubeshark/kubeshark)
+
+Real-time visibility into K8s' internal network, capturing, dissecting and monitoring all traffic and payloads going in, out and across containers, pods, nodes and clusters.
+
+- Install [here](https://kubeshark.co/)
+- Documentation is [here](https://docs.kubeshark.co/en/introduction)
+- [Licence](https://github.com/kubeshark/kubeshark/blob/master/LICENSE)
+- Tap Ortelius `kubeshark tap -n ortelius`
 
 ## [DevSpace](https://devspace.sh/)
 ### [GitHub DevSpace](https://github.com/devspace-sh/devspace)
@@ -471,16 +472,6 @@ This provides the following benefits:
 - Highly flexible configuration via values.yaml
 - Fast and easy definition of Kubernetes resources
 - Kubernetes best practices (e.g. recommended annotations and labels)
-
-## [KubeShark](https://kubeshark.co/) Realtime visibility into K8's
-### [GitHub](https://github.com/kubeshark/kubeshark)
-
-Real-time visibility into K8s' internal network, capturing, dissecting and monitoring all traffic and payloads going in, out and across containers, pods, nodes and clusters.
-
-- Install [here](https://kubeshark.co/)
-- Documentation is [here](https://docs.kubeshark.co/en/introduction)
-- [Licence](https://github.com/kubeshark/kubeshark/blob/master/LICENSE)
-- Tap Ortelius `kubeshark tap -n ortelius`
 
 ## [Localstack](https://docs.localstack.cloud/overview/)
 ### [GitHub LocalStack](https://github.com/localstack)
