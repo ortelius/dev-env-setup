@@ -193,6 +193,9 @@ terraform init
 ```
 terraform plan
 ```
+
+<a href="https://asciinema.org/a/6VyaISagE33JoHMif8HmWiQ10" target="_blank"><img src="https://asciinema.org/a/6VyaISagE33JoHMif8HmWiQ10.svg" /></a>
+
 #### Time the deployment
 ```
 time terraform apply --auto-approve
