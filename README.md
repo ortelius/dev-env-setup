@@ -1,7 +1,8 @@
 # [Ortelius](https://ortelius.io/) Local Deployment
 - [Ortelius Local Deployment](#ortelius-local-deployment)
   - [Project Description](#project-description)
-  - [Tools of the trade](#tools-of-the-trade)
+  - [Pre-requisite checklist](#pre-requisite-checklist)
+    - [](#)
   - [Pre Flight Checks \& Troubleshooting Tips](#pre-flight-checks--troubleshooting-tips)
   - [Ortelius](#ortelius)
       - [Terraform Structure](#terraform-structure)
@@ -78,14 +79,15 @@ As a final step to your development freedom you can add the LocalStack extension
 
 The great thing is that this is immutable and transportable to any operating system that supports Docker, Kubectl, Helm, Kind and Terraform.
 
-## Tools of the trade
-- [Ortelius](https://ortelius.io)
-- [Docker](https://www.docker.com/products/docker-desktop/)
-- [DBeaver](https://dbeaver.io/)
+## Pre-requisite checklist
+- [Docker](https://docs.docker.com/engine/install/ubuntu/)
+- [Terraform](https://www.terraform.io/intro)
 - [Kind](https://kind.sigs.k8s.io/)
 - [Helm](https://helm.sh/)
 - [Kubectl](https://kubernetes.io/docs/tasks/tools/)
-- [Terraform](https://www.terraform.io/intro)
+###
+- [Ortelius](https://ortelius.io)
+- [DBeaver](https://dbeaver.io/)
 - [Kubeshark](https://kubeshark.co/)
 - [Localstack](https://localstack.cloud/)
 - [VS Code](https://code.visualstudio.com/)
