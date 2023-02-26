@@ -2,7 +2,6 @@
 - [Ortelius Local Deployment](#ortelius-local-deployment)
   - [Project Description](#project-description)
   - [Pre-requisite checklist](#pre-requisite-checklist)
-    - [](#)
   - [Pre Flight Checks \& Troubleshooting Tips](#pre-flight-checks--troubleshooting-tips)
   - [Ortelius](#ortelius)
       - [Terraform Structure](#terraform-structure)
@@ -85,7 +84,7 @@ The great thing is that this is immutable and transportable to any operating sys
 - [Kind](https://kind.sigs.k8s.io/)
 - [Helm](https://helm.sh/)
 - [Kubectl](https://kubernetes.io/docs/tasks/tools/)
-###
+-------------------------------------------------------------
 - [Ortelius](https://ortelius.io)
 - [DBeaver](https://dbeaver.io/)
 - [Kubeshark](https://kubeshark.co/)
