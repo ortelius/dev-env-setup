@@ -100,6 +100,8 @@ The great thing is that this is immutable and transportable to any operating sys
 - If everything goes completely haywire manually remove everything such as `*.tfstate` and the Ortelius Docker containers representing the Kind K8s nodes and execute `terraform plan -auto-approve` and `terraform apply -auto-approve`
 - Please make sure you have a folder in your root `/tmp/postgres` and please make sure you add this mount point to your Docker Desktop under `Settings --> Resources --> File Sharing` `(/tmp is sufficient)`
 
+![Postgresql Mount](images/01-postgres-mount-files.jpg)
+
 ## [Ortelius](https://ortelius.io/)
 
 Ortelius is central catalog of supply chain and DevOps intelligence. It is designed to track and version composition details for every component of your software supply chain along with all consuming logical applications. With Ortelius, you can easily view your logical application's SBOMs, CVEs, service dependencies, and inventory based on versions, even in a decoupled microservices architecture.
