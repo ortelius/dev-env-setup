@@ -48,11 +48,6 @@
       - [Notable Plugins](#notable-plugins)
       - [Octant Port Forward to an Endpoint](#octant-port-forward-to-an-endpoint)
   - [local.gd | DNS @127.0.0.1](#localgd--dns-127001)
-  - [Localstack](#localstack)
-    - [GitHub LocalStack](#github-localstack)
-      - [LocalStack VS Code Extension](#localstack-vs-code-extension)
-      - [LocalStack S3 Endpoint](#localstack-s3-endpoint)
-      - [AWS CLI Local](#aws-cli-local)
   - [DevSpace](#devspace)
     - [GitHub DevSpace](#github-devspace)
       - [How](#how)
@@ -62,6 +57,11 @@
       - [Why?](#why)
   - [KubeShark Realtime visibility into K8's](#kubeshark-realtime-visibility-into-k8s)
     - [GitHub](#github)
+  - [Localstack](#localstack)
+    - [GitHub LocalStack](#github-localstack)
+      - [LocalStack VS Code Extension](#localstack-vs-code-extension)
+      - [LocalStack S3 Endpoint](#localstack-s3-endpoint)
+      - [AWS CLI Local](#aws-cli-local)
 
 ## Project Description
 
@@ -366,39 +366,6 @@ Octant is a web-based graphical user interface (GUI) for exploring and analyzing
 - It's like `xip.io` and `nip.io` but straight up easier since we always point to `127.0.0.1`
 - We use `Netlify` DNS so we're pretty sure you're always within 10ms of a DNS server, wherever you are.
 
-## [Localstack](https://docs.localstack.cloud/overview/)
-### [GitHub LocalStack](https://github.com/localstack)
-
-LocalStack is a fully functional local AWS cloud stack that enables developers to develop and test their cloud applications offline. It provides an easy-to-use test/mocking framework for developing cloud applications, eliminating the need for a live AWS environment.
-
-- LocalStack is installed using the Docker Desktop extension, please refer [here](https://docs.localstack.cloud/user-guide/tools/localstack-docker-extension/)
-- [LocalStack Configurations](https://docs.localstack.cloud/references/configuration/)
-- [LocalStack Quickstart](https://docs.localstack.cloud/getting-started/quickstart/)
-- [LocalStack CLI](https://docs.localstack.cloud/references/localstack-cli-manual/)
-- [LocalStack AWS Local CLI](https://docs.localstack.cloud/user-guide/integrations/aws-cli/)
-- [LocalStack Terraform](https://docs.localstack.cloud/user-guide/integrations/terraform/)
-- [LocalStack CI](https://docs.localstack.cloud/user-guide/ci/)
-- [LocalStack Testing Tools](https://docs.localstack.cloud/user-guide/tools/testing-tools/)
-- [Localstack Serverless Plugin](https://github.com/localstack/serverless-localstack)
-- All endpoints are referenced as `http://localhost:4566`
-- Not all endpoints are supported in the free version, please refer [here](https://docs.localstack.cloud/user-guide/aws/feature-coverage/) for supported features
-- [Licence](https://github.com/localstack/localstack/blob/master/LICENSE.txt)
-
-#### LocalStack VS Code Extension
-- `Commandeer` extension [here](https://marketplace.visualstudio.com/items?itemName=Commandeer.commandeer)
-
-![Commandeer](images/vscode/03-commandeer-extension.jpg)
-
-#### LocalStack S3 Endpoint
-![LocalStack S3 Endpoint!](images/localstack/02-localstack-s3-endpoint.jpg)
-
-#### [AWS CLI Local](https://github.com/localstack/awscli-local)
-- This package provides the `awslocal` command, which is a thin wrapper around the aws command line interface for use with LocalStack.
-```
-awslocal --endpoint-url=http://localhost:4566 kinesis list-streams
-StreamNames: []
-```
-
 ## [DevSpace](https://devspace.sh/)
 ### [GitHub DevSpace](https://github.com/devspace-sh/devspace)
 - What is [DevSpace](https://www.devspace.sh/docs/getting-started/introduction)
@@ -514,3 +481,36 @@ Real-time visibility into K8s' internal network, capturing, dissecting and monit
 - Documentation is [here](https://docs.kubeshark.co/en/introduction)
 - [Licence](https://github.com/kubeshark/kubeshark/blob/master/LICENSE)
 - Tap Ortelius `kubeshark tap -n ortelius`
+
+## [Localstack](https://docs.localstack.cloud/overview/)
+### [GitHub LocalStack](https://github.com/localstack)
+
+LocalStack is a fully functional local AWS cloud stack that enables developers to develop and test their cloud applications offline. It provides an easy-to-use test/mocking framework for developing cloud applications, eliminating the need for a live AWS environment.
+
+- LocalStack is installed using the Docker Desktop extension, please refer [here](https://docs.localstack.cloud/user-guide/tools/localstack-docker-extension/)
+- [LocalStack Configurations](https://docs.localstack.cloud/references/configuration/)
+- [LocalStack Quickstart](https://docs.localstack.cloud/getting-started/quickstart/)
+- [LocalStack CLI](https://docs.localstack.cloud/references/localstack-cli-manual/)
+- [LocalStack AWS Local CLI](https://docs.localstack.cloud/user-guide/integrations/aws-cli/)
+- [LocalStack Terraform](https://docs.localstack.cloud/user-guide/integrations/terraform/)
+- [LocalStack CI](https://docs.localstack.cloud/user-guide/ci/)
+- [LocalStack Testing Tools](https://docs.localstack.cloud/user-guide/tools/testing-tools/)
+- [Localstack Serverless Plugin](https://github.com/localstack/serverless-localstack)
+- All endpoints are referenced as `http://localhost:4566`
+- Not all endpoints are supported in the free version, please refer [here](https://docs.localstack.cloud/user-guide/aws/feature-coverage/) for supported features
+- [Licence](https://github.com/localstack/localstack/blob/master/LICENSE.txt)
+
+#### LocalStack VS Code Extension
+- `Commandeer` extension [here](https://marketplace.visualstudio.com/items?itemName=Commandeer.commandeer)
+
+![Commandeer](images/vscode/03-commandeer-extension.jpg)
+
+#### LocalStack S3 Endpoint
+![LocalStack S3 Endpoint!](images/localstack/02-localstack-s3-endpoint.jpg)
+
+#### [AWS CLI Local](https://github.com/localstack/awscli-local)
+- This package provides the `awslocal` command, which is a thin wrapper around the aws command line interface for use with LocalStack.
+```
+awslocal --endpoint-url=http://localhost:4566 kinesis list-streams
+StreamNames: []
+```
