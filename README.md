@@ -100,7 +100,7 @@ The great thing is that this is immutable and transportable to any operating sys
 - If everything goes completely haywire manually remove everything such as `*.tfstate` and the Ortelius Docker containers representing the Kind K8s nodes and execute `terraform plan -auto-approve` and `terraform apply -auto-approve`
 - Please make sure you have a folder in your root `/tmp/postgres` and please make sure you add this mount point to your Docker Desktop under `Settings --> Resources --> File Sharing` `(/tmp is sufficient)`
 
-![Postgresql Mount](images/01-postgres-mount-files.jpg)
+![Postgresql Mount](images/postgres/01-postgres-mount-files.jpg)
 
 ## [Ortelius](https://ortelius.io/)
 
