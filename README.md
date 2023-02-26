@@ -441,7 +441,7 @@ LICENSE     TF-README.md  devspace.yaml  images             main.tf          ort
 
 ![VS Code Remote Explorer!](images/vscode/01-remote-explorer.jpg)
 
-- SSH Settings
+- SSH Settings configured by Devspace
 ```
 # DevSpace Start app.dev-env-setup.devspace
 Host app.dev-env-setup.devspace
