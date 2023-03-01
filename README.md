@@ -82,8 +82,8 @@ The great thing is that this is immutable and transportable to any operating sys
 - [Kind](https://kind.sigs.k8s.io/)
 - [Helm](https://helm.sh/)
 - [Kubectl](https://kubernetes.io/docs/tasks/tools/)
--------------------------------------------------------------
 - [Ortelius](https://ortelius.io)
+-------------------------------------------------------------
 - [DBeaver](https://dbeaver.io/)
 - [Kubeshark](https://kubeshark.co/)
 - [Localstack](https://localstack.cloud/)
