@@ -493,6 +493,8 @@ The App is designed to manage and secure Cloud Access in multi-account environme
 - Connect to EC2 instances straight away
 - Managing Leapp with its CLI
 - Create your own Leapp plugin to customize the App functionalities from the template
+- Download [here](https://docs.leapp.cloud/latest/installation/install-leapp/)
+- [Licence](https://github.com/Noovolari/leapp/blob/master/LICENSE)
 
 ## [Localstack](https://docs.localstack.cloud/overview/)
 ### [GitHub LocalStack](https://github.com/localstack)
