@@ -89,12 +89,12 @@ The great thing is that this is immutable and transportable to any operating sys
 - [Kubectl](https://kubernetes.io/docs/tasks/tools/)
 - [Ortelius](https://ortelius.io)
 -------------------------------------------------------------
-- [DBeaver](https://dbeaver.io/)
-- [Kubeshark](https://kubeshark.co/)
-- [Localstack](https://localstack.cloud/)
 - [VS Code](https://code.visualstudio.com/)
+- [DBeaver](https://dbeaver.io/)
 - [DevSpace](https://www.devspace.sh/)
+- [Kubeshark](https://kubeshark.co/)
 - [Leapp](https://www.leapp.cloud/)
+- [Localstack](https://localstack.cloud/)
 
 ## Pre Flight Checks & Troubleshooting Tips
 - If you have Helm Charts installed run `helm repo update`
