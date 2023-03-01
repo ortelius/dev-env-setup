@@ -43,10 +43,6 @@
       - [FzF in action](#fzf-in-action)
       - [Kubectx for switching context](#kubectx-for-switching-context)
       - [Kubens for switching namespaces](#kubens-for-switching-namespaces)
-  - [Octant](#octant)
-    - [GitHub Octant](#github-octant)
-      - [Notable Plugins](#notable-plugins)
-      - [Octant Port Forward to an Endpoint](#octant-port-forward-to-an-endpoint)
   - [KubeShark Realtime visibility into K8's](#kubeshark-realtime-visibility-into-k8s)
     - [GitHub](#github)
   - [DevSpace](#devspace)
@@ -345,23 +341,6 @@ kubectx kind-ortelius
 ```
 kubens ortelius
 ```
-
-## [Octant](https://octant.dev/)
-### [GitHub Octant](https://github.com/vmware-archive/octant)
-
-Octant is a web-based graphical user interface (GUI) for exploring and analyzing the resources in a Kubernetes cluster. Octant provides a visual representation of a cluster's resources, including deployments, pods, services, and configurations. It allows developers and administrators to view and analyze the health and performance of their applications, and provides insights into the resource utilization of the cluster. Octant also provides an interactive environment for exploring and modifying the cluster's resources, making it easier to diagnose and resolve issues. Octant is designed to be highly extensible and can be integrated with other tools and services to provide a complete end-to-end experience for managing and monitoring Kubernetes clusters. Octant is an open-source project, and provides a fast, lightweight, and modern alternative to traditional command line tools for managing and analyzing Kubernetes clusters.
-
-- Download [here](https://github.com/vmware-tanzu/octant)
-- Documentation [here](https://octant.dev/docs/)
-- Plugins [here](https://github.com/topics/octant-plugin)
-- [Licence](https://github.com/vmware-archive/octant/blob/master/LICENSE)
-
-#### Notable Plugins
-- [Helm](https://github.com/bloodorangeio/octant-helm)
-- [Policy Report](https://github.com/evalsocket/policyreport-octant-plugin)
-
-#### Octant Port Forward to an Endpoint
-![Octant Port Forward to S3!](images/octant/01-octant-port-forward-s3.jpg)
 
 ## [KubeShark](https://kubeshark.co/) Realtime visibility into K8's
 ### [GitHub](https://github.com/kubeshark/kubeshark)
