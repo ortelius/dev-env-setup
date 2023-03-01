@@ -1,6 +1,7 @@
 # [Ortelius](https://ortelius.io/) Local Deployment
 - [Ortelius Local Deployment](#ortelius-local-deployment)
   - [Project Description](#project-description)
+  - [Future Endeavours](#future-endeavours)
   - [Pre-requisite checklist](#pre-requisite-checklist)
   - [Pre Flight Checks \& Troubleshooting Tips](#pre-flight-checks--troubleshooting-tips)
   - [Ortelius](#ortelius)
@@ -75,6 +76,10 @@ Kubeshark can be used by the developer for Microservice API troubleshooting.
 As a final step to your development freedom you can add the LocalStack extension in your Docker Desktop and develop against AWS services running locally on your machine.
 
 The great thing is that this is immutable and transportable to any operating system that supports Docker, Kubectl, Helm, Kind and Terraform.
+
+## Future Endeavours
+- I want to do a test migration of the Ortelius eco-system to AWS using LocalStack.
+- I want to improve the Devcontainer experience.
 
 ## Pre-requisite checklist
 - [Docker](https://docs.docker.com/engine/install/ubuntu/)
