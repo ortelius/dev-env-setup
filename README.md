@@ -56,6 +56,8 @@
       - [VS Code Extensions](#vs-code-extensions)
     - [Component Helm Chart](#component-helm-chart)
       - [Why?](#why)
+  - [Leapp](#leapp)
+    - [GitHub](#github-1)
   - [Localstack](#localstack)
     - [GitHub LocalStack](#github-localstack)
       - [LocalStack VS Code Extension](#localstack-vs-code-extension)
@@ -91,6 +93,7 @@ The great thing is that this is immutable and transportable to any operating sys
 - [Localstack](https://localstack.cloud/)
 - [VS Code](https://code.visualstudio.com/)
 - [DevSpace](https://www.devspace.sh/)
+- [Leapp](https://www.leapp.cloud/)
 
 ## Pre Flight Checks & Troubleshooting Tips
 - If you have Helm Charts installed run `helm repo update`
@@ -475,6 +478,21 @@ This provides the following benefits:
 - Highly flexible configuration via values.yaml
 - Fast and easy definition of Kubernetes resources
 - Kubernetes best practices (e.g. recommended annotations and labels)
+
+## [Leapp](https://www.leapp.cloud/)
+### [GitHub](https://github.com/Noovolari/leapp)
+
+Leapp is a Cross-Platform Cloud access App, built on top of Electron.
+The App is designed to manage and secure Cloud Access in multi-account environments, and it is available for MacOS, Windows, and Linux.
+- Cloud credentials generation in 1 click
+- Data stored locally encrypted in the OS System Vault
+- Multiple Cloud-Access supported strategies
+- Automatic short-lived credentials rotation
+- Automatic provisioning of Sessions from AWS Single Sign-on
+- Open multiple AWS console from different AWS accounts in Firefox and Chrome web extensions!
+- Connect to EC2 instances straight away
+- Managing Leapp with its CLI
+- Create your own Leapp plugin to customize the App functionalities from the template
 
 ## [Localstack](https://docs.localstack.cloud/overview/)
 ### [GitHub LocalStack](https://github.com/localstack)
