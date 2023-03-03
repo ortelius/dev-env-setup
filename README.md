@@ -60,6 +60,8 @@
       - [LocalStack VS Code Extension](#localstack-vs-code-extension)
       - [LocalStack S3 Endpoint](#localstack-s3-endpoint)
       - [AWS CLI Local](#aws-cli-local)
+      - [Thunderclient](#thunderclient)
+    - [GitHub](#github-2)
 
 ## Project Description
 
@@ -95,6 +97,7 @@ The great thing is that this is immutable and transportable to any operating sys
 - [Kubeshark](https://kubeshark.co/)
 - [Leapp](https://www.leapp.cloud/)
 - [Localstack](https://localstack.cloud/)
+- [Thunderclient](https://www.thunderclient.com/)
 
 ## Pre Flight Checks & Troubleshooting Tips
 - If you have Helm Charts installed run `helm repo update`
@@ -512,3 +515,17 @@ LocalStack is a fully functional local AWS cloud stack that enables developers t
 awslocal --endpoint-url=http://localhost:4566 kinesis list-streams
 StreamNames: []
 ```
+
+#### [Thunderclient](https://www.thunderclient.com/)
+### [GitHub](https://github.com/rangav/thunder-client-support)
+
+A new way to test APIs inside VS Code
+
+- Simple & Easy to Use CLI tool
+- Seamless Integration with Thunder Client Extension
+- Run Requests/Collections and View Test results
+- Syntax Highlighting and VSCode Themes
+- Open Request/Collection UI from the terminal
+- Enhances CURL commands
+- CI/CD Integration
+- [Licence](https://github.com/rangav/thunder-client-support/blob/master/LICENSE.txt)
