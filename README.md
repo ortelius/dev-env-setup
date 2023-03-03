@@ -466,6 +466,13 @@ This provides the following benefits:
 - Fast and easy definition of Kubernetes resources
 - Kubernetes best practices (e.g. recommended annotations and labels)
 
+## [GitHub Codespaces](https://docs.github.com/en/codespaces/overview) & [Dev Containers](https://containers.dev/)
+- [Developing inside a container](https://code.visualstudio.com/docs/devcontainers/containers)
+- [Introduction to Dev Containers](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers)
+- [Beginners Series to Dev Containers](https://learn.microsoft.com/en-us/shows/beginners-series-to-dev-containers/)
+- [Getting Started with Dev Containers](https://microsoft.github.io/code-with-engineering-playbook/developer-experience/devcontainers/)
+- [VS Code Dev Containers Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers&WT.mc_id=devcloud-11496-buhollan)
+
 ## [Leapp](https://www.leapp.cloud/)
 ### [GitHub](https://github.com/Noovolari/leapp)
 
@@ -528,4 +535,5 @@ A new way to test APIs inside VS Code
 - Open Request/Collection UI from the terminal
 - Enhances CURL commands
 - CI/CD Integration
+- Please refer [here](https://rangav.medium.com/thunder-client-cli-a-new-way-to-test-apis-inside-vscode-d91eb5c71d8e)for more detail
 - [Licence](https://github.com/rangav/thunder-client-support/blob/master/LICENSE.txt)
