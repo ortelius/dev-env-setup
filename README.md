@@ -240,7 +240,7 @@ time terraform apply --auto-approve
 ```
 terraform apply --auto-approve
 ```
-- Open the videos in a new tab
+- Open videos in a new tab
 
 <a href="https://asciinema.org/a/562847" target="_blank"><img src="https://asciinema.org/a/562847.svg" /></a>
 
