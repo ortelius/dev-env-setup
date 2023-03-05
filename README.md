@@ -31,7 +31,7 @@
       - [Kubeconfig](#kubeconfig)
       - [Get Clusters](#get-clusters)
       - [Logs | Great for debugging \& troubleshooting](#logs--great-for-debugging--troubleshooting)
-  - [Container Runtime Interface (CRI) CLI | Container Troubleshooting tool](#container-runtime-interface-cri-cli--container-troubleshooting-tool)
+  - [Container Runtime Interface (CRI) CLI | Container Troubleshooting Tool](#container-runtime-interface-cri-cli--container-troubleshooting-tool)
     - [GitHub Crictl](#github-crictl)
       - [List containers and check the container is in a created state](#list-containers-and-check-the-container-is-in-a-created-state)
       - [Start container](#start-container)
@@ -105,6 +105,7 @@ Whilst I have tried to cover every scenario in the documentation I welcome feedb
 - [Leapp](https://www.leapp.cloud/)
 - [Localstack](https://localstack.cloud/)
 - [Thunderclient](https://www.thunderclient.com/)
+- [Devdocs](https://devdocs.io/)
 
 ## Pre Flight Checks & Troubleshooting Tips
 - If you have Helm Charts installed run `helm repo update`
