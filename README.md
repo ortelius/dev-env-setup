@@ -54,14 +54,14 @@
     - [Component Helm Chart](#component-helm-chart)
       - [Why?](#why)
   - [GitHub Codespaces \& Dev Containers](#github-codespaces--dev-containers)
-  - [Leapp](#leapp)
+  - [Leapp | Cross-Platform Cloud access App](#leapp--cross-platform-cloud-access-app)
     - [GitHub](#github-1)
-  - [Localstack](#localstack)
+  - [Localstack | AWS Cloudstack on your local machine with Docker extensions](#localstack--aws-cloudstack-on-your-local-machine-with-docker-extensions)
     - [GitHub LocalStack](#github-localstack)
       - [LocalStack VS Code Extension](#localstack-vs-code-extension)
       - [LocalStack S3 Endpoint](#localstack-s3-endpoint)
       - [AWS CLI Local](#aws-cli-local)
-  - [Thunderclient](#thunderclient)
+  - [Thunderclient | API testing inside VS Code](#thunderclient--api-testing-inside-vs-code)
     - [GitHub](#github-2)
 
 ## Project Description
