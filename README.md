@@ -76,9 +76,15 @@ Devspace is the tool for deploying and connecting VS Code to the Dev Container i
 
 Kubeshark can be used by the developer for Microservice API troubleshooting.
 
-As a final step to your development freedom you can add the LocalStack extension in your Docker Desktop and develop against AWS services running locally on your machine.
+The LocalStack extension in your Docker Desktop opens up the cloud world for you to develop against AWS services running locally on your machine.
+
+Leapp is the one ring to rule them all when it comes to cloud provider authentication and role switching.
+
+Thunderclient is a powerful API tester inside VS Code.
 
 The great thing is that this is immutable and transportable to any operating system that supports Docker, Kubectl, Helm, Kind and Terraform.
+
+Whilst I have tried to cover every scenario in the documentation I welcome feedback for any ambigous or missing instructions.
 
 ## Future Endeavours
 - I want to do a test migration of the Ortelius eco-system to AWS using LocalStack.
