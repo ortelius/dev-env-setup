@@ -157,7 +157,7 @@ The latest version of Ortelius is maintained by the Ortelius Community managed b
 - You can use DBeaver Community Edition which is available [here](https://dbeaver.io/)
 - Supports ChatGPT integration for smart completion and code generation as an optional extension
 - [Apache License 2.0](https://dbeaver.io/product/dbeaver_license.txt)
-
+- PostgreSQL localhost mount
 ![Postgresql Mount](images/postgres/01-postgres-mount-files.jpg)
 
 #### Connection settings
