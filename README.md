@@ -1,4 +1,4 @@
-# [Ortelius](https://ortelius.io/) Local Deployment
+# [Ortelius](https://ortelius.io/) Local Development
 - [Ortelius Local Deployment](#ortelius-local-deployment)
   - [Project Description](#project-description)
   - [Future Endeavours](#future-endeavours)
