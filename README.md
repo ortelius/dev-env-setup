@@ -53,7 +53,7 @@
       - [VS Code Extensions](#vs-code-extensions)
     - [Component Helm Chart](#component-helm-chart)
       - [Why?](#why)
-  - [GitHub Codespaces \& Dev Containers](#github-codespaces--dev-containers)
+  - [GitHub Codespaces \& Dev Containers | Devcontainers for your GitHub repos](#github-codespaces--dev-containers--devcontainers-for-your-github-repos)
   - [Leapp | Cross-Platform Cloud access App](#leapp--cross-platform-cloud-access-app)
     - [GitHub](#github-1)
   - [Localstack | AWS Cloudstack on your local machine with Docker extensions](#localstack--aws-cloudstack-on-your-local-machine-with-docker-extensions)
@@ -299,7 +299,7 @@ kind get clusters
 kind export logs -n ortelius
 ```
 
-## [Container Runtime Interface (CRI) CLI](https://kubernetes.io/docs/tasks/debug/debug-cluster/crictl/) | Container Troubleshooting tool
+## [Container Runtime Interface (CRI) CLI](https://kubernetes.io/docs/tasks/debug/debug-cluster/crictl/) | Container Troubleshooting Tool
 ### [GitHub Crictl](https://github.com/kubernetes-sigs/cri-tools/blob/master/docs/crictl.md)
 
 Crictl is a command line tool for interacting with a containerd-based container runtime. It provides a simple, human-readable interface for performing common container operations such as pulling images, starting and stopping containers, and viewing logs. Crictl also supports advanced features such as executing commands inside containers and managing network configurations. It is designed to be a fast and flexible alternative to other container runtime management tools, and can be used in production or development environments. Crictl is a component of the containerd project, which is a lightweight, high-performance runtime for managing containers and is used by many popular container orchestration platforms such as Kubernetes.
