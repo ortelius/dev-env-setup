@@ -497,7 +497,7 @@ This provides the following benefits:
 - [Getting Started with Dev Containers](https://microsoft.github.io/code-with-engineering-playbook/developer-experience/devcontainers/)
 - [VS Code Dev Containers Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers&WT.mc_id=devcloud-11496-buhollan)
 
-## [Leapp](https://www.leapp.cloud/)
+## [Leapp](https://www.leapp.cloud/) | Cross-Platform Cloud access App
 ### [GitHub](https://github.com/Noovolari/leapp)
 
 Leapp is a Cross-Platform Cloud access App, built on top of Electron.
@@ -514,7 +514,7 @@ The App is designed to manage and secure Cloud Access in multi-account environme
 - Download [here](https://docs.leapp.cloud/latest/installation/install-leapp/)
 - [Licence](https://github.com/Noovolari/leapp/blob/master/LICENSE)
 
-## [Localstack](https://docs.localstack.cloud/overview/)
+## [Localstack](https://docs.localstack.cloud/overview/) | AWS Cloudstack on your local machine with Docker extensions
 ### [GitHub LocalStack](https://github.com/localstack)
 
 LocalStack is a fully functional local AWS cloud stack that enables developers to develop and test their cloud applications offline. It provides an easy-to-use test/mocking framework for developing cloud applications, eliminating the need for a live AWS environment.
@@ -547,7 +547,7 @@ awslocal --endpoint-url=http://localhost:4566 kinesis list-streams
 StreamNames: []
 ```
 
-## [Thunderclient](https://www.thunderclient.com/)
+## [Thunderclient](https://www.thunderclient.com/) | API testing inside VS Code
 ### [GitHub](https://github.com/rangav/thunder-client-support)
 
 A new way to test APIs inside VS Code
