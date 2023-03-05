@@ -112,13 +112,13 @@ The great thing is that this is immutable and transportable to any operating sys
       # ortelius http port | change port 8080 to something else if it clashes with your environment
       extra_port_mappings {
         container_port = 31000
-        host_port      = 8080
+        host_port      = 8080 <-- make the port change here
         listen_address = "0.0.0.0"
       }
       # postgresql port | change port 5432 to something else if it clashes with your environment
       extra_port_mappings {
         container_port = 31316
-        host_port      = 5432
+        host_port      = 5432 <-- make the port change here
         listen_address = "0.0.0.0"
       }
     }
