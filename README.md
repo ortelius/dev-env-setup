@@ -72,7 +72,7 @@ Ortelius and its supporting Microservices are deployed into a Kind cluster using
 
 DBeaver or any suitable database client for Postgresql can be used to access the Postgresql database. The Postgres database is persisted using volume mounts.
 
-Devspace is the tool for deploying and connecting VS Code to the Dev Container inside the Ortelius namespace. The Dev Container will contain all the tools required for development of that technology stack.
+Devspace is the tool for deploying and connecting VS Code to the Dev Container inside the Ortelius namespace. The Dev Container will contain all the tools required for development of the Ortelius technology stack.
 
 Kubeshark can be used by the developer for Microservice API troubleshooting.
 
@@ -548,7 +548,7 @@ awslocal --endpoint-url=http://localhost:4566 kinesis list-streams
 StreamNames: []
 ```
 
-## [Thunderclient](https://www.thunderclient.com/) | API testing inside VS Code
+## [Thunderclient](https://www.thunderclient.com/) | API Testing Inside VS Code
 ### [GitHub](https://github.com/rangav/thunder-client-support)
 
 A new way to test APIs inside VS Code
