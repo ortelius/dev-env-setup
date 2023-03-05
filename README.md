@@ -144,6 +144,7 @@ The latest version of Ortelius is maintained by the Ortelius Community managed b
 ![Architecture](images/01-architecture.jpg)
 
 ## [Ortelius](https://ortelius.io/)
+- Ortelius on ArtifactHUB is [here](https://artifacthub.io/packages/helm/ortelius/ortelius)
 - Helm Charts are [here](https://github.com/ortelius/ortelius-charts)
 - Chart.yaml is [here](https://github.com/ortelius/ortelius-charts/blob/master/Chart.yaml)
 ### How to access Ortelius
