@@ -540,7 +540,7 @@ awslocal --endpoint-url=http://localhost:4566 kinesis list-streams
 StreamNames: []
 ```
 
-#### [Thunderclient](https://www.thunderclient.com/)
+## [Thunderclient](https://www.thunderclient.com/)
 ### [GitHub](https://github.com/rangav/thunder-client-support)
 
 A new way to test APIs inside VS Code
