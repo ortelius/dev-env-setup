@@ -228,7 +228,7 @@ terraform init
 ```
 terraform plan
 ```
-- Open the videos in a new tab
+- Open videos in a new tab
 
 <a href="https://asciinema.org/a/6VyaISagE33JoHMif8HmWiQ10" target="_blank"><img src="https://asciinema.org/a/6VyaISagE33JoHMif8HmWiQ10.svg" /></a>
 
@@ -248,7 +248,7 @@ terraform apply --auto-approve
 ```
 terraform destroy --auto-approve
 ```
-- Open the videos in a new tab
+- Open videos in a new tab
 
 <a href="https://asciinema.org/a/562837" target="_blank"><img src="https://asciinema.org/a/562837.svg" /></a>
 
