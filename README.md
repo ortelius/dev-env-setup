@@ -228,7 +228,7 @@ terraform init
 ```
 terraform plan
 ```
-
+- Open the videos in a new tab
 <a href="https://asciinema.org/a/6VyaISagE33JoHMif8HmWiQ10" target="_blank"><img src="https://asciinema.org/a/6VyaISagE33JoHMif8HmWiQ10.svg" /></a>
 
 #### Time the deployment
