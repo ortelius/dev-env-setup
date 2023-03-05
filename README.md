@@ -53,6 +53,7 @@
       - [VS Code Extensions](#vs-code-extensions)
     - [Component Helm Chart](#component-helm-chart)
       - [Why?](#why)
+  - [GitHub Codespaces \& Dev Containers](#github-codespaces--dev-containers)
   - [Leapp](#leapp)
     - [GitHub](#github-1)
   - [Localstack](#localstack)
@@ -60,7 +61,7 @@
       - [LocalStack VS Code Extension](#localstack-vs-code-extension)
       - [LocalStack S3 Endpoint](#localstack-s3-endpoint)
       - [AWS CLI Local](#aws-cli-local)
-      - [Thunderclient](#thunderclient)
+  - [Thunderclient](#thunderclient)
     - [GitHub](#github-2)
 
 ## Project Description
