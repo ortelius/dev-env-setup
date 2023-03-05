@@ -16,7 +16,7 @@
       - [Nodes](#nodes)
   - [Docker.com](#dockercom)
     - [GitHub Docker](#github-docker)
-  - [Terraform](#terraform)
+  - [Terraform | Provisioning \& Managing IaC](#terraform--provisioning--managing-iac)
     - [GitHub Terraform](#github-terraform)
       - [Terraform README](#terraform-readme)
       - [Lets get going](#lets-get-going)
@@ -24,14 +24,14 @@
       - [Don't time the deployment](#dont-time-the-deployment)
       - [Destroy the deployment](#destroy-the-deployment)
       - [Logs](#logs)
-  - [KinD](#kind)
+  - [KinD | Kubernetes in Docker](#kind--kubernetes-in-docker)
     - [GitHub KinD](#github-kind)
     - [Why KinD?](#why-kind)
       - [Get Nodes](#get-nodes)
       - [Kubeconfig](#kubeconfig)
       - [Get Clusters](#get-clusters)
       - [Logs | Great for debugging \& troubleshooting](#logs--great-for-debugging--troubleshooting)
-  - [Container Runtime Interface (CRI) CLI](#container-runtime-interface-cri-cli)
+  - [Container Runtime Interface (CRI) CLI | Container Troubleshooting tool](#container-runtime-interface-cri-cli--container-troubleshooting-tool)
     - [GitHub Crictl](#github-crictl)
       - [List containers and check the container is in a created state](#list-containers-and-check-the-container-is-in-a-created-state)
       - [Start container](#start-container)
@@ -39,14 +39,14 @@
   - [Kubernetes.io](#kubernetesio)
     - [GitHub Kubernetes](#github-kubernetes)
       - [Kubectl](#kubectl)
-      - [Combine Kubens \& Kubectx with Fuzzy Finder](#combine-kubens--kubectx-with-fuzzy-finder)
+      - [Combine Kubens \& Kubectx with Fuzzy Finder | K8s Context \& Namespace Switching](#combine-kubens--kubectx-with-fuzzy-finder--k8s-context--namespace-switching)
       - [FzF](#fzf)
       - [FzF in action](#fzf-in-action)
       - [Kubectx for switching context](#kubectx-for-switching-context)
       - [Kubens for switching namespaces](#kubens-for-switching-namespaces)
   - [KubeShark Realtime visibility into K8's](#kubeshark-realtime-visibility-into-k8s)
     - [GitHub](#github)
-  - [DevSpace](#devspace)
+  - [DevSpace | Dev Container inside K8s](#devspace--dev-container-inside-k8s)
     - [GitHub DevSpace](#github-devspace)
       - [How](#how)
     - [Connect VS Code](#connect-vs-code)
@@ -205,7 +205,7 @@ Docker is a platform for developing, shipping, and running applications. It uses
 - Use [Devdocs](https://devdocs.io/) and the Docker documentation [here](https://docs.docker.com/)
 - [Terms & Conditions](https://www.docker.com/legal/docker-terms-service/)
 
-## [Terraform](https://www.terraform.io/intro)
+## [Terraform](https://www.terraform.io/intro) | Provisioning & Managing IaC
 ### [GitHub Terraform](https://github.com/hashicorp/terraform)
 
 Terraform is an open-source tool for provisioning and managing infrastructure as code. It provides a simple, declarative syntax for defining infrastructure resources, such as virtual machines, DNS entries, and databases. Terraform can manage popular service providers as well as custom in-house solutions. By describing infrastructure as code, Terraform enables versioning, testing, and collaboration of infrastructure changes. Terraform can create, update, and delete resources in parallel, while minimizing the risk of conflicts and errors. Terraform also provides a state management system that tracks changes to infrastructure over time, making it easier to roll back changes if necessary. With Terraform, organizations can automate their infrastructure management processes, improve reliability, and increase efficiency.
@@ -263,7 +263,7 @@ export TF_LOG="DEBUG"
 export TF_LOG_PATH="/abraham/terraform-debug.log"
 ```
 
-## [KinD](https://kind.sigs.k8s.io/)
+## [KinD](https://kind.sigs.k8s.io/) | Kubernetes in Docker
 ### [GitHub KinD](https://github.com/kubernetes-sigs/kind)
 
 Kind (Kubernetes in Docker) is a tool for running local Kubernetes clusters using Docker containers as nodes. It provides an easy-to-use environment for testing and developing applications that run on a Kubernetes cluster. Kind allows developers to run a full Kubernetes cluster on their development machine, eliminating the need for remote clusters and making it easier to test and debug applications. Kind creates a multi-node cluster by launching multiple Docker containers on a single host, making it possible to test complex scenarios and network configurations. Kind is also useful for testing Kubernetes plugins and extensions, and for developing and testing operators, custom controllers, and other Kubernetes-related software.
@@ -299,7 +299,7 @@ kind get clusters
 kind export logs -n ortelius
 ```
 
-## [Container Runtime Interface (CRI) CLI](https://kubernetes.io/docs/tasks/debug/debug-cluster/crictl/)
+## [Container Runtime Interface (CRI) CLI](https://kubernetes.io/docs/tasks/debug/debug-cluster/crictl/) | Container Troubleshooting tool
 ### [GitHub Crictl](https://github.com/kubernetes-sigs/cri-tools/blob/master/docs/crictl.md)
 
 Crictl is a command line tool for interacting with a containerd-based container runtime. It provides a simple, human-readable interface for performing common container operations such as pulling images, starting and stopping containers, and viewing logs. Crictl also supports advanced features such as executing commands inside containers and managing network configurations. It is designed to be a fast and flexible alternative to other container runtime management tools, and can be used in production or development environments. Crictl is a component of the containerd project, which is a lightweight, high-performance runtime for managing containers and is used by many popular container orchestration platforms such as Kubernetes.
@@ -349,7 +349,7 @@ kubectl logs ms-nginx-6ccbb5f95c-9gjg7 -n ortelius -f
 kubectl -n ortelius exec -it ms-nginx-6ccbb5f95c-9gjg7 -n ortelius -c ms-nginx -- sh
 ```
 
-#### Combine Kubens & Kubectx with Fuzzy Finder
+#### Combine Kubens & Kubectx with Fuzzy Finder | K8s Context & Namespace Switching
 - `kubectx` is a tool to switch between contexts (clusters) on kubectl faster.
 - `kubens` is a tool to switch between Kubernetes namespaces (and configure them for kubectl) easily.
 - Download `Kubens & Kubectx` [here](https://github.com/ahmetb/kubectx)
@@ -384,7 +384,7 @@ Real-time visibility into K8s' internal network, capturing, dissecting and monit
 - [Licence](https://github.com/kubeshark/kubeshark/blob/master/LICENSE)
 - Tap Ortelius `kubeshark tap -n ortelius`
 
-## [DevSpace](https://devspace.sh/)
+## [DevSpace](https://devspace.sh/) | Dev Container inside K8s
 ### [GitHub DevSpace](https://github.com/devspace-sh/devspace)
 - What is [DevSpace](https://www.devspace.sh/docs/getting-started/introduction)
 - Devspace could be used for the local Terraform environment whereas Codespaces is more suited for a developer on the repos themselves
@@ -490,7 +490,7 @@ This provides the following benefits:
 - Fast and easy definition of Kubernetes resources
 - Kubernetes best practices (e.g. recommended annotations and labels)
 
-## [GitHub Codespaces](https://docs.github.com/en/codespaces/overview) & [Dev Containers](https://containers.dev/)
+## [GitHub Codespaces](https://docs.github.com/en/codespaces/overview) & [Dev Containers](https://containers.dev/) | Devcontainers for your GitHub repos
 - [Developing inside a container](https://code.visualstudio.com/docs/devcontainers/containers)
 - [Introduction to Dev Containers](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers)
 - [Beginners Series to Dev Containers](https://learn.microsoft.com/en-us/shows/beginners-series-to-dev-containers/)
