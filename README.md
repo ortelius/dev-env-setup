@@ -195,7 +195,7 @@ kubectl get namespace -A
 kubectl get nodes -A
 ```
 
-## [Docker.com](https://www.docker.com/)
+## [Docker.com](https://www.docker.com/) | Application Containerisation Platform
 ### [GitHub Docker](https://github.com/docker)
 
 Docker is a platform for developing, shipping, and running applications. It uses containers, which are lightweight, standalone, executable packages of software that include everything needed to run the application, including the code, runtime, libraries, environment variables, and system tools. Containers provide a consistent, isolated environment for applications to run, making it easier to develop, test, and deploy applications. Docker allows developers to automate the deployment of applications into containers and manage containers as a single unit. It simplifies the process of deploying applications, making it easier to scale applications, and enabling organizations to adopt a microservices architecture.
@@ -328,9 +328,9 @@ crictl exec -i -t 3e025dd50a72d956c4f14881fbb5b1080c9275674e95fb67f965f6478a957d
 bin   dev   etc   home  proc  root  sys   tmp   usr   var
 ```
 
-## [Kubernetes.io](https://kubernetes.io/)
+## [Kubernetes.io](https://kubernetes.io/) | The Conductor of Containerised Applications
 
-Kubernetes is an open-source platform for automating deployment, scaling, and management of containerized applications. It provides a unified API for defining and managing containers, enabling organizations to simplify the deployment and scaling of applications. Kubernetes automates the distribution of containers across a cluster of machines and monitors the health of the containers, ensuring that they are always running. It can automatically replace failed containers and ensure that the desired number of replicas are running. Kubernetes also provides built-in service discovery and load balancing, making it easier to connect microservices and ensure that traffic is distributed evenly across the cluster. Kubernetes has become the de facto standard for container orchestration and is widely adopted by organizations of all sizes.
+Kubernetes is an open-source platform for automating deployment, scaling, and management of containerised applications. It provides a unified API for defining and managing containers, enabling organizations to simplify the deployment and scaling of applications. Kubernetes automates the distribution of containers across a cluster of machines and monitors the health of the containers, ensuring that they are always running. It can automatically replace failed containers and ensure that the desired number of replicas are running. Kubernetes also provides built-in service discovery and load balancing, making it easier to connect microservices and ensure that traffic is distributed evenly across the cluster. Kubernetes has become the de facto standard for container orchestration and is widely adopted by organizations of all sizes.
 
 ### [GitHub Kubernetes](https://github.com/kubernetes-sigs)
 - [Terms & Conditions](https://www.linuxfoundation.org/legal/terms#:~:text=Users%20are%20solely%20responsible%20for,arising%20out%20of%20User%20Content.)
@@ -498,7 +498,7 @@ This provides the following benefits:
 - [Getting Started with Dev Containers](https://microsoft.github.io/code-with-engineering-playbook/developer-experience/devcontainers/)
 - [VS Code Dev Containers Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers&WT.mc_id=devcloud-11496-buhollan)
 
-## [Leapp](https://www.leapp.cloud/) | Cross-Platform Cloud access App
+## [Leapp](https://www.leapp.cloud/) | Cross-Platform Cloud Access Application
 ### [GitHub](https://github.com/Noovolari/leapp)
 
 Leapp is a Cross-Platform Cloud access App, built on top of Electron.
