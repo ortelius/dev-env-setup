@@ -1,12 +1,12 @@
 # [Ortelius](https://ortelius.io/) Local Development
-- [Ortelius Local Deployment](#ortelius-local-deployment)
+- [Ortelius Local Development](#ortelius-local-development)
   - [Project Description](#project-description)
   - [Future Endeavours](#future-endeavours)
   - [Pre-requisite checklist](#pre-requisite-checklist)
   - [Pre Flight Checks \& Troubleshooting Tips](#pre-flight-checks--troubleshooting-tips)
-  - [Ortelius](#ortelius)
+  - [Ortelius | Supply Chain Catalog \& DevOps Intelligence](#ortelius--supply-chain-catalog--devops-intelligence)
       - [Terraform Structure](#terraform-structure)
-  - [Ortelius](#ortelius-1)
+  - [Ortelius](#ortelius)
     - [How to access Ortelius](#how-to-access-ortelius)
     - [How to access PostgreSQL with DBeaver](#how-to-access-postgresql-with-dbeaver)
       - [Connection settings](#connection-settings)
@@ -14,7 +14,7 @@
       - [Context `kind-ortelius`](#context-kind-ortelius)
       - [Namespaces `ortelius`](#namespaces-ortelius)
       - [Nodes](#nodes)
-  - [Docker.com](#dockercom)
+  - [Docker.com | Application Containerisation Platform](#dockercom--application-containerisation-platform)
     - [GitHub Docker](#github-docker)
   - [Terraform | Provisioning \& Managing IaC](#terraform--provisioning--managing-iac)
     - [GitHub Terraform](#github-terraform)
@@ -36,7 +36,7 @@
       - [List containers and check the container is in a created state](#list-containers-and-check-the-container-is-in-a-created-state)
       - [Start container](#start-container)
       - [Exec a command in a container](#exec-a-command-in-a-container)
-  - [Kubernetes.io](#kubernetesio)
+  - [Kubernetes.io | The Conductor of Containerised Applications](#kubernetesio--the-conductor-of-containerised-applications)
     - [GitHub Kubernetes](#github-kubernetes)
       - [Kubectl](#kubectl)
       - [Combine Kubens \& Kubectx with Fuzzy Finder | K8s Context \& Namespace Switching](#combine-kubens--kubectx-with-fuzzy-finder--k8s-context--namespace-switching)
@@ -54,14 +54,14 @@
     - [Component Helm Chart](#component-helm-chart)
       - [Why?](#why)
   - [GitHub Codespaces \& Dev Containers | Devcontainers for your GitHub repos](#github-codespaces--dev-containers--devcontainers-for-your-github-repos)
-  - [Leapp | Cross-Platform Cloud access App](#leapp--cross-platform-cloud-access-app)
+  - [Leapp | Cross-Platform Cloud Access Application](#leapp--cross-platform-cloud-access-application)
     - [GitHub](#github-1)
   - [Localstack | AWS Cloudstack on your local machine with Docker extensions](#localstack--aws-cloudstack-on-your-local-machine-with-docker-extensions)
     - [GitHub LocalStack](#github-localstack)
       - [LocalStack VS Code Extension](#localstack-vs-code-extension)
       - [LocalStack S3 Endpoint](#localstack-s3-endpoint)
       - [AWS CLI Local](#aws-cli-local)
-  - [Thunderclient | API testing inside VS Code](#thunderclient--api-testing-inside-vs-code)
+  - [Thunderclient | API Testing Inside VS Code](#thunderclient--api-testing-inside-vs-code)
     - [GitHub](#github-2)
 
 ## Project Description
@@ -148,8 +148,8 @@ The latest version of Ortelius is maintained by the Ortelius Community managed b
 - Helm Charts are [here](https://github.com/ortelius/ortelius-charts)
 - Chart.yaml is [here](https://github.com/ortelius/ortelius-charts/blob/master/Chart.yaml)
 ### How to access Ortelius
-- Use can access Ortelius at http://localhost:8080/dmadminweb/Home#dhmain
-- To log out http://localhost:8080/dmadminweb/Logout
+- Login http://localhost:8080/dmadminweb/Home#dhmain
+- Logout http://localhost:8080/dmadminweb/Logout
 
 ### How to access PostgreSQL with [DBeaver](https://dbeaver.io/)
 - Free multi-platform database tool for developers, database administrators, analysts and all people who need to work with databases.
