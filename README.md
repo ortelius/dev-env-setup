@@ -132,9 +132,7 @@ Whilst I have tried to cover every scenario in the documentation I welcome feedb
 
 ```
 
-![Postgresql Mount](images/postgres/01-postgres-mount-files.jpg)
-
-## [Ortelius](https://ortelius.io/)
+## [Ortelius](https://ortelius.io/) | Supply Chain Catalog & DevOps Intelligence
 
 Ortelius is central catalog of supply chain and DevOps intelligence. It is designed to track and version composition details for every component of your software supply chain along with all consuming logical applications. With Ortelius, you can easily view your logical application's SBOMs, CVEs, service dependencies, and inventory based on versions, even in a decoupled microservices architecture.
 
@@ -158,6 +156,8 @@ The latest version of Ortelius is maintained by the Ortelius Community managed b
 - You can use DBeaver Community Edition which is available [here](https://dbeaver.io/)
 - Supports ChatGPT integration for smart completion and code generation as an optional extension
 - [Apache License 2.0](https://dbeaver.io/product/dbeaver_license.txt)
+
+![Postgresql Mount](images/postgres/01-postgres-mount-files.jpg)
 
 #### Connection settings
 - Password
