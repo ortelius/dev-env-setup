@@ -1,7 +1,7 @@
 
 ## Project Description
 
-The goal is to open up the Microservices world and give visiblity to developers so that it does not feel like you are developing with a blind fold on.
+The goal is to open up the Microservices world and give visibility to developers so that it does not feel like you are developing with a blind fold on.
 
 Ortelius and its supporting Microservices are deployed into a Kind cluster using Terraform.
 
@@ -19,7 +19,7 @@ Thunderclient is a powerful API tester inside VS Code.
 
 The great thing is that this is immutable and transportable to any operating system that supports Docker, Kubectl, Helm, Kind and Terraform.
 
-Whilst I have tried to cover every scenario in the documentation I welcome feedback for any ambigous or missing instructions.
+Whilst I have tried to cover every scenario in the documentation I welcome feedback for any ambiguous or missing instructions.
 
 ## Future Endeavours
 - I want to do a test migration of the Ortelius eco-system to AWS using LocalStack.

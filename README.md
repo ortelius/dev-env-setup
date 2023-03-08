@@ -1,5 +1,5 @@
 ## Project Description
-The goal is to open up the Microservices world and give visiblity to developers so that it does not feel like you are developing with a blind fold on.
+The goal is to open up the Microservices world and give visibility to developers so that it does not feel like you are developing with a blind fold on.
 
 Ortelius and its supporting Microservices are deployed into a Kind cluster using Terraform.
 
@@ -17,7 +17,7 @@ Thunderclient is a powerful API tester inside VS Code.
 
 The great thing is that this is immutable and transportable to any operating system that supports Docker, Kubectl, Helm, Kind and Terraform.
 
-Whilst I have tried to cover every scenario in the documentation I welcome feedback for any ambigous or missing instructions.
+Whilst I have tried to cover every scenario in the documentation I welcome feedback for any ambiguous or missing instructions.
 
 ## Future Endeavours
 - Migrate the Ortelius eco-system to AWS using LocalStack.
@@ -460,5 +460,5 @@ A new way to test APIs inside VS Code
 - Open Request/Collection UI from the terminal
 - Enhances CURL commands
 - CI/CD Integration
-- Please refer [here](https://rangav.medium.com/thunder-client-cli-a-new-way-to-test-apis-inside-vscode-d91eb5c71d8e)for more detail
+- Please refer [here](https://rangav.medium.com/thunder-client-cli-a-new-way-to-test-apis-inside-vscode-d91eb5c71d8e) for more detail
 - [Licence](https://github.com/rangav/thunder-client-support/blob/master/LICENSE.txt)
