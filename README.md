@@ -22,7 +22,7 @@ Whilst I have tried to cover every scenario in the documentation I welcome feedb
 ## Future Endeavours
 - Migrate the Ortelius eco-system to AWS using LocalStack.
 - Improve the Devcontainer experience.
-- Implement our Event Driven architecture POC.
+- Implement our [Event Driven Architecture POC](https://filedn.eu/lJEPcSQWQQPRsWJKijxnXCQ/ortelius/gitops/01-ci-dev-ortelius-cloudnative-architecture-poc.html).
 
 ## Pre-requisite checklist
 - [Docker](https://docs.docker.com/engine/install/ubuntu/)
