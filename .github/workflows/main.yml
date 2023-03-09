@@ -23,6 +23,7 @@ jobs:
         uses: Platane/snk/svg-only@v2
         with:
           github_committer_name: ${{ github.committer_name }}
+          github_committer_email: ${{ github.committer_email }}
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
