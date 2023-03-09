@@ -22,7 +22,7 @@ jobs:
       - name: generate github-contribution-grid-snake.svg
         uses: Platane/snk/svg-only@v2
         with:
-          github_committer_name: ${{ github.committer_name }}
+          github_user_name: ${{ github.user_name }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           outputs: |
