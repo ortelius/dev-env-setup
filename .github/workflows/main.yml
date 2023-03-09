@@ -1,4 +1,4 @@
-name: generate animation
+name: snake animation
 
 on:
   # run automatically every 24 hours
@@ -11,7 +11,7 @@ on:
   # run on every push on the master branch
   push:
     branches:
-      - master
+      - main
 
 jobs:
   generate:
@@ -22,8 +22,7 @@ jobs:
       - name: generate github-contribution-grid-snake.svg
         uses: Platane/snk/svg-only@v2
         with:
-          github_committer_name: ${{ github.committer_name }}
-          github_committer_email: ${{ github.committer_email }}
+          github_user_name: ${{ github.repository_owner }}
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
