@@ -24,8 +24,6 @@ jobs:
         with:
           fetch-depth: 0
           github_user_name: ${{ github.repository_owner }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
@@ -34,6 +32,7 @@ jobs:
       - name: push github-contribution-grid-snake.svg to the output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
+          fetch-depth: 0
           target_branch: output
           build_dir: dist
         env:
