@@ -94,8 +94,43 @@ Whilst I have tried to cover every scenario in the documentation I welcome feedb
 - [Kubectl](https://kubernetes.io/docs/tasks/tools/)
 - [Ortelius](https://ortelius.io)
 
-Ortelius aggregates DevOps, security and supply chain data for each independent component moving through the pipeline. It is particularly useful in cloud-native, microservices architectures where the logical application becomes ambiguous. Ortelius tracks who is consuming shared components, versions them when they are updated and then creates new release candidates for every logical application that is impacted by a component change. It then aggregates that data to the logical application level so you don't have to.
+## Developer Tools
+- [VS Code](https://code.visualstudio.com/)
+- [DBeaver](https://dbeaver.io/)
+- [DevSpace](https://www.devspace.sh/)
+- [Kubeshark](https://kubeshark.co/)
+- [Leapp](https://www.leapp.cloud/)
+- [Localstack](https://localstack.cloud/)
+- [Thunderclient](https://www.thunderclient.com/)
+- [Devdocs](https://devdocs.io/)
 
+## Pre Flight Checks & Troubleshooting Tips
+- If you have Helm Charts installed run `helm repo update`
+- Kube config is expected to be in the default location `$KUBECONFIG`
+- If you get an `AJAX` error when trying to login then logout first with `http://localhost:8080/dmadminweb/Logout` or you could use incognito mode (Its a cookie issue)
+- If you get incorrect username or password the database is probably borked, destroy and re-deploy
+- If everything goes completely haywire manually remove everything such as `*.tfstate` and the Ortelius Docker containers representing the Kind K8s nodes and execute `terraform plan -auto-approve` and `terraform apply -auto-approve`
+- Please make sure you have a folder in your root `/tmp/postgres` and please make sure you add this mount point to your Docker Desktop under `Settings --> Resources --> File Sharing` `(/tmp is sufficient)`
+- If you are already using ports 8080 or 5432 in your environment you will need to change the ports in `main.tf` here
+```
+      # ortelius http port | change port 8080 to something else if it clashes with your environment
+      extra_port_mappings {
+        container_port = 31000
+        host_port      = 8080 <-- make the port change here
+        listen_address = "0.0.0.0"
+      }
+      # postgresql port | change port 5432 to something else if it clashes with your environment
+      extra_port_mappings {
+        container_port = 31316
+        host_port      = 5432 <-- make the port change here
+        listen_address = "0.0.0.0"
+      }
+    }
+```
+
+## [Ortelius](https://ortelius.io/) | Supply Chain Catalog & DevOps Intelligence
+Ortelius is central catalog of supply chain and DevOps intelligence. It is designed to track and version composition details for every component of your software supply chain along with all consuming logical applications. With Ortelius, you can easily view your logical application's SBOMs, CVEs, service dependencies, and inventory based on versions, even in a decoupled microservices architecture.
+Ortelius aggregates DevOps, security and supply chain data for each independent component moving through the pipeline. It is particularly useful in cloud-native, microservices architectures where the logical application becomes ambiguous. Ortelius tracks who is consuming shared components, versions them when they are updated and then creates new release candidates for every logical application that is impacted by a component change. It then aggregates that data to the logical application level so you don't have to.
 The latest version of Ortelius is maintained by the Ortelius Community managed by the [Continuous Delivery Foundation](https://cd.foundation/) (Linux Foundation). It was originally created by [DeployHub](https://www.deployhub.com/) and [OpenMake Software](https://www.openmakesoftware.com/). Our mission is to simplify the adoption of modern architecture through a world-class microservice catalog driven by a supportive and diverse global open source community.
 
 #### Terraform Structure
