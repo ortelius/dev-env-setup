@@ -1,7 +1,10 @@
 - [Project Description](#project-description)
 - [Future Endeavours](#future-endeavours)
 - [Pre-requisite checklist](#pre-requisite-checklist)
+- [Developer Tools](#developer-tools)
+- [Pre Flight Checks \& Troubleshooting Tips](#pre-flight-checks--troubleshooting-tips)
     - [Terraform Structure](#terraform-structure)
+- [Ortelius | Supply Chain Catalog \& DevOps Intelligence](#ortelius--supply-chain-catalog--devops-intelligence)
 - [Ortelius](#ortelius)
   - [How to access Ortelius](#how-to-access-ortelius)
   - [How to access PostgreSQL with DBeaver](#how-to-access-postgresql-with-dbeaver)
@@ -128,18 +131,20 @@ Whilst I have tried to cover every scenario in the documentation I welcome feedb
     }
 ```
 
+#### Terraform Structure
+![Architecture](images/01-architecture.jpg)
+
 ## [Ortelius](https://ortelius.io/) | Supply Chain Catalog & DevOps Intelligence
 Ortelius is central catalog of supply chain and DevOps intelligence. It is designed to track and version composition details for every component of your software supply chain along with all consuming logical applications. With Ortelius, you can easily view your logical application's SBOMs, CVEs, service dependencies, and inventory based on versions, even in a decoupled microservices architecture.
 Ortelius aggregates DevOps, security and supply chain data for each independent component moving through the pipeline. It is particularly useful in cloud-native, microservices architectures where the logical application becomes ambiguous. Ortelius tracks who is consuming shared components, versions them when they are updated and then creates new release candidates for every logical application that is impacted by a component change. It then aggregates that data to the logical application level so you don't have to.
 The latest version of Ortelius is maintained by the Ortelius Community managed by the [Continuous Delivery Foundation](https://cd.foundation/) (Linux Foundation). It was originally created by [DeployHub](https://www.deployhub.com/) and [OpenMake Software](https://www.openmakesoftware.com/). Our mission is to simplify the adoption of modern architecture through a world-class microservice catalog driven by a supportive and diverse global open source community.
 
-#### Terraform Structure
-![Architecture](images/01-architecture.jpg)
-
 ## [Ortelius](https://ortelius.io/)
 - Ortelius on ArtifactHUB is [here](https://artifacthub.io/packages/helm/ortelius/ortelius)
 - Helm Charts are [here](https://github.com/ortelius/ortelius-charts)
 - Chart.yaml is [here](https://github.com/ortelius/ortelius-charts/blob/master/Chart.yaml)
+- Ortelius architecture is [here](https://ortelius.io/blog/2023/03/21/the-2023-ortelius-architecture/)
+- Ortelius architecture diagram is [here](https://ortelius.io/diagrams/newarch/)
 ### How to access Ortelius
 - Login http://localhost:8080/dmadminweb/Home#dhmain
 - Logout http://localhost:8080/dmadminweb/Logout
