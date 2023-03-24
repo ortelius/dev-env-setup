@@ -1,4 +1,5 @@
 ## Ortelius in a box
+- [Ortelius in a box](#ortelius-in-a-box)
 - [Project Description](#project-description)
 - [Future Endeavours](#future-endeavours)
 - [Pre-requisite checklist](#pre-requisite-checklist)
