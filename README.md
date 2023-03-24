@@ -1,3 +1,4 @@
+## Ortelius in a box
 - [Project Description](#project-description)
 - [Future Endeavours](#future-endeavours)
 - [Pre-requisite checklist](#pre-requisite-checklist)
