@@ -16,7 +16,6 @@ resource "kind_cluster" "ortelius" {
     node {
       role                   = "control-plane"
       kubeadm_config_patches = ["kind: InitConfiguration\nnodeRegistration:\n  kubeletExtraArgs:\n    node-labels: \"kubernetes.io/os=linux\"\n"]
-
       # ortelius http port
       extra_port_mappings {
         container_port = 31000
@@ -29,40 +28,31 @@ resource "kind_cluster" "ortelius" {
         host_port      = 5432
         listen_address = "0.0.0.0"
       }
-      # localhost run proxy
+      # cilium localhost run proxy
       extra_port_mappings {
         container_port = 32042
         host_port      = 32042
         listen_address = "0.0.0.0"
       }
-      # Hubble relay
+      # cilium hubble relay
       extra_port_mappings {
         container_port = 31234
         host_port      = 31234
         listen_address = "0.0.0.0"
       }
-      # Hubble UI
+      # cilium hubble UI
       extra_port_mappings {
         container_port = 31235
         host_port      = 31235
         listen_address = "0.0.0.0"
       }
-      node {
-        role = "worker"
-        # postgres persistent volume
-        extra_mounts {
-          host_path      = "/tmp/postgres"
-          container_path = "/pgdata"
-        }
-        # cilium
-        extra_mounts {
-          host_path      = "/opt/images"
-          container_path = "/opt/images"
-        }
-        # cilium
-        networking {
-          disable_default_cni = "true"
-        }
+    }
+    node {
+      role = "worker"
+      # ortelius postgres persistent volume
+      extra_mounts {
+        host_path      = "/tmp/postgres"
+        container_path = "/pgdata"
       }
     }
   }
@@ -114,7 +104,8 @@ resource "helm_release" "ortelius" {
 resource "helm_release" "cilium" {
   name              = "cilium"
   chart             = "cilium"
-  repository        = "https://github.com/cilium/cilium"
+  repository        = "https://helm.cilium.io/"
+  namespace         = var.cilium_namespace
   create_namespace  = false
   recreate_pods     = true
   depends_on        = [kind_cluster.ortelius]
