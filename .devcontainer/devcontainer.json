@@ -40,21 +40,27 @@
 		"TF_LOG_PATH": "'${templateOption:tfLogPath}"
 	},
 	"mounts": [
-		"source=profile,target=/root,type=volume",
-		"target=/root/.vscode-server,type=volume"
-		],
-// Use 'forwardPorts' to make a list of ports inside the container available locally.
-// "forwardPorts": [],
-// Use 'postCreateCommand' to run commands after the container is created.
-"postCreateCommand": "${NVM_DIR}/nvm.sh && nvm install --lts",
-// Configure tool-specific properties.
-"customizations": {
-"vscode": {
-	"extensions": ["hashicorp.terraform","redhat.vscode-xml","timonwong.shellcheck","redhat.vscode-yaml","oderwat.indent-rainbow"],
-	"settings": {
-		"terraform.languageServer": {
-			"enabled": true,
-			"args": []
+		"source=profile,target=$HOME,type=volume",
+		"target=$HOME/.vscode-server,type=volume"
+	],
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "${NVM_DIR}/nvm.sh && nvm install --lts",
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"hashicorp.terraform",
+				"redhat.vscode-xml",
+				"timonwong.shellcheck",
+				"redhat.vscode-yaml",
+				"oderwat.indent-rainbow"
+			],
+			"settings": {
+				"terraform.languageServer": {
+					"enabled": true,
+					"args": []
 				}
 			}
 		}

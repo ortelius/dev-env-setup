@@ -15,9 +15,3 @@ variable "ortelius_namespace" {
   description = "The Ortelius namespace"
   default     = "ortelius"
 }
-
-#variable "backstage_namespace" {
-#  type        = string
-#  description = "The Backstage namespace"
-#  default     = "backstage"
-#}
