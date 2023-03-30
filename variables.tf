@@ -15,3 +15,9 @@ variable "ortelius_namespace" {
   description = "The Ortelius namespace"
   default     = "ortelius"
 }
+
+variable "cilium_namespace" {
+  type        = string
+  description = "The Cilium namespace"
+  default     = "kube-system"
+}
