@@ -65,6 +65,10 @@
 - [Thunderclient | API Testing Inside VS Code](#thunderclient--api-testing-inside-vs-code)
   - [GitHub](#github-2)
 
+## Welcom to Ortelius in a Box
+
+![Ortelius in a Box!](images/ortelius-in-a-box.jpg "Ortelius in a Box")
+
 ## Project Description
 The goal is to open up the Microservices world and give visibility to developers so that it does not feel like you are developing with a blind fold on.
 
