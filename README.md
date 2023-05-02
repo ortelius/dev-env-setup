@@ -65,7 +65,7 @@
 - [Thunderclient | API Testing Inside VS Code](#thunderclient--api-testing-inside-vs-code)
   - [GitHub](#github-2)
 
-## Welcom to Ortelius in a Box
+## Welcome to Ortelius in a Box
 
 ![Ortelius in a Box!](images/ortelius-in-a-box.jpg "Ortelius in a Box")
 
